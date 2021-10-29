@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:padding="50dp"
+    android:background="@drawable/color">
+
+    <EditText
+        android:id="@+id/edtLastName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btnicon"
+        android:minHeight="48dp"
+        android:hint="Last name"
+        android:inputType="text"
+        android:layout_marginTop="30dp"/>
+
+    <EditText
+        android:id="@+id/edtFirstName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/edtLastName"
+        android:layout_centerInParent="true"
+        android:hint="First name"
+        android:inputType="text"
+        android:minHeight="48dp" />
+
+    <EditText
+        android:id="@+id/edtEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:minHeight="48dp"
+        android:hint="Bennington email"
+        android:layout_below="@id/edtFirstName"
+        android:inputType="textEmailAddress"/>
+
+    <EditText
+        android:id="@+id/edtBirthDate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:minHeight="48dp"
+        android:hint="Birthdate"
+        android:layout_below="@id/edtEmail"
+        android:inputType="date"/>
+
+
+    <EditText
+        android:id="@+id/edtnewPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:minHeight="48dp"
+        android:hint="new password"
+        android:inputType="textPassword"
+        android:layout_below="@+id/edtBirthDate"/>
+
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:text="Register"
+        android:layout_centerInParent="true"
+        android:id="@+id/btnRegister"
+        android:layout_below="@+id/edtnewPassword"
+        android:layout_marginTop="10dp"/>
+
+
+    <ImageView
+        android:layout_width="150dp"
+        android:layout_height="100dp"
+        android:id="@+id/btnicon"
+        android:layout_centerHorizontal="true"
+        android:src="@mipmap/bennicon"/>
+
+
+</RelativeLayout>
