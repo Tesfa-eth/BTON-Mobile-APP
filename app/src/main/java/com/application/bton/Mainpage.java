@@ -15,11 +15,11 @@ public class Mainpage extends AppCompatActivity implements View.OnClickListener{
     public void onClick(View v) {
         switch (v.getId()){
             case  R.id.btnGallery:
-                Intent intent = new Intent(Mainpage.this, Log.class);
+                Intent intent = new Intent(Mainpage.this, Register.class);
                 startActivity(intent);
                 break;
             case  R.id.btnAboutBTN:
-                Intent aboutBtn_intent = new Intent(Mainpage.this, AboutBennington.class);
+                Intent aboutBtn_intent = new Intent(Mainpage.this, AboutBTONCollege.class);
                 startActivity(aboutBtn_intent);
                 break;
             default:
