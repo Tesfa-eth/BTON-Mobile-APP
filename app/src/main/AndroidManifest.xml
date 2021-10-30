@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.BTON">
         <activity
+            android:name=".AboutBennington"
+            android:exported="false" />
+        <activity
             android:name=".Mainpage"
             android:exported="false" />
         <activity
