@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".AboutBennington">
+    tools:context=".AboutBTONCollege">
     <ImageView
         android:layout_width="450dp"
         android:layout_height="450dp"
@@ -28,7 +28,7 @@
         android:id="@+id/mainscrollview"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="20dp"
         android:layout_below="@+id/BTNtitle"
         android:padding="10dp">
         <RelativeLayout
@@ -69,6 +69,7 @@
                 android:id="@+id/benEduBody"
                 android:layout_below="@+id/benEdu"
                 android:textColor="#216056"
+                android:layout_marginBottom="40dp"
                 android:text="@string/benEduBody"/>
 
 
@@ -79,7 +80,7 @@
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/btnofficalWebsite"
+        android:id="@+id/btnofficialWebsite"
         android:text=" Visit Official Website"
         android:textSize="20dp"
         android:layout_centerHorizontal="true"
