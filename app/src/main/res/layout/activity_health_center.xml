@@ -83,8 +83,9 @@
                     android:layout_height="match_parent"
                     android:text="@string/healthCenterIntro"
                     android:textColor="#000000"
-                    android:layout_marginHorizontal="30dp"
-
+                    android:visibility="gone"
+                    android:justificationMode="inter_word"
+                    android:layout_marginHorizontal="45dp"
                     />
 
             </androidx.constraintlayout.widget.ConstraintLayout>

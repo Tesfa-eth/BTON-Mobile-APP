@@ -12,9 +12,9 @@
     </string>
 
     <string name="healthCenterIntro">
-        <p>Located in the Student Health Center, Health Services is open Monday through Friday during the spring and fall academic terms.</p>
+        <p>Located in the Student Health Center, Health Services is open Monday through Friday during the spring and fall academic terms. \n\n </p>
         <p>The health services provide direct emergency care, routine physical exams, laboratory testing and also provides health education.</p>
         <p>Appointments can be scheduled through phone call on 802-440-4426 (or via on campus extension: x4426) and in-person visits</p>
-        <p>Visit on the college website </p>
+        <p>Visit college website</p>
     </string>
 </resources>
