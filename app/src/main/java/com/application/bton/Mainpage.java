@@ -15,12 +15,16 @@ public class Mainpage extends AppCompatActivity implements View.OnClickListener{
     public void onClick(View v) {
         switch (v.getId()){
             case  R.id.btnGallery:
-                Intent intent = new Intent(Mainpage.this, Register.class);
+                Intent intent = new Intent(Mainpage.this, CampusGallery.class);
                 startActivity(intent);
                 break;
             case  R.id.btnAboutBTN:
                 Intent aboutBtn_intent = new Intent(Mainpage.this, AboutBTONCollege.class);
                 startActivity(aboutBtn_intent);
+                break;
+            case  R.id.btnHeathCenter:
+                Intent healthCenter_intent = new Intent(Mainpage.this, HealthCenter.class);
+                startActivity(healthCenter_intent);
                 break;
             default:
                 break;
@@ -37,5 +41,8 @@ public class Mainpage extends AppCompatActivity implements View.OnClickListener{
 
         Button btnAboutBTN = findViewById(R.id.btnAboutBTN);
         btnAboutBTN.setOnClickListener(this);
+
+        Button btnHealthCenter = findViewById(R.id.btnHeathCenter);
+        btnHealthCenter.setOnClickListener(this);
     }
 }

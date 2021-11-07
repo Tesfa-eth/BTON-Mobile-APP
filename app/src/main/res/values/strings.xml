@@ -10,4 +10,11 @@
         <p><b><i>Graduate-style academic advising </i> allows students to map a territory for study and practice that goes beyond the bounds of a traditional major and hones their ability to thrive in a world without givens, to tolerate ambiguity, and to find solutions even when a path is not laid out before them. </b></p>
         <p> Bennington is the only college in the country to require an annual internship since its founding. For two months every winter, students work with an organization or institution of their choosing, anywhere in the world, to apply what they have learned on campus and to focus what they study and make at Bennington—engaging the field that interests them without waiting for graduation</p>
     </string>
+
+    <string name="healthCenterIntro">
+        <p>Located in the Student Health Center, Health Services is open Monday through Friday during the spring and fall academic terms.</p>
+        <p>The health services provide direct emergency care, routine physical exams, laboratory testing and also provides health education.</p>
+        <p>Appointments can be scheduled through phone call on 802-440-4426 (or via on campus extension: x4426) and in-person visits</p>
+        <p>Visit on the college website </p>
+    </string>
 </resources>
