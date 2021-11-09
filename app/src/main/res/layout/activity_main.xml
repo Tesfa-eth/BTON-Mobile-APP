@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity"
     android:padding="80dp"
-    android:background="@drawable/bennington_background">
+    android:background="#945F4F">
 
     <Button
         android:layout_width="match_parent"
