@@ -29,11 +29,20 @@
         android:layout_below="@id/btnicon"
         />
 
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/pagetitle"
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
     <androidx.cardview.widget.CardView
         android:id="@+id/information"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/pagetitle"
         app:cardBackgroundColor="#ffffff"
         style="@style/CardView.Light">
 
@@ -96,14 +105,13 @@
 
     </androidx.cardview.widget.CardView>
 
-
     <androidx.cardview.widget.CardView
         android:id="@+id/location"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:cardBackgroundColor="#ffffff"
         style="@style/CardView.Light"
-        android:layout_below="@id/information"
+        android:layout_below="@+id/information"
         android:layout_marginTop="40dp">
 
         <LinearLayout
@@ -118,6 +126,8 @@
         </LinearLayout>
 
     </androidx.cardview.widget.CardView>
+
+
 
         <androidx.cardview.widget.CardView
             android:id="@+id/example"
@@ -140,5 +150,7 @@
             </RelativeLayout>
 
         </androidx.cardview.widget.CardView>
+    </RelativeLayout>
+    </ScrollView>
 
 </RelativeLayout>
