@@ -15,6 +15,47 @@
         android:textSize="40dp"
         />
 
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/campusGallery"
+        android:id="@+id/scrollView"
+        >
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+            <ImageView
+                android:layout_width="400dp"
+                android:layout_height="200dp"
+                android:id="@+id/image1"
+                android:layout_marginTop="20dp"
+                android:src="@drawable/bennington_background" />
+            <ImageView
+                android:layout_width="400dp"
+                android:layout_height="200dp"
+                android:layout_marginTop="15dp"
+                android:layout_below="@+id/image1"
+                android:id="@+id/image2"
+                android:src="@drawable/bennington_background" />
+            <ImageView
+                android:layout_width="400dp"
+                android:layout_height="200dp"
+                android:layout_marginTop="15dp"
+                android:layout_below="@+id/image2"
+                android:id="@+id/image3"
+                android:src="@drawable/bennington_background" />
+            <ImageView
+                android:layout_width="400dp"
+                android:layout_height="200dp"
+                android:layout_marginTop="15dp"
+                android:layout_below="@+id/image3"
+                android:id="@+id/image4"
+                android:src="@drawable/bennington_background" />
+        </RelativeLayout>
+    </ScrollView>
+
 
 
 
