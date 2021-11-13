@@ -4,49 +4,67 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".CampusGallery">
+    tools:context=".CampusGallery"
+    android:background="#945F4F">
 
+    <!--main title, background image would be nice-->
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
         android:id="@+id/campusGallery"
         android:text="Campus Gallery"
+        android:textAlignment="center"
         android:layout_centerHorizontal="true"
-        android:textSize="40dp"
-        android:background="#CC8999"
+        android:textSize="60dp"
+        android:textColor="#ffffff"
         />
+
+    <!--min, max button for general view-->
     <Button
-        android:layout_width="wrap_content"
+        android:layout_width="40dp"
         android:layout_height="wrap_content"
-        android:text="Minimize"
+        android:background="@drawable/ic_baseline_keyboard_arrow_down_24"
         android:layout_marginTop="10dp"
         android:layout_below="@+id/campusGallery"
         android:layout_alignRight="@+id/generalView"
         android:id="@+id/minimize"
-        android:layout_marginLeft="300dp"
+        android:layout_marginRight="10dp"
         />
 
     <TextView
+        android:id="@+id/generalView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="General Campus View"
-        android:textSize="35dp"
-        android:layout_marginTop="10dp"
         android:layout_below="@+id/campusGallery"
-        android:id="@+id/generalView"
+        android:layout_marginTop="10dp"
         android:background="#8E9AA5"
-        />
+        android:text="General View"
+        android:textSize="35dp" />
+
+    <!--Scrollview containing all scrollable contents-->
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/generalView"
         android:id="@+id/scrollView"
-        android:background="#945F4F"
         >
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            >
+        <!--General view cardView-->
+        <androidx.cardview.widget.CardView
             android:id="@+id/exampleImages"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            >
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/exampleImages1"
+            android:background="#945F4F"
             >
 
             <ImageView
@@ -77,6 +95,10 @@
                 android:id="@+id/image4"
                 android:src="@drawable/bennington_background" />
         </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+        </RelativeLayout>
+        <!--General view cardView-->
     </ScrollView>
 
 
