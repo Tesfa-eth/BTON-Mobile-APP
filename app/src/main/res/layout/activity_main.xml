@@ -5,28 +5,37 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity"
-    android:padding="80dp"
+    android:padding="40dp"
     android:background="#945F4F">
+
+    <ImageView
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:id="@+id/btnicon"
+        android:layout_centerHorizontal="true"
+        android:src="@mipmap/bennicon"
+        />
 
     <Button
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="80dp"
         android:text="Get Started"
-        android:layout_centerInParent="true"
-        android:layout_below="@id/txtHello"
+        android:layout_centerInParent="false"
+        android:layout_below="@+id/txtHello"
         android:id="@+id/getStarted"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="60dp"
         />
 
     <TextView
         android:id="@+id/txtHello"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:text="Welcome to Bennington College Mobile app"
+        android:layout_marginTop="50dp"
+        android:text="Welcome to BENNINGTON COLLEGE Mobile app"
+        android:layout_below="@+id/btnicon"
         android:textAlignment="center"
         android:textColor="#ffffff"
-        android:layout_centerInParent="true"
         android:textSize="30dp"/>
 
 

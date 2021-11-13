@@ -10,10 +10,10 @@
 
 
     <ImageView
-        android:layout_width="150dp"
-        android:layout_height="150dp"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
         android:id="@+id/btnicon"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="5dp"
         android:layout_centerHorizontal="true"
         android:src="@mipmap/bennicon"/>
 
@@ -150,7 +150,75 @@
             </RelativeLayout>
 
         </androidx.cardview.widget.CardView>
-    </RelativeLayout>
+            <androidx.cardview.widget.CardView
+                android:id="@+id/information2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardBackgroundColor="#ffffff"
+                android:layout_below="@+id/example"
+                android:layout_marginTop="10dp"
+                style="@style/CardView.Light">
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    >
+
+
+                    <ImageView
+                        android:id="@+id/informationImage2"
+                        android:layout_width="match_parent"
+                        android:layout_height="180dp"
+                        android:layout_marginTop="10dp"
+                        android:src="@drawable/bennington_background" />
+
+                    <TextView
+                        android:id="@+id/generalInformation2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="General Information"
+                        android:textColor="@color/black"
+                        android:textSize="25dp"
+                        android:layout_below="@+id/informationImage2"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginLeft="30dp"
+                        />
+
+                    <Button
+                        android:id="@+id/downarrow2"
+                        android:layout_width="40dp"
+                        android:layout_height="50dp"
+                        android:layout_below="@+id/informationImage2"
+                        android:layout_alignRight="@+id/generalInformation2"
+                        android:layout_marginRight="40dp"
+                        android:layout_marginTop="-5dp"
+                        android:background="@drawable/ic_baseline_keyboard_arrow_down_24" />
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/expandableView2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone"
+                        android:layout_below="@+id/generalInformation2"
+                        >
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="@string/healthCenterIntro"
+                            android:textColor="#000000"
+                            android:justificationMode="inter_word"
+                            android:layout_marginHorizontal="45dp"
+                            />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+
+        </RelativeLayout>
     </ScrollView>
 
 </RelativeLayout>

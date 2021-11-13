@@ -15,35 +15,45 @@
         android:textSize="40dp"
         android:background="#CC8999"
         />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Minimize"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/campusGallery"
+        android:layout_alignRight="@+id/generalView"
+        android:id="@+id/minimize"
+        android:layout_marginLeft="300dp"
+        />
 
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="General Campus View"
+        android:textSize="35dp"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/campusGallery"
+        android:id="@+id/generalView"
+        android:background="#8E9AA5"
+        />
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/campusGallery"
+        android:layout_below="@+id/generalView"
         android:id="@+id/scrollView"
         android:background="#945F4F"
         >
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:id="@+id/exampleImages"
             >
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="General Campus View"
-                android:textSize="35dp"
-                android:layout_marginTop="10dp"
-                android:id="@+id/generalView"
-                android:background="#8E9AA5"
-                />
 
             <ImageView
                 android:layout_width="400dp"
                 android:layout_height="200dp"
                 android:id="@+id/image1"
                 android:layout_marginTop="20dp"
-                android:layout_below="@+id/generalView"
                 android:src="@drawable/bennington_background" />
             <ImageView
                 android:layout_width="400dp"
