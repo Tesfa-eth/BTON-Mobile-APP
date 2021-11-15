@@ -5,59 +5,60 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".CampusGallery"
+    android:padding="15dp"
     android:background="#945F4F">
 
     <!--main title, background image would be nice-->
     <TextView
+        android:id="@+id/campusGallery"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
         android:layout_marginTop="20dp"
-        android:id="@+id/campusGallery"
         android:text="Campus Gallery"
         android:textAlignment="center"
-        android:layout_centerHorizontal="true"
-        android:textSize="60dp"
         android:textColor="#ffffff"
-        />
+        android:textSize="60dp" />
 
-    <!--min, max button for general view-->
-    <Button
-        android:layout_width="40dp"
-        android:layout_height="wrap_content"
-        android:background="@drawable/ic_baseline_keyboard_arrow_down_24"
-        android:layout_marginTop="10dp"
-        android:layout_below="@+id/campusGallery"
-        android:layout_alignRight="@+id/generalView"
-        android:id="@+id/minimize"
-        android:layout_marginRight="10dp"
-        />
 
-    <TextView
-        android:id="@+id/generalView"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/campusGallery"
-        android:layout_marginTop="10dp"
-        android:background="#8E9AA5"
-        android:text="General View"
-        android:textSize="35dp" />
 
     <!--Scrollview containing all scrollable contents-->
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/generalView"
+        android:layout_below="@+id/campusGallery"
         android:id="@+id/scrollView"
         >
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             >
+
+            <!--min, max button for general view-->
+            <Button
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ic_baseline_keyboard_arrow_down_24"
+                android:layout_marginTop="10dp"
+                android:layout_alignRight="@+id/generalView"
+                android:id="@+id/minimize"
+                android:layout_marginRight="10dp"
+                />
+
+            <TextView
+                android:id="@+id/generalView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="#8E9AA5"
+                android:text="General View"
+                android:textSize="35dp" />
         <!--General view cardView-->
         <androidx.cardview.widget.CardView
             android:id="@+id/exampleImages"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_below="@+id/generalView"
             android:visibility="gone"
             >
         <RelativeLayout
@@ -97,6 +98,97 @@
         </RelativeLayout>
 
         </androidx.cardview.widget.CardView>
+            <!--Second card view-->
+
+            <TextView
+                android:id="@+id/vapaCardViewText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/generalView"
+                android:layout_marginTop="10dp"
+                android:background="#8E9AA5"
+                android:text="VAPA"
+                android:textSize="40dp" />
+
+            <Button
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/buttonDown"
+                android:layout_below="@id/generalView"
+                android:layout_alignRight="@+id/vapaCardViewText"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/ic_baseline_keyboard_arrow_down_24" />
+            <androidx.cardview.widget.CardView
+                android:id="@+id/vapaCardView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_below="@id/vapaCardViewText"
+                android:visibility="gone"
+                >
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#945F4F"
+                    >
+
+                    <!--add a drop down button here-->
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/minimize2"
+                        >
+                    <ImageView
+                        android:layout_width="400dp"
+                        android:layout_height="200dp"
+                        android:layout_marginTop="15dp"
+                        android:id="@+id/newImage1"
+                        android:src="@drawable/bennington_background" />
+
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+
+            </androidx.cardview.widget.CardView>
+
+            <!--Third card view-->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/capaCardView"
+                android:text="CAPA"
+                android:textSize="40dp"
+                android:layout_marginTop="10dp"
+                android:background="#8E9AA5"
+                android:layout_below="@+id/vapaCardView"
+                />
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_below="@+id/capaCardView"
+                >
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#945F4F"
+                    >
+
+                    <ImageView
+                        android:layout_width="400dp"
+                        android:layout_height="200dp"
+                        android:src="@drawable/bennington_background" />
+                </RelativeLayout>
+
+
+            </androidx.cardview.widget.CardView>
+
+
+
         </RelativeLayout>
         <!--General view cardView-->
     </ScrollView>
