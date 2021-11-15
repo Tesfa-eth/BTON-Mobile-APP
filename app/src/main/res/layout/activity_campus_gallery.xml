@@ -33,78 +33,10 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             >
-
-            <!--min, max button for general view-->
-            <Button
-                android:layout_width="40dp"
-                android:layout_height="wrap_content"
-                android:background="@drawable/ic_baseline_keyboard_arrow_down_24"
-                android:layout_marginTop="10dp"
-                android:layout_alignRight="@+id/generalView"
-                android:id="@+id/minimize"
-                android:layout_marginRight="10dp"
-                />
-
-            <TextView
-                android:id="@+id/generalView"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:background="#8E9AA5"
-                android:text="General View"
-                android:textSize="35dp" />
-        <!--General view cardView-->
-        <androidx.cardview.widget.CardView
-            android:id="@+id/exampleImages"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/generalView"
-            android:visibility="gone"
-            >
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/exampleImages1"
-            android:background="#945F4F"
-            >
-
-            <ImageView
-                android:layout_width="400dp"
-                android:layout_height="200dp"
-                android:id="@+id/image1"
-                android:layout_marginTop="20dp"
-                android:src="@drawable/bennington_background" />
-            <ImageView
-                android:layout_width="400dp"
-                android:layout_height="200dp"
-                android:layout_marginTop="15dp"
-                android:layout_below="@+id/image1"
-                android:id="@+id/image2"
-                android:src="@drawable/bennington_background" />
-            <ImageView
-                android:layout_width="400dp"
-                android:layout_height="200dp"
-                android:layout_marginTop="15dp"
-                android:layout_below="@+id/image2"
-                android:id="@+id/image3"
-                android:src="@drawable/bennington_background" />
-            <ImageView
-                android:layout_width="400dp"
-                android:layout_height="200dp"
-                android:layout_marginTop="15dp"
-                android:layout_below="@+id/image3"
-                android:id="@+id/image4"
-                android:src="@drawable/bennington_background" />
-        </RelativeLayout>
-
-        </androidx.cardview.widget.CardView>
-            <!--Second card view-->
-
             <TextView
                 android:id="@+id/vapaCardViewText"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/generalView"
                 android:layout_marginTop="10dp"
                 android:background="#8E9AA5"
                 android:text="VAPA"
@@ -114,7 +46,6 @@
                 android:layout_width="40dp"
                 android:layout_height="wrap_content"
                 android:id="@+id/buttonDown"
-                android:layout_below="@id/generalView"
                 android:layout_alignRight="@+id/vapaCardViewText"
                 android:layout_marginTop="15dp"
                 android:layout_marginRight="10dp"
@@ -147,6 +78,22 @@
                         android:id="@+id/newImage1"
                         android:src="@drawable/bennington_background" />
 
+                        <ImageView
+                            android:layout_width="400dp"
+                            android:layout_height="200dp"
+                            android:layout_marginTop="15dp"
+                            android:id="@+id/newImage2"
+                            android:layout_below="@+id/newImage1"
+                            android:src="@drawable/bennington_background" />
+
+                        <ImageView
+                            android:layout_width="400dp"
+                            android:layout_height="200dp"
+                            android:layout_marginTop="15dp"
+                            android:id="@+id/newImage3"
+                            android:layout_below="@id/newImage2"
+                            android:src="@drawable/bennington_background" />
+
                     </RelativeLayout>
 
                 </RelativeLayout>
@@ -158,29 +105,49 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/capaCardView"
+                android:id="@+id/capaCardViewText"
                 android:text="CAPA"
                 android:textSize="40dp"
                 android:layout_marginTop="10dp"
                 android:background="#8E9AA5"
                 android:layout_below="@+id/vapaCardView"
                 />
+
+            <Button
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/buttonDownCapa"
+                android:layout_below="@id/vapaCardView"
+                android:layout_alignRight="@+id/capaCardViewText"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/ic_baseline_keyboard_arrow_down_24" />
+
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
-                android:layout_below="@+id/capaCardView"
+                android:id="@+id/capaCardView"
+                android:layout_below="@+id/capaCardViewText"
                 >
 
                 <RelativeLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:background="#945F4F"
+                    android:id="@+id/expandableView11"
                     >
 
                     <ImageView
                         android:layout_width="400dp"
                         android:layout_height="200dp"
+                        android:id="@+id/newestImage1"
+                        android:src="@drawable/bennington_background" />
+                    <ImageView
+                        android:layout_width="400dp"
+                        android:layout_height="200dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_below="@+id/newestImage1"
                         android:src="@drawable/bennington_background" />
                 </RelativeLayout>
 

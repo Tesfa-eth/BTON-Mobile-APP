@@ -20,8 +20,8 @@ public class CampusGallery extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_campus_gallery);
 
-        minimize = findViewById(R.id.minimize);
-        toMinimize = findViewById(R.id.exampleImages);
+        minimize = findViewById(R.id.buttonDownCapa);
+        toMinimize = findViewById(R.id.capaCardView);
 
         minimize2 = findViewById(R.id.buttonDown);
         toMinimize2 = findViewById(R.id.vapaCardView);
