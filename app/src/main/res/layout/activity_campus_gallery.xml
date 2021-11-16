@@ -5,20 +5,20 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".CampusGallery"
-    android:padding="15dp"
     android:background="#945F4F">
 
     <!--main title, background image would be nice-->
     <TextView
         android:id="@+id/campusGallery"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="750dp"
+        android:layout_height="150dp"
+        android:background="@drawable/bennington_background"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="20dp"
         android:text="Campus Gallery"
         android:textAlignment="center"
         android:textColor="#ffffff"
-        android:textSize="60dp" />
+        android:textSize="60dp"
+        android:padding="0dp"/>
 
 
 
@@ -28,6 +28,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/campusGallery"
         android:id="@+id/scrollView"
+        android:padding="10dp"
         >
         <RelativeLayout
             android:layout_width="match_parent"
