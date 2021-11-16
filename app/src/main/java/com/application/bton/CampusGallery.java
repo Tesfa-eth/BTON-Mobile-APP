@@ -12,48 +12,73 @@ import android.widget.Button;
 
 public class CampusGallery extends AppCompatActivity {
 
-    Button minimize, minimize2;
-    CardView toMinimize, toMinimize2;
+    //declaring variables
+    Button btnBarn, btnGeneral, btnCommons;
+    CardView barnCardView, generalCardView, commonsCardView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_campus_gallery);
 
-        minimize = findViewById(R.id.buttonDownCapa);
-        toMinimize = findViewById(R.id.capaCardView);
+        //respective buttons to cardViews
+        btnBarn = findViewById(R.id.btnBarn);
+        btnGeneral = findViewById(R.id.btnGeneral);
+        btnCommons = findViewById(R.id.btnCommons);
 
-        minimize2 = findViewById(R.id.buttonDown);
-        toMinimize2 = findViewById(R.id.vapaCardView);
+        //cardViews
+        generalCardView = findViewById(R.id.generalCardView);
+        barnCardView = findViewById(R.id.barnCardView);
+        commonsCardView = findViewById(R.id.commonsCardView);
 
-        minimize.setOnClickListener(new View.OnClickListener() {
+        //Campus view on click listener
+        btnBarn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(toMinimize.getVisibility() == View.GONE){
-                    TransitionManager.beginDelayedTransition(toMinimize, new AutoTransition());
-                    toMinimize.setVisibility(View.VISIBLE);
-                    minimize.setBackgroundResource(R.drawable.ic_baseline_keyboard_arrow_up_24);
+                if(barnCardView.getVisibility() == View.GONE){
+                    TransitionManager.beginDelayedTransition(barnCardView, new AutoTransition());
+                    barnCardView.setVisibility(View.VISIBLE);
+                    btnBarn.setBackgroundResource(R.drawable.ic_baseline_keyboard_arrow_up_24);
                 }
                 else{
-                    toMinimize.setVisibility(View.GONE);
-                    minimize.setBackgroundResource(R.drawable.ic_baseline_keyboard_arrow_down_24);
+                    barnCardView.setVisibility(View.GONE);
+                    btnBarn.setBackgroundResource(R.drawable.ic_baseline_keyboard_arrow_down_24);
                 }
             }
         });
 
-        minimize2.setOnClickListener(new View.OnClickListener() {
+        //Barn view on click listener
+        btnGeneral.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(toMinimize2.getVisibility() == View.GONE){
-                    TransitionManager.beginDelayedTransition(toMinimize2, new AutoTransition());
-                    toMinimize2.setVisibility(View.VISIBLE);
-                    minimize2.setBackgroundResource(R.drawable.ic_baseline_keyboard_arrow_up_24);
+                if(generalCardView.getVisibility() == View.GONE){
+                    TransitionManager.beginDelayedTransition(generalCardView, new AutoTransition());
+                    generalCardView.setVisibility(View.VISIBLE);
+                    btnGeneral.setBackgroundResource(R.drawable.ic_baseline_keyboard_arrow_up_24);
                 }
                 else{
-                    toMinimize2.setVisibility(View.GONE);
-                    minimize2.setBackgroundResource(R.drawable.ic_baseline_keyboard_arrow_down_24);
+                    generalCardView.setVisibility(View.GONE);
+                    btnGeneral.setBackgroundResource(R.drawable.ic_baseline_keyboard_arrow_down_24);
                 }
             }
         });
+
+        //commons on click listener
+        btnCommons.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(commonsCardView.getVisibility() == View.GONE){
+                    TransitionManager.beginDelayedTransition(commonsCardView, new AutoTransition());
+                    commonsCardView.setVisibility(View.VISIBLE);
+                    btnCommons.setBackgroundResource(R.drawable.ic_baseline_keyboard_arrow_up_24);
+                }
+                else{
+                    commonsCardView.setVisibility(View.GONE);
+                    btnCommons.setBackgroundResource(R.drawable.ic_baseline_keyboard_arrow_down_24);
+                }
+            }
+        });
+
+
     }
 }

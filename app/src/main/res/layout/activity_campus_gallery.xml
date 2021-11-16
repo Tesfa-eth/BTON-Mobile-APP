@@ -30,61 +30,59 @@
         android:id="@+id/scrollView"
         android:padding="10dp"
         >
+        <!--Relative lay out containing everything under scrollView view-->
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             >
+            <!--Text and button for the first CardView-->
             <TextView
-                android:id="@+id/vapaCardViewText"
+                android:id="@+id/generalCardViewText"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:background="#8E9AA5"
-                android:text="VAPA"
+                android:text="Campus View"
                 android:textSize="40dp" />
 
             <Button
                 android:layout_width="40dp"
                 android:layout_height="wrap_content"
-                android:id="@+id/buttonDown"
-                android:layout_alignRight="@+id/vapaCardViewText"
+                android:id="@+id/btnGeneral"
+                android:layout_alignRight="@+id/generalCardViewText"
                 android:layout_marginTop="15dp"
                 android:layout_marginRight="10dp"
                 android:background="@drawable/ic_baseline_keyboard_arrow_down_24" />
+
+            <!--First CardView (General, Campus View) starts here-->
             <androidx.cardview.widget.CardView
-                android:id="@+id/vapaCardView"
+                android:id="@+id/generalCardView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
-                android:layout_below="@id/vapaCardViewText"
+                android:layout_below="@id/generalCardViewText"
                 android:visibility="gone"
                 >
-
+                <!--Relative layout containing elements (images) under CardView-->
                 <RelativeLayout
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:id="@+id/generalImages"
                     android:background="#945F4F"
-                    >
-
-                    <!--add a drop down button here-->
-                    <RelativeLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/minimize2"
                         >
                     <ImageView
                         android:layout_width="400dp"
                         android:layout_height="200dp"
                         android:layout_marginTop="15dp"
-                        android:id="@+id/newImage1"
+                        android:id="@+id/genImage1"
                         android:src="@drawable/bennington_background" />
 
                         <ImageView
                             android:layout_width="400dp"
                             android:layout_height="200dp"
                             android:layout_marginTop="15dp"
-                            android:id="@+id/newImage2"
-                            android:layout_below="@+id/newImage1"
+                            android:id="@+id/genImage2"
+                            android:layout_below="@+id/genImage1"
                             android:src="@drawable/bennington_background" />
 
                         <ImageView
@@ -92,44 +90,43 @@
                             android:layout_height="200dp"
                             android:layout_marginTop="15dp"
                             android:id="@+id/newImage3"
-                            android:layout_below="@id/newImage2"
+                            android:layout_below="@id/genImage2"
                             android:src="@drawable/bennington_background" />
 
-                    </RelativeLayout>
-
                 </RelativeLayout>
-
-
             </androidx.cardview.widget.CardView>
 
-            <!--Third card view-->
+
+            <!--Text and Button for the second (BARN) CardView-->
             <TextView
+                android:id="@+id/barnCardViewText"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/capaCardViewText"
-                android:text="CAPA"
-                android:textSize="40dp"
+                android:layout_below="@+id/generalCardView"
                 android:layout_marginTop="10dp"
                 android:background="#8E9AA5"
-                android:layout_below="@+id/vapaCardView"
-                />
+                android:text="Barn"
+                android:textSize="40dp" />
 
             <Button
                 android:layout_width="40dp"
                 android:layout_height="wrap_content"
-                android:id="@+id/buttonDownCapa"
-                android:layout_below="@id/vapaCardView"
-                android:layout_alignRight="@+id/capaCardViewText"
+                android:id="@+id/btnBarn"
+                android:layout_below="@id/generalCardView"
+                android:layout_alignRight="@+id/barnCardViewText"
                 android:layout_marginTop="15dp"
                 android:layout_marginRight="10dp"
                 android:background="@drawable/ic_baseline_keyboard_arrow_down_24" />
 
+
+            <!--Second CardView (Barn)-->
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
-                android:id="@+id/capaCardView"
-                android:layout_below="@+id/capaCardViewText"
+                android:id="@+id/barnCardView"
+                android:layout_below="@+id/barnCardViewText"
+                android:visibility="gone"
                 >
 
                 <RelativeLayout
@@ -142,13 +139,71 @@
                     <ImageView
                         android:layout_width="400dp"
                         android:layout_height="200dp"
-                        android:id="@+id/newestImage1"
+                        android:id="@+id/barnImage1"
                         android:src="@drawable/bennington_background" />
                     <ImageView
                         android:layout_width="400dp"
                         android:layout_height="200dp"
                         android:layout_marginTop="10dp"
-                        android:layout_below="@+id/newestImage1"
+                        android:id="@+id/barnImage2"
+                        android:layout_below="@+id/barnImage1"
+                        android:src="@drawable/bennington_background" />
+                </RelativeLayout>
+
+
+            </androidx.cardview.widget.CardView>
+
+            <!--Third CardView Commons Goes here-->
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/commonsCardViewText"
+                android:text="Commons"
+                android:textSize="40dp"
+                android:layout_marginTop="10dp"
+                android:background="#8E9AA5"
+                android:layout_below="@+id/barnCardView"
+                />
+
+            <Button
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/btnCommons"
+                android:layout_below="@id/barnCardView"
+                android:layout_alignRight="@+id/commonsCardViewText"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/ic_baseline_keyboard_arrow_down_24" />
+
+            <!--Third CardView (Commons)-->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:id="@+id/commonsCardView"
+                android:layout_below="@+id/commonsCardViewText"
+                android:visibility="gone"
+                >
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#945F4F"
+                    android:id="@+id/commonsRelativeLayaout"
+                    >
+
+                    <ImageView
+                        android:layout_width="400dp"
+                        android:layout_height="200dp"
+                        android:id="@+id/commonsImage1"
+                        android:src="@drawable/bennington_background" />
+                    <ImageView
+                        android:layout_width="400dp"
+                        android:layout_height="200dp"
+                        android:layout_marginTop="10dp"
+                        android:id="@+id/commonsImage2"
+                        android:layout_below="@+id/commonsImage1"
                         android:src="@drawable/bennington_background" />
                 </RelativeLayout>
 
