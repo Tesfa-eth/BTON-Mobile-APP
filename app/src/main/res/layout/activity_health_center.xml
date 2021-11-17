@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".HealthCenter"
-    android:background="#945F4F"
+    android:background="#64b445"
     android:padding="15dp">
 
 
@@ -15,7 +15,7 @@
         android:id="@+id/btnicon"
         android:layout_marginTop="5dp"
         android:layout_centerHorizontal="true"
-        android:src="@mipmap/bennicon"/>
+        android:src="@mipmap/benniconblue"/>
 
     <TextView
         android:layout_width="match_parent"
@@ -29,16 +29,20 @@
         android:layout_below="@id/btnicon"
         />
 
+    <!--Scrollview containing all the scorallble content-->
     <ScrollView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/pagetitle"
+        android:layout_marginTop="15dp"
         >
 
+        <!--relative layout for everything under scrollable view-->
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             >
+            <!--first card view (General Information)-->
     <androidx.cardview.widget.CardView
         android:id="@+id/information"
         android:layout_width="match_parent"
@@ -46,7 +50,7 @@
         app:cardBackgroundColor="#ffffff"
         style="@style/CardView.Light">
 
-
+        <!--containing everything under card view-->
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -64,16 +68,15 @@
                 android:id="@+id/generalInformation"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_below="@+id/informationImage"
+                android:layout_marginLeft="30dp"
+                android:layout_marginBottom="5dp"
                 android:text="General Information"
                 android:textColor="@color/black"
-                android:textSize="25dp"
-                android:layout_below="@+id/informationImage"
-                android:layout_marginBottom="5dp"
-                android:layout_marginLeft="30dp"
-                />
+                android:textSize="25dp" />
 
             <Button
-                android:id="@+id/downarrow"
+                android:id="@+id/btnInformation"
                 android:layout_width="40dp"
                 android:layout_height="50dp"
                 android:layout_below="@+id/informationImage"
@@ -82,8 +85,9 @@
                 android:layout_marginRight="40dp"
                 android:background="@drawable/ic_baseline_keyboard_arrow_down_24" />
 
+            <!--Expandable Contents (information)-->
             <androidx.constraintlayout.widget.ConstraintLayout
-                android:id="@+id/expandableView"
+                android:id="@+id/expInformation"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:visibility="gone"
@@ -105,25 +109,71 @@
 
     </androidx.cardview.widget.CardView>
 
+            <!--second card view (Schedule appointment)-->
     <androidx.cardview.widget.CardView
-        android:id="@+id/location"
+        android:id="@+id/scheduleaptm"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:cardBackgroundColor="#ffffff"
         style="@style/CardView.Light"
         android:layout_below="@+id/information"
-        android:layout_marginTop="40dp">
+        android:layout_marginTop="20dp">
 
-        <LinearLayout
+        <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
+            <ImageView
+                android:id="@+id/scheduleAptmImage"
+                android:layout_width="match_parent"
+                android:layout_height="180dp"
+                android:layout_marginTop="10dp"
+                android:src="@drawable/bennington_background" />
+
             <TextView
+                android:id="@+id/scheduleAptmText"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/benEduBody"
-                />
-        </LinearLayout>
+                android:layout_below="@+id/scheduleAptmImage"
+                android:layout_marginLeft="30dp"
+                android:layout_marginBottom="5dp"
+                android:text="Schedule Appointment"
+                android:textColor="@color/black"
+                android:textSize="23dp" />
+
+            <Button
+                android:id="@+id/btnscheduleAptm"
+                android:layout_width="40dp"
+                android:layout_height="50dp"
+                android:layout_below="@+id/scheduleAptmImage"
+                android:layout_alignRight="@+id/scheduleAptmText"
+                android:layout_marginRight="30dp"
+                android:layout_marginTop="-5dp"
+                android:background="@drawable/ic_baseline_keyboard_arrow_down_24" />
+
+            <!--Expandable Contents (schedule appointment)-->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/expScheduleAptm"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="visible"
+                android:layout_below="@+id/scheduleAptmText"
+                >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="@string/healthCenterIntro"
+                    android:textColor="#000000"
+                    android:justificationMode="inter_word"
+                    android:layout_marginHorizontal="45dp"
+                    android:visibility="gone"
+                    />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </RelativeLayout>
 
     </androidx.cardview.widget.CardView>
 
@@ -135,8 +185,8 @@
             android:layout_height="wrap_content"
             app:cardBackgroundColor="#ffffff"
             style="@style/CardView.Light"
-            android:layout_below="@+id/location"
-            android:layout_marginTop="40dp">
+            android:layout_below="@+id/scheduleaptm"
+            android:layout_marginTop="20dp">
 
             <RelativeLayout
                 android:layout_width="match_parent"
