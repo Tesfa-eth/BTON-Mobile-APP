@@ -15,9 +15,9 @@ import java.util.ArrayList;
 
 public class HealthCenter extends AppCompatActivity {
 
-    ConstraintLayout expinformation, expScheduleApt;
-    Button btnInformation, btnscheduleAptm;
-    CardView information, scheduleaptm;
+    ConstraintLayout expinformation, expScheduleApt, expLocation;
+    Button btnInformation, btnscheduleAptm, btnlocation;
+    CardView information, scheduleaptm, location;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,6 +33,11 @@ public class HealthCenter extends AppCompatActivity {
         expScheduleApt = findViewById(R.id.expScheduleAptm);
         btnscheduleAptm = findViewById(R.id.btnscheduleAptm);
         scheduleaptm = findViewById(R.id.scheduleaptm);
+
+        //location
+        expLocation = findViewById(R.id.expLocation);
+        btnlocation = findViewById(R.id.btnlocation);
+        location = findViewById(R.id.location);
 
 
         btnInformation.setOnClickListener(new View.OnClickListener() {
@@ -73,5 +78,28 @@ public class HealthCenter extends AppCompatActivity {
             }
         });
 
+        //location
+        //expLocation = findViewById(R.id.expLocation);
+        //btnlocation = findViewById(R.id.btnlocation);
+        //location = findViewById(R.id.location);
+
+        btnlocation.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (expLocation.getVisibility() == View.GONE){
+                    TransitionManager.beginDelayedTransition(location, new AutoTransition());
+                    //TransitionManager.beginDelayedTransition(information, new AutoTransition()); may be get the next cardView id?
+                    expLocation.setVisibility(View.VISIBLE);
+                    btnlocation.setBackgroundResource(R.drawable.ic_baseline_keyboard_arrow_up_24);
+                }
+                else{
+                    //this code is commented in order to avoid overlapping
+                    //TransitionManager.beginDelayedTransition(information, new AutoTransition());
+                    // TransitionManager.beginDelayedTransition(scheduleaptm, new AutoTransition()); new view?
+                    expLocation.setVisibility(View.GONE);
+                    btnlocation.setBackgroundResource(R.drawable.ic_baseline_keyboard_arrow_down_24);
+                }
+            }
+        });
     }
 }

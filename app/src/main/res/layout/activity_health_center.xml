@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".HealthCenter"
-    android:background="#64b445"
+    android:background="#945F4F"
     android:padding="15dp">
 
 
@@ -15,7 +15,7 @@
         android:id="@+id/btnicon"
         android:layout_marginTop="5dp"
         android:layout_centerHorizontal="true"
-        android:src="@mipmap/benniconblue"/>
+        android:src="@mipmap/bennicon"/>
 
     <TextView
         android:layout_width="match_parent"
@@ -147,8 +147,8 @@
                 android:layout_height="50dp"
                 android:layout_below="@+id/scheduleAptmImage"
                 android:layout_alignRight="@+id/scheduleAptmText"
-                android:layout_marginRight="30dp"
                 android:layout_marginTop="-5dp"
+                android:layout_marginRight="30dp"
                 android:background="@drawable/ic_baseline_keyboard_arrow_down_24" />
 
             <!--Expandable Contents (schedule appointment)-->
@@ -156,8 +156,8 @@
                 android:id="@+id/expScheduleAptm"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:visibility="visible"
                 android:layout_below="@+id/scheduleAptmText"
+                android:visibility="gone"
                 >
 
                 <TextView
@@ -167,7 +167,6 @@
                     android:textColor="#000000"
                     android:justificationMode="inter_word"
                     android:layout_marginHorizontal="45dp"
-                    android:visibility="gone"
                     />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
@@ -178,35 +177,13 @@
     </androidx.cardview.widget.CardView>
 
 
-
-        <androidx.cardview.widget.CardView
-            android:id="@+id/example"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:cardBackgroundColor="#ffffff"
-            style="@style/CardView.Light"
-            android:layout_below="@+id/scheduleaptm"
-            android:layout_marginTop="20dp">
-
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="@string/benEduBody"
-                    />
-            </RelativeLayout>
-
-        </androidx.cardview.widget.CardView>
             <androidx.cardview.widget.CardView
-                android:id="@+id/information2"
+                android:id="@+id/location"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:cardBackgroundColor="#ffffff"
-                android:layout_below="@+id/example"
-                android:layout_marginTop="10dp"
+                android:layout_below="@+id/scheduleaptm"
+                android:layout_marginTop="20dp"
                 style="@style/CardView.Light">
 
 
@@ -217,7 +194,7 @@
 
 
                     <ImageView
-                        android:id="@+id/informationImage2"
+                        android:id="@+id/locationImage"
                         android:layout_width="match_parent"
                         android:layout_height="180dp"
                         android:layout_marginTop="10dp"
@@ -227,26 +204,26 @@
                         android:id="@+id/generalInformation2"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="General Information"
+                        android:text="Location"
                         android:textColor="@color/black"
                         android:textSize="25dp"
-                        android:layout_below="@+id/informationImage2"
+                        android:layout_below="@+id/locationImage"
                         android:layout_marginBottom="5dp"
                         android:layout_marginLeft="30dp"
                         />
 
                     <Button
-                        android:id="@+id/downarrow2"
+                        android:id="@+id/btnlocation"
                         android:layout_width="40dp"
                         android:layout_height="50dp"
-                        android:layout_below="@+id/informationImage2"
+                        android:layout_below="@+id/locationImage"
                         android:layout_alignRight="@+id/generalInformation2"
                         android:layout_marginRight="40dp"
                         android:layout_marginTop="-5dp"
                         android:background="@drawable/ic_baseline_keyboard_arrow_down_24" />
 
                     <androidx.constraintlayout.widget.ConstraintLayout
-                        android:id="@+id/expandableView2"
+                        android:id="@+id/expLocation"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:visibility="gone"

@@ -64,14 +64,15 @@
                 android:layout_below="@+id/aboutBody"/>
 
             <TextView
+                android:id="@+id/benEduBody"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textSize="20dp"
-                android:id="@+id/benEduBody"
                 android:layout_below="@+id/benEdu"
-                android:textColor="#216056"
+                android:layout_marginBottom="40dp"
                 android:justificationMode="inter_word"
-                android:layout_marginBottom="40dp"                android:text="@string/benEduBody"/>
+                android:text="@string/benEduBody"
+                android:textColor="#216056"
+                android:textSize="20dp" />
 
 
         </RelativeLayout>

@@ -52,12 +52,12 @@
         android:layout_marginTop="5dp"/>
 
     <ImageView
+        android:id="@+id/btnicon"
         android:layout_width="150dp"
         android:layout_height="150dp"
-        android:id="@+id/btnicon"
-        android:layout_marginTop="10dp"
         android:layout_centerHorizontal="true"
-        android:src="@mipmap/bennicon"/>
+        android:layout_marginTop="10dp"
+        android:src="@mipmap/bennicon" />
 
 
 </RelativeLayout>
