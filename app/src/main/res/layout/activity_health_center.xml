@@ -176,7 +176,7 @@
 
     </androidx.cardview.widget.CardView>
 
-
+        <!--location card view-->
             <androidx.cardview.widget.CardView
                 android:id="@+id/location"
                 android:layout_width="match_parent"
@@ -229,8 +229,8 @@
                         android:visibility="gone"
                         android:layout_below="@+id/generalInformation2"
                         >
-
                         <TextView
+                            android:id="@+id/explocationText"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:text="@string/healthCenterIntro"
@@ -239,11 +239,99 @@
                             android:layout_marginHorizontal="45dp"
                             />
 
+                        <Button
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/toMapHealthCenter"
+                            app:layout_constraintBaseline_toBottomOf="@+id/explocationText"
+                            android:text="Walk me there"
+                            android:textColor="#0000FF"
+                            android:background="#0000ffff"
+                            />
+
                     </androidx.constraintlayout.widget.ConstraintLayout>
 
                 </RelativeLayout>
 
             </androidx.cardview.widget.CardView>
+
+            <!--Contact card view-->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/scheduleaptm1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardBackgroundColor="#ffffff"
+                style="@style/CardView.Light"
+                android:layout_below="@+id/location"
+                android:layout_marginTop="20dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/scheduleAptmImage1"
+                        android:layout_width="match_parent"
+                        android:layout_height="180dp"
+                        android:layout_marginTop="10dp"
+                        android:src="@drawable/bennington_background" />
+
+                    <TextView
+                        android:id="@+id/scheduleAptmText1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/scheduleAptmImage1"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginBottom="5dp"
+                        android:text="Contact"
+                        android:textColor="@color/black"
+                        android:textSize="23dp" />
+
+                    <Button
+                        android:id="@+id/btnscheduleAptm1"
+                        android:layout_width="40dp"
+                        android:layout_height="50dp"
+                        android:layout_below="@+id/scheduleAptmImage1"
+                        android:layout_alignRight="@+id/scheduleAptmText1"
+                        android:layout_marginTop="-5dp"
+                        android:layout_marginRight="30dp"
+                        android:background="@drawable/ic_baseline_keyboard_arrow_down_24" />
+
+                    <!--Expandable Contents (schedule appointment)-->
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/expScheduleAptm1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/scheduleAptmText1"
+                        android:visibility="visible"
+                        >
+
+                        <TextView
+                            android:id="@+id/contactDescription"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="@string/healthCenterIntro"
+                            android:textColor="#000000"
+                            android:justificationMode="inter_word"
+                            android:layout_marginHorizontal="45dp"
+                            />
+                        <Button
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/toContactHealthCenter"
+                            app:layout_constraintBaseline_toBottomOf="@+id/contactDescription"
+                            android:text="Contact Health Center"
+                            android:textColor="#0000FF"
+                            android:background="#0000ffff"
+                            />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+
 
         </RelativeLayout>
     </ScrollView>

@@ -4,19 +4,21 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
 import androidx.constraintlayout.widget.ConstraintLayout;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.transition.AutoTransition;
 import android.transition.TransitionManager;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ExpandableListView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 
 public class HealthCenter extends AppCompatActivity {
 
     ConstraintLayout expinformation, expScheduleApt, expLocation;
-    Button btnInformation, btnscheduleAptm, btnlocation;
+    Button btnInformation, btnscheduleAptm, btnlocation, toHealthCenter, toContactHCenter;
     CardView information, scheduleaptm, location;
 
     @Override
@@ -99,6 +101,27 @@ public class HealthCenter extends AppCompatActivity {
                     expLocation.setVisibility(View.GONE);
                     btnlocation.setBackgroundResource(R.drawable.ic_baseline_keyboard_arrow_down_24);
                 }
+            }
+        });
+
+        // to health center map button clicked
+        toHealthCenter = findViewById(R.id.toMapHealthCenter);
+        toHealthCenter.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //Toast.makeText(this, "Safe Journey!", Toast.LENGTH_SHORT).show();
+                Intent intentToMain = new Intent(HealthCenter.this, MapHealthCenter.class);
+                startActivity(intentToMain);
+            }
+        });
+
+        // to contact button clicked
+        toContactHCenter = findViewById(R.id.toContactHealthCenter);
+        toContactHCenter.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intentToMain = new Intent(HealthCenter.this, ContactHealthCenter.class);
+                startActivity(intentToMain);
             }
         });
     }
