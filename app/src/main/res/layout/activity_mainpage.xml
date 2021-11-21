@@ -22,10 +22,9 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/btnicon"
         android:layout_marginTop="50dp"
-        android:text="Campus Gallery"
-        android:textColor="#ffffff"
         android:background="@drawable/mainbuttoncolor"
-        />
+        android:text="Campus Gallery"
+        android:textColor="#ffffff" />
 
     <Button
         android:id="@+id/btnDirectory"

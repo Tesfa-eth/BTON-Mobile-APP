@@ -15,7 +15,7 @@ public class Register extends AppCompatActivity implements View.OnClickListener{
         switch (v.getId()){
             case  R.id.btnRegister:
                 Toast.makeText(this, "Welcome back", Toast.LENGTH_SHORT).show();
-                Intent intentToMain = new Intent(Register.this, Mainpage.class);
+                Intent intentToMain = new Intent(Register.this, Homepage.class);
                 startActivity(intentToMain);
                 break;
             default:
