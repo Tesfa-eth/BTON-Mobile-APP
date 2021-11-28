@@ -32,10 +32,9 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/btnGallery"
         android:layout_marginTop="10dp"
-        android:text="Directory"
-        android:textColor="#ffffff"
         android:background="@drawable/mainbuttoncolor"
-        />
+        android:text="Directory"
+        android:textColor="#ffffff" />
 
     <Button
         android:id="@+id/btnHeathCenter"
@@ -54,10 +53,9 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/btnHeathCenter"
         android:layout_marginTop="10dp"
-        android:text="General Announcements"
-        android:textColor="#ffffff"
         android:background="@drawable/mainbuttoncolor"
-        />
+        android:text="General Announcements"
+        android:textColor="#ffffff" />
 
     <Button
         android:id="@+id/btnAboutBTN"

@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/primary"
+    tools:context=".CampusDirectory">
+<ScrollView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    >
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+    <!--First Horizontal ScrollView test-->
+        <HorizontalScrollView
+            android:id="@id/horizontalV3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            >
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                >
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#ffffff"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="20dp"
+                android:id="@+id/card1"
+                >
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    >
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/img_circle"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:src="@drawable/bennington_background"
+                        android:padding="10dp"
+                        android:layout_centerHorizontal="true"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/img_circle"
+                        android:text="Name: someone is here \n assistant director \n phone number \n email"
+                        />
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#ffffff"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="20dp"
+                android:layout_toRightOf="@+id/card1"
+                android:layout_marginLeft="10dp"
+                >
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    >
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/img_circle1"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:src="@drawable/bennington_background"
+                        android:padding="10dp"
+                        android:layout_centerHorizontal="true"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/img_circle1"
+                        android:text="Name: someone is here \n assistant director \n phone number \n email" />
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#ffffff"
+                    app:cardCornerRadius="20dp"
+                    app:cardElevation="20dp"
+                    android:layout_toRightOf="@+id/card2"
+                    android:layout_marginLeft="10dp"
+                    >
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        >
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:id="@+id/img_circle2"
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:src="@drawable/bennington_background"
+                            android:padding="10dp"
+                            />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/img_circle2"
+                            android:text="Name: someone is here \n assistant director \n phone number \n email"
+                            />
+                    </RelativeLayout>
+
+                </androidx.cardview.widget.CardView>
+
+
+            </RelativeLayout>
+        </HorizontalScrollView>
+
+        <ImageView
+            android:id="@+id/big_1"
+            android:layout_width="200dp"
+            android:layout_height="800dp"
+            android:src="@drawable/bennington_background"
+            android:layout_below="@+id/horizontalV3"
+            />
+
+    </RelativeLayout>
+</ScrollView>
+</RelativeLayout>

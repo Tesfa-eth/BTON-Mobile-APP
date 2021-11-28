@@ -8,61 +8,143 @@
     android:padding="10dp"
     tools:context=".Homepage">
 
-    <ImageView
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:id="@+id/btnicon"
-        android:layout_marginTop="10dp"
-        android:layout_centerHorizontal="true"
-        android:src="@mipmap/bennicon"/>
+    <!--main scroll view containing the whole page-->
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/btnicon"
         >
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             >
-
             <ImageView
-                android:id="@+id/img1"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:id="@+id/btnicon"
+                android:layout_marginTop="10dp"
+                android:layout_centerHorizontal="true"
+                android:src="@mipmap/bennicon"/>
+
+            <!--Gallery veiw-->
+            <ImageView
+                android:id="@+id/imgGallery"
                 android:layout_width="match_parent"
                 android:layout_height="250dp"
-                android:layout_marginTop="20dp"
+                android:layout_marginTop= "20dp"
                 android:outlineAmbientShadowColor="@color/white"
                 android:outlineSpotShadowColor="@color/white"
+                android:layout_below="@id/btnicon"
                 android:src="@drawable/bennington_background" />
 
             <Button
                 android:id="@+id/btnGallery"
-                android:layout_width="210dp"
-                android:layout_height="match_parent"
+                android:layout_width="300dp"
+                android:layout_height="100dp"
+                android:layout_below="@+id/btnicon"
                 android:layout_centerHorizontal="true"
-                android:layout_marginTop="125dp"
+                android:layout_marginTop="100dp"
+                android:background="@drawable/homepage_btn_apply"
                 android:text="Campus Gallery"
+                android:textAlignment="center"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="40dp" />
+
+            <!--General Announcements-->
+            <ImageView
+                android:id="@+id/imgAnnouncements"
+                android:layout_width="wrap_content"
+                android:layout_height="250dp"
+                android:src="@drawable/bennington_background"
+                android:layout_below="@+id/imgGallery"
+                android:layout_marginTop="5dp"
+            />
+            <Button
+                android:id="@+id/btnAnnouncement"
+                android:layout_below="@+id/imgGallery"
+                android:layout_width="300dp"
+                android:layout_height="100dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="95dp"
+                android:text="General Announcements"
                 android:textAllCaps="false"
                 android:textAlignment="center"
-                android:background="@drawable/homepage_custom_btn"
-                android:textColor="@color/primary"
+                android:background="@drawable/homepage_btn_apply"
+                android:textColor="@color/white"
                 android:textSize="25dp" />
 
-        <ImageView
-            android:id="@+id/img2"
-            android:layout_width="wrap_content"
-            android:layout_height="250dp"
-            android:src="@drawable/bennington_background"
-            android:layout_below="@+id/img1"
-            android:layout_marginTop="10dp"
+            <!--Health Center-->
+            <ImageView
+                android:id="@+id/imgHealthCenter"
+                android:layout_width="wrap_content"
+                android:layout_height="250dp"
+                android:src="@drawable/bennington_background"
+                android:layout_below="@+id/imgAnnouncements"
+                android:layout_marginTop="10dp"
             />
 
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="250dp"
-            android:src="@drawable/bennington_background"
-            android:layout_below="@+id/img2"
-            android:layout_marginTop="10dp"
-            />
+            <Button
+                android:id="@+id/btnHeathCenter"
+                android:layout_below="@+id/imgAnnouncements"
+                android:layout_width="300dp"
+                android:layout_height="100dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="95dp"
+                android:text="Health Center"
+                android:textAllCaps="false"
+                android:textAlignment="center"
+                android:background="@drawable/homepage_btn_apply"
+                android:textColor="@color/white"
+                android:textSize="25dp" />
+
+            <!--Campus Directory-->
+            <ImageView
+                android:id="@+id/imgCampusDirectory"
+                android:layout_width="wrap_content"
+                android:layout_height="250dp"
+                android:src="@drawable/bennington_background"
+                android:layout_below="@+id/imgHealthCenter"
+                android:layout_marginTop="10dp"
+                />
+
+            <Button
+                android:id="@+id/btnDirectory"
+                android:layout_width="300dp"
+                android:layout_height="100dp"
+                android:layout_below="@+id/imgHealthCenter"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="95dp"
+                android:background="@drawable/homepage_btn_apply"
+                android:text="Campus Directory"
+                android:textAlignment="center"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="25dp" />
+
+            <!--About Bennington-->
+            <ImageView
+                android:id="@+id/imgAboutBTN"
+                android:layout_width="wrap_content"
+                android:layout_height="250dp"
+                android:src="@drawable/bennington_background"
+                android:layout_below="@+id/imgCampusDirectory"
+                android:layout_marginTop="10dp"
+                />
+
+            <Button
+                android:id="@+id/btnAboutBTN"
+                android:layout_below="@+id/imgCampusDirectory"
+                android:layout_width="300dp"
+                android:layout_height="100dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="95dp"
+                android:text="About Bennington"
+                android:textAllCaps="false"
+                android:textAlignment="center"
+                android:background="@drawable/homepage_btn_apply"
+                android:textColor="@color/white"
+                android:textSize="25dp" />
+
 
 
         </RelativeLayout>
