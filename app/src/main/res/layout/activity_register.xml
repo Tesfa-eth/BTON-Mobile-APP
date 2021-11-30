@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity"
-    android:padding="50dp"
+    android:padding="30dp"
     android:background="#945F4F">
 
     <EditText
@@ -13,11 +13,13 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/btnicon"
-        android:minHeight="48dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/custom_input"
+        android:drawableStart="@drawable/ic_person"
+        android:drawablePadding="10dp"
         android:hint="Last name"
         android:inputType="text"
-        android:background="#ffffff"
-        android:layout_marginTop="30dp"/>
+        android:minHeight="48dp" />
 
     <EditText
         android:id="@+id/edtFirstName"
@@ -25,9 +27,11 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/edtLastName"
         android:layout_centerInParent="true"
-        android:hint="First name"
         android:layout_marginTop="10dp"
-        android:background="#ffffff"
+        android:background="@drawable/custom_input"
+        android:hint="First name"
+        android:drawableStart="@drawable/ic_person"
+        android:drawablePadding="10dp"
         android:inputType="text"
         android:minHeight="48dp" />
 
@@ -35,43 +39,127 @@
         android:id="@+id/edtEmail"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        android:minHeight="48dp"
-        android:layout_marginTop="10dp"
-        android:hint="Bennington email"
         android:layout_below="@id/edtFirstName"
-        android:inputType="textEmailAddress"/>
+        android:layout_centerInParent="true"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/custom_input"
+        android:drawableStart="@drawable/ic_email"
+        android:drawablePadding="10dp"
+        android:hint="Bennington email"
+        android:inputType="textEmailAddress"
+        android:minHeight="48dp" />
 
     <EditText
         android:id="@+id/edtBirthDate"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        android:minHeight="48dp"
-        android:hint="Birthdate"
         android:layout_below="@id/edtEmail"
-        android:inputType="date"/>
+        android:layout_centerInParent="true"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/custom_input"
+        android:hint="Birthdate"
+        android:drawableStart="@drawable/ic_date"
+        android:drawablePadding="10dp"
+        android:inputType="date"
+        android:minHeight="48dp" />
 
 
     <EditText
         android:id="@+id/edtnewPassword"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_below="@+id/edtBirthDate"
         android:layout_centerInParent="true"
-        android:minHeight="48dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/custom_input"
+        android:drawableStart="@drawable/ic_lock"
+        android:drawablePadding="10dp"
         android:hint="new password"
         android:inputType="textPassword"
-        android:layout_below="@+id/edtBirthDate"/>
+        android:minHeight="48dp" />
 
+    <RadioGroup
+        android:id="@+id/radioChooseYear1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@+id/edtnewPassword">
+
+        <RadioButton
+            android:id="@+id/radioFirstYear"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:buttonTint="@android:color/black"
+            android:checked="true"
+            android:text="Freshman" />
+
+        <RadioButton
+            android:id="@+id/radioSecondYear"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/radioFirstYear"
+            android:buttonTint="@android:color/black"
+            android:layout_marginLeft="10dp"
+            android:checked="true"
+            android:text="Sophomore" />
+
+        <RadioButton
+            android:id="@+id/radioThirdYear"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Junior"
+            android:layout_marginLeft="10dp"
+            android:buttonTint="@android:color/black"
+            android:layout_below="@+id/radioFirstYear"/>
+    </RadioGroup>
+
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/radioChooseYear2"
+        android:orientation="horizontal"
+        android:layout_below="@+id/radioChooseYear1">
+        <RadioButton
+            android:id="@+id/radioFourthYear"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Senior"
+            android:buttonTint="@android:color/black"
+            android:layout_toRightOf="@+id/radioFirstYear"
+            android:layout_below="@+id/radioSecondYear"/>
+
+        <RadioButton
+            android:id="@+id/radioFaculty"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Faculty"
+            android:buttonTint="@android:color/black"
+            android:layout_toRightOf="@+id/radioSecondYear"
+            android:layout_marginLeft="32dp" />
+        <RadioButton
+            android:id="@+id/radioOther"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Other"
+            android:buttonTint="@android:color/black"
+            android:layout_toRightOf="@+id/radioSecondYear"
+            android:layout_marginLeft="39dp"
+            android:layout_below="@+id/radioFaculty"/>
+
+
+    </RadioGroup>
 
     <Button
+        android:id="@+id/btnRegister"
         android:layout_width="match_parent"
         android:layout_height="70dp"
-        android:text="Register"
+        android:layout_below="@+id/radioChooseYear2"
         android:layout_centerInParent="true"
-        android:id="@+id/btnRegister"
-        android:layout_below="@+id/edtnewPassword"
-        android:layout_marginTop="10dp"/>
+        android:layout_marginTop="10dp"
+        android:background="@drawable/contact_hc_button_apply"
+        android:drawableBottom="@drawable/ic_person_add"
+        android:text="Register"
+        android:textSize="20dp" />
 
 
     <ImageView

@@ -12,34 +12,32 @@
         android:id="@+id/contactHCtitle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Contact the Health Center"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="10dp"
-        android:textSize="35dp"
-        android:textColor="@color/white"
+        android:text="Contact the Health Center"
         android:textAlignment="center"
-        />
+        android:textColor="@color/white"
+        android:textSize="35dp" />
 
     <TextView
+        android:id="@+id/contactHCmailto"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/contactHCmailto"
         android:layout_below="@+id/contactHCtitle"
         android:layout_marginTop="20dp"
-        android:text="mail to:   stesfatsionmulugeta@gmail.com"
-        android:textSize="18dp"
+        android:background="@drawable/custom_input"
+        android:text=" mail to:   stesfatsionmulugeta@gmail.com "
         android:textColor="@color/black"
-        android:background="@color/white"
-        />
+        android:textSize="18dp" />
+
     <EditText
+        android:id="@+id/contactHCsubject"
         android:layout_width="match_parent"
         android:layout_height="30dp"
-        android:id="@+id/contactHCsubject"
         android:layout_below="@+id/contactHCmailto"
         android:layout_marginTop="20dp"
-        android:background="@color/white"
-        android:hint="subject"
-        />
+        android:background="@drawable/custom_input"
+        android:hint="subject" />
 
     <EditText
         android:layout_width="match_parent"
@@ -48,7 +46,7 @@
         android:layout_below="@+id/contactHCsubject"
         android:layout_marginTop="20dp"
         android:hint="main body goes here"
-        android:background="@color/white"
+        android:background="@drawable/custom_input"
         />
 
     <Button
@@ -56,7 +54,7 @@
         android:layout_height="wrap_content"
         android:id="@+id/btnSendEmail"
         android:layout_below="@+id/contactHCbody"
-        android:background="@color/white"
+        android:background="@drawable/contact_hc_button_apply"
         android:layout_marginTop="20dp"
         android:text="send"
         />

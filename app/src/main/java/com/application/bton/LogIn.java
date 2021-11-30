@@ -15,7 +15,7 @@ public class LogIn extends AppCompatActivity implements View.OnClickListener {
         switch (v.getId()){
             case  R.id.btnsign_in:
                 Toast.makeText(this, "Welcome back", Toast.LENGTH_SHORT).show();
-                Intent intentToMain = new Intent(LogIn.this, Mainpage.class);
+                Intent intentToMain = new Intent(LogIn.this, Homepage.class);
                 startActivity(intentToMain);
                 break;
             case R.id.btnToRegister:

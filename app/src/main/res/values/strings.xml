@@ -11,10 +11,93 @@
         <p> Bennington is the only college in the country to require an annual internship since its founding. For two months every winter, students work with an organization or institution of their choosing, anywhere in the world, to apply what they have learned on campus and to focus what they study and make at Bennington—engaging the field that interests them without waiting for graduation</p>
     </string>
 
+    <!--Health Center-->
     <string name="healthCenterIntro">
         <p>Located in the Student Health Center, Health Services is open Monday through Friday during the spring and fall academic terms. \n\n </p>
         <p>The health services provide direct emergency care, routine physical exams, laboratory testing and also provides health education.</p>
         <p>Appointments can be scheduled through phone call on 802-440-4426 (or via on campus extension: x4426) and in-person visits</p>
-        <p>Visit college website</p>
     </string>
+
+    <string name="healthCenterLocation">
+        <b>Location: </b> at Student Health Center (between the EAC and the Meyer Rec Barn) \n
+        <b> Hours:</b> M-F during spring and fall terms \n
+        <b> Appointments:</b> 802-440-4426
+    </string>
+    <string name="pychologicalServices">
+        <b>Location: </b> Student Health Center \n
+        <b> Hours:</b> M-F during spring and fall terms \n
+        <b> Appointments:</b> 802-440-4426
+    </string>
+    <!--Campus directory-->
+    <!--president's office-->
+    <string name="lauraWaker">President Laura Waker \n <br>College President \n </br> <br>Barn 101 \n </br> <br>president@bennington.edu \n</br> <br>802-440-4302</br> </string>
+    <string name="pageBartels"> <br>Senior Advisor to the President \n </br> <br>Barn 101 \n </br>pbartels@bennington.edu \n <br>802-440-4482</br></string>
+    <string name="shannon"><br>Shannon Howlett \n </br><br>Executive Assistant \n </br><br>Barn 101 \n </br><br>shannonhowlett@bennington.edu \n </br><br>802-440-4302 \n </br></string>
+    <string name="elio"><br>Elio Jahaj 18 \n </br><br>Student Success Assessment - \n Coordinator \n </br><br>Barn 101 \n </br><br>elioj@bennington.edu \n </br><br>802-440-4552</br></string>
+    <string name="meredith"><br>Meredith McCoy \n </br><br>Associate Vice President, - \n Institutional Initiatives \n </br><br>Barn 101 \n </br><br>meredithmccoy@bennington.edu \n </br><br>802-440-4337</br></string>
+    <string name="charlie"><br>Charlie Nadler \n </br><br>Director, Office of the President \n and Assistant Secretary to \n the Board of Trustees \n </br><br>Barn 101 \n </br><br>charlienadler@bennington.edu \n </br><br>802-440-4307</br></string>
+
+    <!--Admissions office-->
+    <string name="tony"><br>Tony Cabasco \n </br><br>Vise President for \n Enrollment Cricket Hill \n Counselor of WA \n </br><br>tonycabasco@bennington.edu \n </br><br>802-440-4312 \n </br></string>
+    <string name="wesley"><br>Wesley Haaf \n </br><br>Admissions Counselor \n Off-Campus Counselor \n  </br><br> wesleyhaaf@bennington.edu \n </br> <br>802-440-4738 </br></string>
+    <string name="eliz"><br>Elizabeth Hackett \n </br><br>Str. Assistant DirectorOf - \n Admissions, Cricket Hill \n  </br><br> hackett@bennington.edu \n </br> <br>802-440-4677 </br></string>
+    <string name="fabian"><br>Fabian Miemietz \n </br><br>Admissions Counselor \n Off Campus \n </br><br> abianjosefmiemietz@ benni - \n ngton.edu \n </br> <br>802-440-4313 </br></string>
+    <string name="cristina"><br>Cristina Perez - \n Ayala Cano \n </br><br>Assistant Director of \n Admissions \n Cricket Hill \n </br><br> ristinaperezayala@bennington.edu \n </br> <br>802-440-4312 </br></string>
+    <string name="whitney"><br>Whitney Rundell \n </br><br>Associate Director of \n Admissions \n Cricket Hill \n </br><br> witneyrundell@bennington.edu \n </br> <br>802-430-9838 </br></string>
+
+    <!--IT-->
+    <string name="jude"><br>Jude Higdon, Ed.D \n </br><br>Director of Technology \n Dickinson 225 \n </br><br> judehigdon@bennington.edu \n </br> <br>802-440-4485 </br></string>
+    <string name="chris"><br>Chris Adams \n </br><br>Associate Director of \n Technology \n Dickinson 225 \n </br><br> chrisadams@bennington.edu \n </br> <br>802-440-4489 </br></string>
+    <string name="joshua"><br>Joshua Wyoski \n </br><br> Systems administrator \n Dickinson 225 \n </br><br> jwysocki@bennington.edu \n </br> <br>802-440-4478 </br></string>
+    <string name="matt"><br>Matt Vozzella \n </br><br> Media and Classroom Techn- \n ology Coordinator \n Dickinson 225 \n </br><br> mattvozzella@bennington.edu \n </br> <br>802-440-4475 </br></string>
+    <string name="eric"><br>Eric Dingfelder \n </br><br> Senior Software and Data \n Engineer \n </br><br> edingfelder@bennington.edu \n </br> 000-000-0000</string>
+
+
+
+    <!--General announcment (dynamic)-->
+    <!--Nov 30, 2021-->
+    <string name="nov30_2021"><b>Message from:</b> Kate Child, Associate  Dean for Academic  \n <b>Subject: </b>New Travel Ban in effect</string>
+    <string name="nov_30_2021_body1">Good morning,\n
+        Like me you may have been keeping up with the news of an Executive Order signed by U.S. President Biden
+        that prohibit travelers who were physically present within the Republic of Botswana, the Kingdom of Eswatini,
+        the Kingdom of Lesotho, the Republic of Malawi, the Republic of Mozambique, the Republic of Namibia, the Republic
+        of South Africa, and the Republic of Zimbabwe during the 14-day period preceding their entry or attempted entry into
+        the United States. \n
+        It is not yet clear to me at this time if there will be a national interest exception for students traveling on F1 visas,
+        but I *hope* to have more information about that shortly.  \n
+
+        I have written to our contacts at Senator Leahy Office to ask if they have more information. We will be watching
+        the news and updates to the Executive Order carefully. We will send email updates as we have more information. And,
+        we will continue to advocate for international students and press our elected officials, as needed. \n
+
+        If you have not already applied to stay on campus for winter break and FWT and wish to do so due to concerns regarding
+        safety or ability to reenter the US, you can email iss@bennington.edu and/or Christine Winget directly. It is the Colleges
+        priority for international students to remain on campus this winter if they choose to do so.
+
+    </string>
+
+    <!--Nov 26, 2021-->
+    <string name="nov26_2021"><b>Message from:</b> COVID Taskforce  \n <b>Subject: </b>Covid Update</string>
+
+    <string name="nov_26_2021_body1">
+        Dear Bennington Community, \n
+
+        I wanted to share that we have a new student case, which was identified through surveillance testing earlier this week. \n
+
+        The student is isolating and contact tracing is complete. The College is working closely with the student and the Vermont
+        Department of Health. If anyone is identified as a close contact, they will receive instructions from me. \n
+
+        Christine Winget, Dr. Randy Anselmo, and I have been in touch with the House to answer any questions. \n
+
+        Per CDC guidelines, anyone who is fully vaccinated is not required to quarantine and is permitted to continue daily activities
+        on campus including attending class and entering the dining hall. Close contacts will be tested 5-7 days after exposure. \n
+
+        Everyone should be tested every week. Please continue to wear a mask, including in common spaces in houses; wash your hands; and
+        please report symptoms if you have them. \n
+
+        Please let me know if you have any questions.
+
+    </string>
+
+
 </resources>

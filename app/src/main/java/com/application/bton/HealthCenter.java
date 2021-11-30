@@ -33,13 +33,13 @@ public class HealthCenter extends AppCompatActivity {
 
         //schedule appointment
         expScheduleApt = findViewById(R.id.expScheduleAptm);
-        btnscheduleAptm = findViewById(R.id.btnscheduleAptm);
-        scheduleaptm = findViewById(R.id.scheduleaptm);
+        btnscheduleAptm = findViewById(R.id.btnhealthServices);
+        scheduleaptm = findViewById(R.id.card_healthServices);
 
         //location
         expLocation = findViewById(R.id.expLocation);
         btnlocation = findViewById(R.id.btnlocation);
-        location = findViewById(R.id.location);
+        location = findViewById(R.id.pyschServices);
 
 
         btnInformation.setOnClickListener(new View.OnClickListener() {
@@ -105,7 +105,7 @@ public class HealthCenter extends AppCompatActivity {
         });
 
         // to health center map button clicked
-        toHealthCenter = findViewById(R.id.toMapHealthCenter);
+        /*toHealthCenter = findViewById(R.id.toMapHealthCenter);
         toHealthCenter.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -113,7 +113,7 @@ public class HealthCenter extends AppCompatActivity {
                 Intent intentToMain = new Intent(HealthCenter.this, MapHealthCenter.class);
                 startActivity(intentToMain);
             }
-        });
+        });*/
 
         // to contact button clicked
         toContactHCenter = findViewById(R.id.toContactHealthCenter);

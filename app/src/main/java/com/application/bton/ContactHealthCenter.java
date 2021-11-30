@@ -30,7 +30,7 @@ public class ContactHealthCenter extends AppCompatActivity {
                 Intent intent = new Intent(Intent.ACTION_VIEW,
                         Uri.parse("mailto:stesfatsionmulugeta@gmail.com"));
                 intent.putExtra(Intent.EXTRA_SUBJECT, contactHCsubject.getText().toString());
-                intent.putExtra(Intent.EXTRA_SUBJECT, contactHCbody.getText().toString());
+                intent.putExtra(Intent.EXTRA_TEXT, contactHCbody.getText().toString());
                 startActivity(intent);
             }
         });

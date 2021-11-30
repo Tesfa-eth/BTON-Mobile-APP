@@ -4,55 +4,40 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/primary"
     tools:context=".AboutBTONCollege">
-    <ImageView
-        android:layout_width="450dp"
-        android:layout_height="450dp"
-        android:id="@+id/btnicon"
-        android:layout_centerInParent="true"
-        android:layout_centerHorizontal="true"
-        android:src="@mipmap/bennicon"/>
 
     <TextView
         android:id="@+id/BTNtitle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Bennington College"
-        android:textSize="45dp"
         android:layout_centerHorizontal="true"
+        android:background="@color/primary_light"
+        android:text="About Bennington College"
+        android:textColor="@color/white"
         android:textAlignment="center"
-        android:background="@drawable/color"
-        />
+        android:textSize="45dp" />
 
     <ScrollView
         android:id="@+id/mainscrollview"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:layout_below="@+id/BTNtitle"
-        android:padding="10dp">
+        android:layout_below="@+id/BTNtitle">
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
             <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/about"
-                android:text="About"
-                android:textSize="30dp"
-                />
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textSize="20dp"
                 android:id="@+id/aboutBody"
-                android:layout_below="@+id/about"
-                android:textColor="#368578"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:justificationMode="inter_word"
+                android:padding="10dp"
                 android:shadowColor="#000000"
                 android:shadowRadius="50"
-                android:justificationMode="inter_word"
-                android:text="@string/about_bennington"/>
+                android:text="@string/about_bennington"
+                android:textColor="@color/white"
+                android:textSize="20dp" />
 
             <TextView
                 android:layout_width="match_parent"
@@ -60,6 +45,8 @@
                 android:id="@+id/benEdu"
                 android:text="A Bennington Education"
                 android:textSize="30dp"
+                android:textColor="@color/white"
+                android:background="@color/primary_light"
                 android:layout_marginTop="10dp"
                 android:layout_below="@+id/aboutBody"/>
 
@@ -68,10 +55,12 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/benEdu"
-                android:layout_marginBottom="40dp"
+                android:layout_marginBottom="50dp"
+                android:shadowColor="#000000"
+                android:shadowRadius="50"
                 android:justificationMode="inter_word"
                 android:text="@string/benEduBody"
-                android:textColor="#216056"
+                android:textColor="@color/white"
                 android:textSize="20dp" />
 
 
@@ -86,7 +75,7 @@
         android:text=" Visit Official Website"
         android:textSize="20dp"
         android:layout_centerHorizontal="true"
-        android:background="@drawable/color"
+        android:background="@color/primary_light"
         android:layout_alignParentBottom="true"
 
         />

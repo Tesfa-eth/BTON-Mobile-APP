@@ -21,17 +21,21 @@ public class Homepage extends AppCompatActivity implements View.OnClickListener 
                 Intent intent_dir = new Intent(Homepage.this, CampusDirectory.class);
                 startActivity(intent_dir);
                 break;
-
-            /**case  R.id.btnAboutBTN:
-                Intent aboutBtn_intent = new Intent(Mainpage.this, AboutBTONCollege.class);
+            case  R.id.btnAboutBTN:
+                Intent aboutBtn_intent = new Intent(Homepage.this, AboutBTONCollege.class);
                 startActivity(aboutBtn_intent);
                 break;
             case  R.id.btnHeathCenter:
-                Intent healthCenter_intent = new Intent(Mainpage.this, HealthCenter.class);
+                Intent healthCenter_intent = new Intent(Homepage.this, HealthCenter.class);
                 startActivity(healthCenter_intent);
                 break;
+
+            case R.id.btnAnnouncement:
+                Intent announcement_intent = new Intent(Homepage.this, GeneralAnnouncement.class);
+                startActivity(announcement_intent);
+                break;
             default:
-                break;*/
+                break;
         }
     }
     @Override
@@ -45,10 +49,13 @@ public class Homepage extends AppCompatActivity implements View.OnClickListener 
         Button btnDirectory = findViewById(R.id.btnDirectory);
         btnDirectory.setOnClickListener(this);
 
-        //Button btnAboutBTN = findViewById(R.id.btnAboutBTN);
-        //btnAboutBTN.setOnClickListener(this);
+        Button btnAboutBTN = findViewById(R.id.btnAboutBTN);
+        btnAboutBTN.setOnClickListener(this);
 
-        //Button btnHealthCenter = findViewById(R.id.btnHeathCenter);
-        //btnHealthCenter.setOnClickListener(this);
+        Button btnHealthCenter = findViewById(R.id.btnHeathCenter);
+        btnHealthCenter.setOnClickListener(this);
+
+        Button btnAnnouncement = findViewById(R.id.btnAnnouncement);
+        btnAnnouncement.setOnClickListener(this);
     }
 }

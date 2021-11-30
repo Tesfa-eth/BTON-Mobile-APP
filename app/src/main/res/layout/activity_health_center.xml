@@ -47,7 +47,7 @@
         android:id="@+id/information"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:cardBackgroundColor="#ffffff"
+        app:cardBackgroundColor="@color/primary_light"
         style="@style/CardView.Light">
 
         <!--containing everything under card view-->
@@ -101,6 +101,7 @@
                     android:textColor="#000000"
                     android:justificationMode="inter_word"
                     android:layout_marginHorizontal="45dp"
+                    android:paddingBottom="10dp"
                     />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
@@ -109,12 +110,12 @@
 
     </androidx.cardview.widget.CardView>
 
-            <!--second card view (Schedule appointment)-->
+    <!--second card view (Health Services)-->
     <androidx.cardview.widget.CardView
-        android:id="@+id/scheduleaptm"
+        android:id="@+id/card_healthServices"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:cardBackgroundColor="#ffffff"
+        app:cardBackgroundColor="@color/primary_light"
         style="@style/CardView.Light"
         android:layout_below="@+id/information"
         android:layout_marginTop="20dp">
@@ -124,29 +125,29 @@
             android:layout_height="match_parent">
 
             <ImageView
-                android:id="@+id/scheduleAptmImage"
+                android:id="@+id/healthServicesImage"
                 android:layout_width="match_parent"
                 android:layout_height="180dp"
                 android:layout_marginTop="10dp"
                 android:src="@drawable/bennington_background" />
 
             <TextView
-                android:id="@+id/scheduleAptmText"
+                android:id="@+id/healthServicesText"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/scheduleAptmImage"
+                android:layout_below="@+id/healthServicesImage"
                 android:layout_marginLeft="30dp"
                 android:layout_marginBottom="5dp"
-                android:text="Schedule Appointment"
+                android:text="Health Services"
                 android:textColor="@color/black"
                 android:textSize="23dp" />
 
             <Button
-                android:id="@+id/btnscheduleAptm"
+                android:id="@+id/btnhealthServices"
                 android:layout_width="40dp"
                 android:layout_height="50dp"
-                android:layout_below="@+id/scheduleAptmImage"
-                android:layout_alignRight="@+id/scheduleAptmText"
+                android:layout_below="@+id/healthServicesImage"
+                android:layout_alignRight="@+id/healthServicesText"
                 android:layout_marginTop="-5dp"
                 android:layout_marginRight="30dp"
                 android:background="@drawable/ic_baseline_keyboard_arrow_down_24" />
@@ -156,17 +157,19 @@
                 android:id="@+id/expScheduleAptm"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/scheduleAptmText"
+                android:layout_below="@+id/healthServicesText"
                 android:visibility="gone"
                 >
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:text="@string/healthCenterIntro"
+                    android:text="@string/healthCenterLocation"
                     android:textColor="#000000"
                     android:justificationMode="inter_word"
-                    android:layout_marginHorizontal="45dp"
+                    android:layout_marginHorizontal="30dp"
+                    android:paddingRight="35dp"
+                    android:paddingBottom="25dp"
                     />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
@@ -176,13 +179,13 @@
 
     </androidx.cardview.widget.CardView>
 
-        <!--location card view-->
+        <!--pyschServices card view-->
             <androidx.cardview.widget.CardView
-                android:id="@+id/location"
+                android:id="@+id/pyschServices"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                app:cardBackgroundColor="#ffffff"
-                android:layout_below="@+id/scheduleaptm"
+                app:cardBackgroundColor="@color/primary_light"
+                android:layout_below="@+id/card_healthServices"
                 android:layout_marginTop="20dp"
                 style="@style/CardView.Light">
 
@@ -194,20 +197,20 @@
 
 
                     <ImageView
-                        android:id="@+id/locationImage"
+                        android:id="@+id/pyschServicesImage"
                         android:layout_width="match_parent"
                         android:layout_height="180dp"
                         android:layout_marginTop="10dp"
                         android:src="@drawable/bennington_background" />
 
                     <TextView
-                        android:id="@+id/generalInformation2"
+                        android:id="@+id/txtpyschServices"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Location"
+                        android:text="Psychological Services"
                         android:textColor="@color/black"
-                        android:textSize="25dp"
-                        android:layout_below="@+id/locationImage"
+                        android:textSize="20dp"
+                        android:layout_below="@+id/pyschServicesImage"
                         android:layout_marginBottom="5dp"
                         android:layout_marginLeft="30dp"
                         />
@@ -216,8 +219,8 @@
                         android:id="@+id/btnlocation"
                         android:layout_width="40dp"
                         android:layout_height="50dp"
-                        android:layout_below="@+id/locationImage"
-                        android:layout_alignRight="@+id/generalInformation2"
+                        android:layout_below="@+id/pyschServicesImage"
+                        android:layout_alignRight="@+id/txtpyschServices"
                         android:layout_marginRight="40dp"
                         android:layout_marginTop="-5dp"
                         android:background="@drawable/ic_baseline_keyboard_arrow_down_24" />
@@ -227,19 +230,20 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:visibility="gone"
-                        android:layout_below="@+id/generalInformation2"
+                        android:layout_below="@+id/txtpyschServices"
                         >
                         <TextView
                             android:id="@+id/explocationText"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:text="@string/healthCenterIntro"
+                            android:text="@string/pychologicalServices"
                             android:textColor="#000000"
                             android:justificationMode="inter_word"
                             android:layout_marginHorizontal="45dp"
+                            android:paddingBottom="10dp"
                             />
 
-                        <Button
+                        <!-- remove walk me there button <Button
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:id="@+id/toMapHealthCenter"
@@ -247,7 +251,7 @@
                             android:text="Walk me there"
                             android:textColor="#0000FF"
                             android:background="#0000ffff"
-                            />
+                            /> -->
 
                     </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -255,14 +259,14 @@
 
             </androidx.cardview.widget.CardView>
 
-            <!--Contact card view-->
-            <androidx.cardview.widget.CardView
+            <!--Contact card view (removed for now, can be replaced with a map)-->
+            <!--androidx.cardview.widget.CardView
                 android:id="@+id/scheduleaptm1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                app:cardBackgroundColor="#ffffff"
+                app:cardBackgroundColor="@color/primary_light"
                 style="@style/CardView.Light"
-                android:layout_below="@+id/location"
+                android:layout_below="@+id/pyschServices"
                 android:layout_marginTop="20dp">
 
                 <RelativeLayout
@@ -297,7 +301,7 @@
                         android:layout_marginRight="30dp"
                         android:background="@drawable/ic_baseline_keyboard_arrow_down_24" />
 
-                    <!--Expandable Contents (schedule appointment)-->
+
                     <androidx.constraintlayout.widget.ConstraintLayout
                         android:id="@+id/expScheduleAptm1"
                         android:layout_width="match_parent"
@@ -315,24 +319,24 @@
                             android:justificationMode="inter_word"
                             android:layout_marginHorizontal="45dp"
                             />
-                        <Button
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:id="@+id/toContactHealthCenter"
-                            app:layout_constraintBaseline_toBottomOf="@+id/contactDescription"
-                            android:text="Contact Health Center"
-                            android:textColor="#0000FF"
-                            android:background="#0000ffff"
-                            />
 
                     </androidx.constraintlayout.widget.ConstraintLayout>
 
 
                 </RelativeLayout>
 
-            </androidx.cardview.widget.CardView>
+            </androidx.cardview.widget.CardView-->
 
-
+            <!--Emergency contact-->
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/toContactHealthCenter"
+                android:layout_below="@+id/pyschServices"
+                android:layout_marginTop="20dp"
+                android:text="Emergency Contact"
+                android:background="@drawable/contact_hc_button_apply"
+                />
         </RelativeLayout>
     </ScrollView>
 
