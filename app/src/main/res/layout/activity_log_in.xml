@@ -22,7 +22,7 @@
         android:minHeight="48dp" />
 
     <EditText
-        android:id="@+id/edtTxtDate"
+        android:id="@+id/edtTxtPassword"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
@@ -39,7 +39,7 @@
         android:id="@+id/btnsign_in"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/edtTxtDate"
+        android:layout_below="@+id/edtTxtPassword"
         android:layout_centerInParent="true"
         android:layout_marginTop="30dp"
         android:background="@drawable/contact_hc_button_apply"

@@ -6,18 +6,32 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.Toast;
 
 public class LogIn extends AppCompatActivity implements View.OnClickListener {
+    EditText edtTxtname, edtTxtPassword;
+
 
     @Override
     public void onClick(View v) {
         switch (v.getId()){
             case  R.id.btnsign_in:
-                Toast.makeText(this, "Welcome back", Toast.LENGTH_SHORT).show();
-                Intent intentToMain = new Intent(LogIn.this, Homepage.class);
-                startActivity(intentToMain);
-                break;
+                edtTxtname = (EditText) findViewById(R.id.edtTxtName);
+                edtTxtPassword = (EditText) findViewById(R.id.edtTxtPassword);
+
+                String username = edtTxtname.getText().toString();
+                String password = edtTxtPassword.getText().toString();
+                if (username.equals("tesfaAdmin") && password.equals("123456")){
+                    Toast.makeText(this, "Welcome back " + username, Toast.LENGTH_SHORT).show();
+                    Intent intentToMain = new Intent(LogIn.this, Homepage.class);
+                    startActivity(intentToMain);
+                    break;
+                }
+                else{
+                    Toast.makeText(this, "Invalid username or password", Toast.LENGTH_SHORT).show();
+                    break;
+                }
             case R.id.btnToRegister:
                 Intent intent = new Intent(LogIn.this, Register.class);
                 startActivity(intent);
