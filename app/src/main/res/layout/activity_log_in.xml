@@ -9,7 +9,7 @@
     android:background="#945F4F">
 
     <EditText
-        android:id="@+id/edtTxtName"
+        android:id="@+id/et_lusername"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/btnicon"
@@ -22,7 +22,7 @@
         android:minHeight="48dp" />
 
     <EditText
-        android:id="@+id/edtTxtPassword"
+        android:id="@+id/et_lpassword"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
@@ -33,13 +33,13 @@
         android:background="@drawable/custom_input"
         android:drawableStart="@drawable/ic_lock"
         android:drawablePadding="12dp"
-        android:layout_below="@+id/edtTxtName"/>
+        android:layout_below="@+id/et_lusername"/>
 
     <Button
-        android:id="@+id/btnsign_in"
+        android:id="@+id/btn_llogin"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/edtTxtPassword"
+        android:layout_below="@+id/et_lpassword"
         android:layout_centerInParent="true"
         android:layout_marginTop="30dp"
         android:background="@drawable/contact_hc_button_apply"
@@ -48,16 +48,15 @@
         android:textSize="23dp" />
 
 
-
     <Button
+        android:id="@+id/btn_lregister"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Don't have an account?"
+        android:layout_below="@+id/btn_llogin"
         android:layout_centerInParent="true"
-        android:id="@+id/btnToRegister"
+        android:layout_marginTop="5dp"
         android:background="@drawable/contact_hc_button_apply"
-        android:layout_below="@+id/btnsign_in"
-        android:layout_marginTop="5dp"/>
+        android:text="Don't have an account?" />
 
     <ImageView
         android:id="@+id/btnicon"

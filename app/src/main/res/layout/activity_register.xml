@@ -9,7 +9,7 @@
     android:background="#945F4F">
 
     <EditText
-        android:id="@+id/edtLastName"
+        android:id="@+id/et_username"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/btnicon"
@@ -25,13 +25,13 @@
         android:id="@+id/edtFirstName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/edtLastName"
+        android:layout_below="@id/et_username"
         android:layout_centerInParent="true"
         android:layout_marginTop="10dp"
         android:background="@drawable/custom_input"
-        android:hint="First name"
         android:drawableStart="@drawable/ic_person"
         android:drawablePadding="10dp"
+        android:hint="First name"
         android:inputType="text"
         android:minHeight="48dp" />
 
@@ -65,10 +65,24 @@
 
 
     <EditText
-        android:id="@+id/edtnewPassword"
+        android:id="@+id/et_password"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/edtBirthDate"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/custom_input"
+        android:drawableStart="@drawable/ic_lock"
+        android:drawablePadding="10dp"
+        android:hint="new password"
+        android:inputType="textPassword"
+        android:minHeight="48dp" />
+
+    <EditText
+        android:id="@+id/et_cpassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/et_password"
         android:layout_centerInParent="true"
         android:layout_marginTop="10dp"
         android:background="@drawable/custom_input"
@@ -83,7 +97,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:layout_below="@+id/edtnewPassword">
+        android:layout_below="@+id/et_cpassword">
 
         <RadioButton
             android:id="@+id/radioFirstYear"
@@ -150,7 +164,7 @@
     </RadioGroup>
 
     <Button
-        android:id="@+id/btnRegister"
+        android:id="@+id/btn_register"
         android:layout_width="match_parent"
         android:layout_height="70dp"
         android:layout_below="@+id/radioChooseYear2"

@@ -4,51 +4,58 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import androidx.appcompat.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-public class LogIn extends AppCompatActivity implements View.OnClickListener {
-    EditText edtTxtname, edtTxtPassword;
 
 
-    @Override
-    public void onClick(View v) {
-        switch (v.getId()){
-            case  R.id.btnsign_in:
-                edtTxtname = (EditText) findViewById(R.id.edtTxtName);
-                edtTxtPassword = (EditText) findViewById(R.id.edtTxtPassword);
+public class LogIn extends AppCompatActivity /*implements View.OnClickListener*/ {
+    Button btn_lregister, btn_llogin;
+    EditText et_lusername, et_lpassword;
 
-                String username = edtTxtname.getText().toString();
-                String password = edtTxtPassword.getText().toString();
-                if (username.equals("tesfaAdmin") && password.equals("123456")){
-                    Toast.makeText(this, "Welcome back " + username, Toast.LENGTH_SHORT).show();
-                    Intent intentToMain = new Intent(LogIn.this, Homepage.class);
-                    startActivity(intentToMain);
-                    break;
-                }
-                else{
-                    Toast.makeText(this, "Invalid username or password", Toast.LENGTH_SHORT).show();
-                    break;
-                }
-            case R.id.btnToRegister:
-                Intent intent = new Intent(LogIn.this, Register.class);
-                startActivity(intent);
-            default:
-                break;
-        }
-    }
+    DatabaseHelper databaseHelper;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_log_in);
 
-        Button btnSignIn = findViewById(R.id.btnsign_in);
-        btnSignIn.setOnClickListener(this);
+        databaseHelper = new DatabaseHelper(this);
 
-        Button btnToRegister = findViewById(R.id.btnToRegister);
-        btnToRegister.setOnClickListener(this);
+        et_lusername = (EditText)findViewById(R.id.et_lusername);
+        et_lpassword = (EditText)findViewById(R.id.et_lpassword);
+
+        btn_llogin = (Button)findViewById(R.id.btn_llogin);
+
+        btn_lregister = (Button)findViewById(R.id.btn_lregister);
+
+        btn_lregister.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(LogIn.this, Register.class);
+                startActivity(intent);
+            }
+        });
+
+        btn_llogin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String username = et_lusername.getText().toString();
+                String password = et_lpassword.getText().toString();
+
+                Boolean checklogin = databaseHelper.CheckLogin(username, password);
+                if(checklogin == true){
+                    Intent loggedIn_intent = new Intent(LogIn.this, Homepage.class);
+                    startActivity(loggedIn_intent);
+                    Toast.makeText(getApplicationContext(), "Login Successful", Toast.LENGTH_SHORT).show();
+                }else{
+                    Toast.makeText(getApplicationContext(), "Invalid username or password", Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
     }
+
 }
