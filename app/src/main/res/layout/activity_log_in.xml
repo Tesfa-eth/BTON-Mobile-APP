@@ -48,16 +48,25 @@
         android:textSize="23dp" />
 
 
-
     <Button
+        android:id="@+id/btnToRegister"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Don't have an account?"
-        android:layout_centerInParent="true"
-        android:id="@+id/btnToRegister"
-        android:background="@drawable/contact_hc_button_apply"
         android:layout_below="@+id/btnsign_in"
-        android:layout_marginTop="5dp"/>
+        android:layout_centerInParent="true"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/contact_hc_button_apply"
+        android:text="Don't have an account?" />
+
+    <Button
+        android:id="@+id/btnVisitor"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btnToRegister"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/contact_hc_button_apply"
+        android:text="Visitor" />
 
     <ImageView
         android:id="@+id/btnicon"
