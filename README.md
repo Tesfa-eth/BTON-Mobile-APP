@@ -1,5 +1,5 @@
 # BTON-Mobile-APP
-Campus wide andriod mobile app for Bennington College. Apart from a working log in and register page, this app the following main sections:
+Campus wide andriod mobile app for Bennington College where students can find all essential information in one place. This app has functional user log in and registration. This app the following main sections:
 
 * Campus Gallery - sample photo showcase for general campus view, Barn and commons
 * General announcements - where announcmenets are displayed chronologically
