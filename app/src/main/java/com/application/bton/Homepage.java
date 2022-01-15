@@ -35,6 +35,12 @@ public class Homepage extends AppCompatActivity implements View.OnClickListener 
                 startActivity(announcement_intent);
                 break;
 
+            case R.id.btnSclCalander:
+                Intent sclCalander_intent = new Intent(Homepage.this, SchoolCalander.class);
+                startActivity(sclCalander_intent);
+                break;
+
+
             default:
                 break;
         }
@@ -58,6 +64,9 @@ public class Homepage extends AppCompatActivity implements View.OnClickListener 
 
         Button btnAnnouncement = findViewById(R.id.btnAnnouncement);
         btnAnnouncement.setOnClickListener(this);
+
+        Button btnSchoolCalendar = findViewById(R.id.btnSclCalander);
+        btnSchoolCalendar.setOnClickListener(this);
 
     }
 }

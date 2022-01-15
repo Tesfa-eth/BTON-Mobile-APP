@@ -12,6 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.BTON">
         <activity
+            android:name=".SchoolCalander"
+            android:exported="false" />
+        <activity
             android:name=".GeneralAnnouncement"
             android:exported="false" />
         <activity

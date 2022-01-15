@@ -118,9 +118,9 @@
                 android:textColor="@color/white"
                 android:textSize="25dp" />
 
-            <!--About Bennington-->
+            <!--School Calander-->
             <ImageView
-                android:id="@+id/imgAboutBTN"
+                android:id="@+id/imgSclCalander"
                 android:layout_width="wrap_content"
                 android:layout_height="250dp"
                 android:src="@drawable/bennington_background"
@@ -129,8 +129,32 @@
                 />
 
             <Button
-                android:id="@+id/btnAboutBTN"
+                android:id="@+id/btnSclCalander"
                 android:layout_below="@+id/imgCampusDirectory"
+                android:layout_width="300dp"
+                android:layout_height="100dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="85dp"
+                android:text="School Calendar"
+                android:textAllCaps="false"
+                android:textAlignment="center"
+                android:background="@drawable/homepage_btn_apply"
+                android:textColor="@color/white"
+                android:textSize="25dp" />
+
+            <!--About Bennington-->
+            <ImageView
+                android:id="@+id/imgAboutBTN"
+                android:layout_width="wrap_content"
+                android:layout_height="250dp"
+                android:src="@drawable/bennington_background"
+                android:layout_below="@+id/imgSclCalander"
+                android:layout_marginTop="-10dp"
+                />
+
+            <Button
+                android:id="@+id/btnAboutBTN"
+                android:layout_below="@+id/imgSclCalander"
                 android:layout_width="300dp"
                 android:layout_height="100dp"
                 android:layout_centerHorizontal="true"
