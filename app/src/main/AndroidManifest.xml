@@ -2,8 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.application.bton">
 
-    <uses-permission android:name="android.permission.INTERNET" /> <!-- don't know which one is right -->
-    <uses-permission  android:name="android.permission.INTERNET"></uses-permission>
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
