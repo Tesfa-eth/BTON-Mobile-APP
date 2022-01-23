@@ -65,8 +65,9 @@
         android:layout_below="@+id/btnToRegister"
         android:layout_centerInParent="true"
         android:layout_marginTop="5dp"
+        android:textAllCaps="false"
         android:background="@drawable/contact_hc_button_apply"
-        android:text="Visitor" />
+        android:text="Dhall menu" />
 
     <ImageView
         android:id="@+id/btnicon"
