@@ -15,6 +15,7 @@
         android:layout_marginTop="10dp"
         android:layout_centerHorizontal="true"
         android:src="@mipmap/bennicon"/>
+
     <TextView
         android:id="@+id/title"
         android:layout_width="wrap_content"
@@ -24,12 +25,34 @@
         android:layout_centerHorizontal="true"
         android:textColor="@color/white"
         android:textSize="40sp"/>
-    <Button
-        android:id="@+id/btnGetmeal"
-        android:layout_width="match_parent"
+
+    <Spinner
+        android:id="@+id/spinnerDay"
+        android:layout_width="250dp"
+        android:layout_height="70dp"
+        android:layout_below="@+id/title"
+        android:outlineSpotShadowColor="@color/white"
+        android:layout_marginTop="45dp"
+        android:backgroundTint="@color/white" />
+
+
+    <TextView
+        android:id="@+id/dayView"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="140dp"
-        android:text="Get item"
-        android:layout_below="@+id/title"/>
+        android:layout_below="@+id/spinnerDay"
+        android:text="Day"
+        android:textColor="@color/white"
+        android:textSize="50sp" />
+
+    <TextView
+        android:id="@+id/foodlist"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/dayView"
+        android:layout_marginTop="20dp"
+        android:text="What's for today..."
+        android:textColor="@color/white"
+        android:textSize="30sp" />
 
 </RelativeLayout>
