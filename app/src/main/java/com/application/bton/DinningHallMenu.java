@@ -1,12 +1,12 @@
 package com.application.bton;
 
-public class DhallMenu {
+public class DinningHallMenu {
     private String day;
     private String mealOfTheDay;
     private String mealType;
     private String meal;
 
-    public DhallMenu() {
+    public DinningHallMenu() {
         day = null;
         mealType = null;
         meal = null;
