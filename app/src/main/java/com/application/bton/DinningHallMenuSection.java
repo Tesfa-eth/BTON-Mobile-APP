@@ -21,6 +21,7 @@ import java.util.List;
 public class DinningHallMenuSection extends AppCompatActivity {
 
     TextView foodlist, dayView;
+    TextView breakfast, lunch, dinner;
     public final String[] day = {"Monday"};
 
     @Override
@@ -69,6 +70,7 @@ public class DinningHallMenuSection extends AppCompatActivity {
                     toastMessage(response.get(i).getDay() + " - " +
                             response.get(i).getMealOfTheDay()+ " - " + response.get(i).getMeal());
                 }
+
                 foodlist = findViewById(R.id.foodlist);
                 dayView = findViewById(R.id.dayView);
 
@@ -78,7 +80,7 @@ public class DinningHallMenuSection extends AppCompatActivity {
                     //foodlist.setText(response.get(0).getDay() + " - " + response.get(0).getMealOfTheDay()+ " - " + response.get(0).getMeal());
                 }
                 else{
-                    foodlist.setText("Sorry the menu is not updated yet!");
+                    foodlist.setText("Sorry, menu not updated yet :( ");
                 }
 
             }

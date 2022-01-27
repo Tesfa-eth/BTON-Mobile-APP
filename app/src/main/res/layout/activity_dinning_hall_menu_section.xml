@@ -29,11 +29,11 @@
     <Spinner
         android:id="@+id/spinnerDay"
         android:layout_width="250dp"
-        android:layout_height="70dp"
+        android:layout_height="50dp"
         android:layout_below="@+id/title"
-        android:outlineSpotShadowColor="@color/white"
-        android:layout_marginTop="45dp"
-        android:backgroundTint="@color/white" />
+        android:layout_marginTop="25dp"
+        android:backgroundTint="@color/white"
+        android:outlineSpotShadowColor="@color/white" />
 
 
     <TextView
@@ -43,7 +43,7 @@
         android:layout_below="@+id/spinnerDay"
         android:text="Day"
         android:textColor="@color/white"
-        android:textSize="50sp" />
+        android:textSize="30sp" />
 
     <TextView
         android:id="@+id/foodlist"
@@ -53,6 +53,132 @@
         android:layout_marginTop="20dp"
         android:text="What's for today..."
         android:textColor="@color/white"
-        android:textSize="30sp" />
+        android:textSize="20sp" />
+
+    <!--Scroll view-->
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/foodlist"
+        android:layout_marginTop="15dp"
+        >
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <!-- Breakfast Card View-->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardViewBreakfast"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardBackgroundColor="@color/primary_light"
+                style="@style/CardView.Light">
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <!--Card view elements go here-->
+
+                    <TextView
+                        android:id="@+id/breakfastTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="5dp"
+                        android:text="Breakfast"
+                        android:textColor="@color/white"
+                        android:textSize="30sp"/>
+                    <TextView
+                        android:id="@+id/breakfast"
+                        android:layout_below="@+id/breakfastTitle"
+                        android:text="Sorry, menu not updated yet :("
+                        android:textSize="25sp"
+                        android:textColor="#f5d57a"
+                        android:padding="5dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        />
+
+
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- Lunch Card View -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/carfdViewLunch"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardBackgroundColor="@color/primary_light"
+                android:layout_below="@+id/cardViewBreakfast"
+                android:layout_marginTop="10dp"
+                style="@style/CardView.Light">
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <!--Card view elements go here-->
+
+                    <TextView
+                        android:id="@+id/lunchTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="5dp"
+                        android:text="Lunch"
+                        android:textColor="@color/white"
+                        android:textSize="30sp"/>
+                    <TextView
+                        android:id="@+id/lunch"
+                        android:layout_below="@+id/lunchTitle"
+                        android:text="Sorry, menu not updated yet :("
+                        android:textSize="25sp"
+                        android:textColor="#f5d57a"
+                        android:padding="5dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        />
+
+
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- Dinner Card View goes here-->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/carfdViewDinner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardBackgroundColor="@color/primary_light"
+                android:layout_below="@+id/carfdViewLunch"
+                android:layout_marginTop="10dp"
+                style="@style/CardView.Light">
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <!--Card view elements go here-->
+
+                    <TextView
+                        android:id="@+id/dinnerTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="5dp"
+                        android:text="Dinner"
+                        android:textColor="@color/white"
+                        android:textSize="30sp"/>
+                    <TextView
+                        android:id="@+id/dinner"
+                        android:layout_below="@+id/dinnerTitle"
+                        android:text="Sorry, menu not updated yet :("
+                        android:textSize="25sp"
+                        android:textColor="#f5d57a"
+                        android:padding="5dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        />
+
+
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+
+        </RelativeLayout>
+
+    </ScrollView>
 
 </RelativeLayout>
