@@ -20,8 +20,8 @@ import java.util.List;
 
 public class DinningHallMenuSection extends AppCompatActivity {
 
-    TextView foodlist, dayView;
-    TextView breakfast, lunch, dinner;
+    //TextView foodlist, dayView;
+    TextView breakFaststreetEats, saltSourStreetEats,soupAndgrains, lunch, dinner;
     public final String[] day = {"Monday"};
 
     @Override
@@ -43,7 +43,7 @@ public class DinningHallMenuSection extends AppCompatActivity {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 day[0] = parent.getItemAtPosition(position).toString();
-                toastMessage(day[0]);
+                //toastMessage(day[0]);
                 readDataAndDisplay();
             }
 
@@ -62,16 +62,52 @@ public class DinningHallMenuSection extends AppCompatActivity {
         queryBuilder.setPageSize(100).setOffset(0);
         queryBuilder.setSortBy("day");
 
+        breakFaststreetEats = findViewById(R.id.breakFastStreetEats);
+        saltSourStreetEats = findViewById(R.id.saltSourStreetEats);
+        soupAndgrains = findViewById(R.id.soupAndgrains);
+
+        lunch = findViewById(R.id.lunch);
+        dinner = findViewById(R.id.dinner);
+
+        // pre load text value
+        breakFaststreetEats.setText("Sorry, not updated yet :( ");
+        saltSourStreetEats.setText("Sorry, not updated yet :( ");
+        soupAndgrains.setText("Sorry, not updated yet :( ");
+
+
+        lunch.setText("Sorry, not updated yet :( ");
+        dinner.setText("Sorry, not updated yet :( ");
+
         Backendless.Persistence.of(DhallMenu.class).find(queryBuilder,new AsyncCallback<List<DhallMenu>>() {
             @Override
             public void handleResponse(List<DhallMenu> response) {
-                toastMessage("count: " + response.size());
+                //toastMessage("count: " + response.size());
                 for(int i=0; i < response.size(); i++){
-                    toastMessage(response.get(i).getDay() + " - " +
-                            response.get(i).getMealOfTheDay()+ " - " + response.get(i).getMeal());
+                    //toastMessage(response.get(i).getDay() + " - " +
+                    //        response.get(i).getMealOfTheDay()+ " - " + response.get(i).getMealType() + "-" + response.get(i).getMeal());
+                    String meal = response.get(i).getMeal();
+                    String mealOfTheDay = response.get(i).getMealOfTheDay();
+                    String mealType = response.get(i).getMealType();
+                    if (mealOfTheDay.equals("Breakfast")){
+                        if (mealType.equals("Street Eats")){
+                            breakFaststreetEats.setText(meal);
+                        }
+                        else if(mealType.equals("Salt/Sour/Spice/Umami")){
+                            saltSourStreetEats.setText(meal);
+                        }
+                        else if(mealType.equals("Soup and Grains")){
+                            soupAndgrains.setText(meal);
+                        }
+                    }
+                    else if (mealOfTheDay.equals("Lunch")){
+                        lunch.setText(meal);
+                    }
+                    else if(mealOfTheDay.equals("Dinner")){
+                        dinner.setText(meal);
+                    }
                 }
 
-                foodlist = findViewById(R.id.foodlist);
+                /*foodlist = findViewById(R.id.foodlist);
                 dayView = findViewById(R.id.dayView);
 
                 dayView.setText(day[0]);
@@ -81,7 +117,7 @@ public class DinningHallMenuSection extends AppCompatActivity {
                 }
                 else{
                     foodlist.setText("Sorry, menu not updated yet :( ");
-                }
+                }*/
 
             }
 

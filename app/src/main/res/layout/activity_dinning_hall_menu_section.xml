@@ -36,16 +36,16 @@
         android:outlineSpotShadowColor="@color/white" />
 
 
-    <TextView
+    <!--TextView
         android:id="@+id/dayView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/spinnerDay"
         android:text="Day"
         android:textColor="@color/white"
-        android:textSize="30sp" />
+        android:textSize="30sp" /-->
 
-    <TextView
+    <!--TextView
         android:id="@+id/foodlist"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -53,14 +53,14 @@
         android:layout_marginTop="20dp"
         android:text="What's for today..."
         android:textColor="@color/white"
-        android:textSize="20sp" />
+        android:textSize="20sp" /-->
 
     <!--Scroll view-->
     <ScrollView
         android:id="@+id/scrollView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/foodlist"
+        android:layout_below="@+id/spinnerDay"
         android:layout_marginTop="15dp"
         >
 
@@ -87,9 +87,59 @@
                         android:text="Breakfast"
                         android:textColor="@color/white"
                         android:textSize="30sp"/>
+
                     <TextView
-                        android:id="@+id/breakfast"
+                        android:id="@+id/breakfastStreetEatsSubtitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
                         android:layout_below="@+id/breakfastTitle"
+                        android:padding="5dp"
+                        android:text="(Street Eats)"
+                        android:textColor="@color/primary"
+                        android:textSize="20sp" />
+                    <TextView
+                        android:id="@+id/breakFastStreetEats"
+                        android:layout_below="@+id/breakfastStreetEatsSubtitle"
+                        android:text="Sorry, menu not updated yet :("
+                        android:textSize="25sp"
+                        android:textColor="#f5d57a"
+                        android:padding="5dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        />
+                    <TextView
+                        android:id="@+id/saltSourStreetEatsSubtitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/breakFastStreetEats"
+                        android:padding="5dp"
+                        android:text="(Salt/Sour/Spice/Umami)"
+                        android:textColor="@color/primary"
+                        android:textSize="20sp" />
+                    <TextView
+                        android:id="@+id/saltSourStreetEats"
+                        android:layout_below="@+id/saltSourStreetEatsSubtitle"
+                        android:text="Sorry, menu not updated yet :("
+                        android:textSize="25sp"
+                        android:textColor="#f5d57a"
+                        android:padding="5dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        />
+
+                    <TextView
+                        android:id="@+id/soupAndgrainsSubtitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/saltSourStreetEats"
+                        android:padding="5dp"
+                        android:text="(Salt/Sour/Spice/Umami)"
+                        android:textColor="@color/primary"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/soupAndgrains"
+                        android:layout_below="@+id/soupAndgrainsSubtitle"
                         android:text="Sorry, menu not updated yet :("
                         android:textSize="25sp"
                         android:textColor="#f5d57a"
