@@ -21,7 +21,9 @@ import java.util.List;
 public class DinningHallMenuSection extends AppCompatActivity {
 
     //TextView foodlist, dayView;
-    TextView breakFaststreetEats, saltSourStreetEats,soupAndgrains, lunch, dinner;
+    TextView breakFaststreetEats, bFsaltSourSpiceUmami, bFsoupAndgrains;
+    TextView lunchStreetEats, lunchsaltSourSpiceUmami, lunchsoupAndgrains;
+    TextView dinnerStreetEats, dinnersaltSourSpiceUmami, dinnersoupAndgrains;
     public final String[] day = {"Monday"};
 
     @Override
@@ -63,20 +65,32 @@ public class DinningHallMenuSection extends AppCompatActivity {
         queryBuilder.setSortBy("day");
 
         breakFaststreetEats = findViewById(R.id.breakFastStreetEats);
-        saltSourStreetEats = findViewById(R.id.saltSourStreetEats);
-        soupAndgrains = findViewById(R.id.soupAndgrains);
+        bFsaltSourSpiceUmami = findViewById(R.id.bFsaltSourStreetEats);
+        bFsoupAndgrains = findViewById(R.id.bFsoupAndgrains);
+        lunchStreetEats = findViewById(R.id.lunchStreetEats);
+        lunchsaltSourSpiceUmami = findViewById(R.id.lunchsaltSourSpiceUmami);
+        lunchsoupAndgrains = findViewById(R.id.lunchsoupAndgrains);
+        dinnerStreetEats = findViewById(R.id.dinnerStreetEats);
+        dinnersaltSourSpiceUmami = findViewById(R.id.dinnersaltSourSpiceUmami);
+        dinnersoupAndgrains = findViewById(R.id.dinnersoupAndgrains);
 
-        lunch = findViewById(R.id.lunch);
-        dinner = findViewById(R.id.dinner);
+        //lunch = findViewById(R.id.lunch);
+        //dinner = findViewById(R.id.dinner);
 
         // pre load text value
-        breakFaststreetEats.setText("Sorry, not updated yet :( ");
-        saltSourStreetEats.setText("Sorry, not updated yet :( ");
-        soupAndgrains.setText("Sorry, not updated yet :( ");
+        breakFaststreetEats.setText("N/A");
+        bFsaltSourSpiceUmami.setText("N/A");
+        bFsoupAndgrains.setText("N/A");
+        lunchStreetEats.setText("N/A");
+        lunchsaltSourSpiceUmami.setText("N/A");
+        lunchsoupAndgrains.setText("N/A");
+        dinnerStreetEats.setText("N/A");
+        dinnersaltSourSpiceUmami.setText("N/A");
+        dinnersoupAndgrains.setText("N/A");
 
 
-        lunch.setText("Sorry, not updated yet :( ");
-        dinner.setText("Sorry, not updated yet :( ");
+        //lunch.setText("Sorry, not updated yet :( ");
+        //dinner.setText("Sorry, not updated yet :( ");
 
         Backendless.Persistence.of(DhallMenu.class).find(queryBuilder,new AsyncCallback<List<DhallMenu>>() {
             @Override
@@ -88,22 +102,50 @@ public class DinningHallMenuSection extends AppCompatActivity {
                     String meal = response.get(i).getMeal();
                     String mealOfTheDay = response.get(i).getMealOfTheDay();
                     String mealType = response.get(i).getMealType();
+
+                    //breakfast
                     if (mealOfTheDay.equals("Breakfast")){
-                        if (mealType.equals("Street Eats")){
-                            breakFaststreetEats.setText(meal);
-                        }
-                        else if(mealType.equals("Salt/Sour/Spice/Umami")){
-                            saltSourStreetEats.setText(meal);
-                        }
-                        else if(mealType.equals("Soup and Grains")){
-                            soupAndgrains.setText(meal);
+                        switch (mealType) {
+                            case "Street Eats":
+                                breakFaststreetEats.setText(meal);
+                                break;
+                            case "Salt/Sour/Spice/Umami":
+                                bFsaltSourSpiceUmami.setText(meal);
+                                break;
+                            case "Soup and Grains":
+                                bFsoupAndgrains.setText(meal);
+                                break;
                         }
                     }
+
+                    // lunch
                     else if (mealOfTheDay.equals("Lunch")){
-                        lunch.setText(meal);
+                        switch (mealType) {
+                            case "Street Eats":
+                                lunchStreetEats.setText(meal);
+                                break;
+                            case "Salt/Sour/Spice/Umami":
+                                lunchsaltSourSpiceUmami.setText(meal);
+                                break;
+                            case "Soup and Grains":
+                                lunchsoupAndgrains.setText(meal);
+                                break;
+                        }
                     }
-                    else if(mealOfTheDay.equals("Dinner")){
-                        dinner.setText(meal);
+
+                    //dinner
+                    else if (mealOfTheDay.equals("Dinner")){
+                        switch (mealType) {
+                            case "Street Eats":
+                                dinnerStreetEats.setText(meal);
+                                break;
+                            case "Salt/Sour/Spice/Umami":
+                                dinnersaltSourSpiceUmami.setText(meal);
+                                break;
+                            case "Soup and Grains":
+                                dinnersoupAndgrains.setText(meal);
+                                break;
+                        }
                     }
                 }
 

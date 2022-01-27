@@ -9,29 +9,29 @@
     tools:context=".DinningHallMenuSection">
 
     <ImageView
-        android:layout_width="100dp"
-        android:layout_height="100dp"
         android:id="@+id/btnicon"
-        android:layout_marginTop="10dp"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
         android:layout_centerHorizontal="true"
-        android:src="@mipmap/bennicon"/>
+        android:layout_marginTop="10dp"
+        android:src="@mipmap/bennicon" />
 
     <TextView
         android:id="@+id/title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Dinning Hall Menu"
         android:layout_below="@+id/btnicon"
         android:layout_centerHorizontal="true"
+        android:text="Dinning Hall Menu"
         android:textColor="@color/white"
-        android:textSize="40sp"/>
+        android:textSize="35sp" />
 
     <Spinner
         android:id="@+id/spinnerDay"
         android:layout_width="250dp"
-        android:layout_height="50dp"
+        android:layout_height="30dp"
         android:layout_below="@+id/title"
-        android:layout_marginTop="25dp"
+        android:layout_marginTop="20dp"
         android:backgroundTint="@color/white"
         android:outlineSpotShadowColor="@color/white" />
 
@@ -97,18 +97,18 @@
                         android:text="(Street Eats)"
                         android:textColor="@color/primary"
                         android:textSize="20sp" />
+
                     <TextView
                         android:id="@+id/breakFastStreetEats"
-                        android:layout_below="@+id/breakfastStreetEatsSubtitle"
-                        android:text="Sorry, menu not updated yet :("
-                        android:textSize="25sp"
-                        android:textColor="#f5d57a"
-                        android:padding="5dp"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        />
+                        android:layout_below="@+id/breakfastStreetEatsSubtitle"
+                        android:padding="5dp"
+                        android:text="Sorry, menu not updated yet :("
+                        android:textColor="#f5d57a"
+                        android:textSize="15sp" />
                     <TextView
-                        android:id="@+id/saltSourStreetEatsSubtitle"
+                        android:id="@+id/bFsaltSourStreetEatsSubtitle"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_below="@+id/breakFastStreetEats"
@@ -116,32 +116,32 @@
                         android:text="(Salt/Sour/Spice/Umami)"
                         android:textColor="@color/primary"
                         android:textSize="20sp" />
+
                     <TextView
-                        android:id="@+id/saltSourStreetEats"
-                        android:layout_below="@+id/saltSourStreetEatsSubtitle"
-                        android:text="Sorry, menu not updated yet :("
-                        android:textSize="25sp"
-                        android:textColor="#f5d57a"
-                        android:padding="5dp"
+                        android:id="@+id/bFsaltSourStreetEats"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        />
+                        android:layout_below="@+id/bFsaltSourStreetEatsSubtitle"
+                        android:padding="5dp"
+                        android:text="Sorry, menu not updated yet :("
+                        android:textColor="#f5d57a"
+                        android:textSize="15sp" />
 
                     <TextView
                         android:id="@+id/soupAndgrainsSubtitle"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_below="@+id/saltSourStreetEats"
+                        android:layout_below="@+id/bFsaltSourStreetEats"
                         android:padding="5dp"
-                        android:text="(Salt/Sour/Spice/Umami)"
+                        android:text="(Soups and Grains)"
                         android:textColor="@color/primary"
                         android:textSize="20sp" />
 
                     <TextView
-                        android:id="@+id/soupAndgrains"
+                        android:id="@+id/bFsoupAndgrains"
                         android:layout_below="@+id/soupAndgrainsSubtitle"
                         android:text="Sorry, menu not updated yet :("
-                        android:textSize="25sp"
+                        android:textSize="15sp"
                         android:textColor="#f5d57a"
                         android:padding="5dp"
                         android:layout_width="wrap_content"
@@ -174,16 +174,69 @@
                         android:text="Lunch"
                         android:textColor="@color/white"
                         android:textSize="30sp"/>
+
                     <TextView
-                        android:id="@+id/lunch"
+                        android:id="@+id/lunchStreetEatsSubtitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
                         android:layout_below="@+id/lunchTitle"
+                        android:padding="5dp"
+                        android:text="(Street Eats)"
+                        android:textColor="@color/primary"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/lunchStreetEats"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/lunchStreetEatsSubtitle"
+                        android:padding="5dp"
                         android:text="Sorry, menu not updated yet :("
-                        android:textSize="25sp"
+                        android:textColor="#f5d57a"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:id="@+id/lunchsaltSourSpiceUmamiSubtitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/lunchStreetEats"
+                        android:padding="5dp"
+                        android:text="(Salt/Sour/Spice/Umami)"
+                        android:textColor="@color/primary"
+                        android:textSize="20sp" />
+                    <TextView
+                        android:id="@+id/lunchsaltSourSpiceUmami"
+                        android:layout_below="@+id/lunchsaltSourSpiceUmamiSubtitle"
+                        android:text="Sorry, menu not updated yet :("
+                        android:textSize="15sp"
                         android:textColor="#f5d57a"
                         android:padding="5dp"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         />
+
+                    <TextView
+                        android:id="@+id/lunchsoupAndgrainsSubtitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/lunchsaltSourSpiceUmami"
+                        android:padding="5dp"
+                        android:text="(Soups and Grains)"
+                        android:textColor="@color/primary"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/lunchsoupAndgrains"
+                        android:layout_below="@+id/lunchsoupAndgrainsSubtitle"
+                        android:text="Sorry, menu not updated yet :("
+                        android:textSize="15sp"
+                        android:textColor="#f5d57a"
+                        android:padding="5dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        />
+
+
 
 
                 </RelativeLayout>
@@ -212,15 +265,66 @@
                         android:textColor="@color/white"
                         android:textSize="30sp"/>
                     <TextView
-                        android:id="@+id/dinner"
+                        android:id="@+id/dinnerStreetEatsSubtitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
                         android:layout_below="@+id/dinnerTitle"
+                        android:padding="5dp"
+                        android:text="(Street Eats)"
+                        android:textColor="@color/primary"
+                        android:textSize="20sp" />
+                    <TextView
+                        android:id="@+id/dinnerStreetEats"
+                        android:layout_below="@+id/dinnerStreetEatsSubtitle"
                         android:text="Sorry, menu not updated yet :("
-                        android:textSize="25sp"
+                        android:textSize="15sp"
                         android:textColor="#f5d57a"
                         android:padding="5dp"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         />
+
+                    <TextView
+                        android:id="@+id/dinnersaltSourSpiceUmamiSubtitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/dinnerStreetEats"
+                        android:padding="5dp"
+                        android:text="(Salt/Sour/Spice/Umami)"
+                        android:textColor="@color/primary"
+                        android:textSize="20sp" />
+                    <TextView
+                        android:id="@+id/dinnersaltSourSpiceUmami"
+                        android:layout_below="@+id/dinnersaltSourSpiceUmamiSubtitle"
+                        android:text="Sorry, menu not updated yet :("
+                        android:textSize="15sp"
+                        android:textColor="#f5d57a"
+                        android:padding="5dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        />
+
+                    <TextView
+                        android:id="@+id/dinnersoupAndgrainsSubtitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/dinnersaltSourSpiceUmami"
+                        android:padding="5dp"
+                        android:text="(Soups and Grains)"
+                        android:textColor="@color/primary"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/dinnersoupAndgrains"
+                        android:layout_below="@+id/dinnersoupAndgrainsSubtitle"
+                        android:text="Sorry, menu not updated yet :("
+                        android:textSize="15sp"
+                        android:textColor="#f5d57a"
+                        android:padding="5dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        />
+
 
 
                 </RelativeLayout>
