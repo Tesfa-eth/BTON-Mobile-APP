@@ -223,10 +223,16 @@ public class DinningHallMenuSection extends AppCompatActivity {
         Backendless.Persistence.of(StatusUpdate.class).find(queryBuilder, new AsyncCallback<List<StatusUpdate>>() {
             @Override
             public void handleResponse(List<StatusUpdate> response) {
-                String status = response.get(0).getStatus();
                 Button btnStatus = findViewById(R.id.btnStatus);
+                if(response.size() == 0){
+                    btnStatus.setText("Offline");
+                    toastMessage("The app is currently on an update. We apologize for any" +
+                            " inconvenience.");
+                    return;
+                }
+                String status = response.get(0).getStatus();
                 if (status.equals("ON")){
-                    toastMessage("The dinning hall is currently Open");
+                    toastMessage("The dinning hall is currently open.");
 
                     //btnStatus.setBackgroundColor(getResources().getColor(R.color.primary));
                     btnStatus.setText("OPEN");
@@ -235,7 +241,7 @@ public class DinningHallMenuSection extends AppCompatActivity {
                     // btnStatus.setBackground();
                 }
                 else {
-                    toastMessage("The dinning hall is currentl closed");
+                    toastMessage("The dinning hall is currently closed.");
                     btnStatus.setText("CLOSED");
                     btnStatus.setTextColor(getResources().getColor(R.color.danger));
                     //btnStatus.setBackground(R.color.danger);
