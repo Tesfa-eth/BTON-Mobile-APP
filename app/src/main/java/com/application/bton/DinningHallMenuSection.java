@@ -2,7 +2,11 @@ package com.application.bton;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
+import android.content.Intent;
 import android.graphics.Color;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -35,6 +39,22 @@ public class DinningHallMenuSection extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dinning_hall_menu_section);
+
+        Button btnRefresh = findViewById(R.id.btnRefresh);
+        btnRefresh.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(!internetConnection()){
+                    toastMessage("Connection failed. Please turn on your wifi or mobile data");
+                    return;
+                }
+                finish();
+                overridePendingTransition( 0, 0);
+                startActivity(getIntent());
+                overridePendingTransition( 0, 0);
+                toastMessage("Refreshed!");
+            }
+        });
 
         // update online status
         readAndUpdateStatus("DhallStatus");
@@ -165,7 +185,7 @@ public class DinningHallMenuSection extends AppCompatActivity {
             @Override
             public void handleFault(BackendlessFault fault) {
 
-                toastMessage("fault");
+                toastMessage("You're offline. Please connect to internet and refresh the page");
             }
         });
     }
@@ -207,13 +227,17 @@ public class DinningHallMenuSection extends AppCompatActivity {
                 Button btnStatus = findViewById(R.id.btnStatus);
                 if (status.equals("ON")){
                     toastMessage("The dinning hall is currently Open");
-                    btnStatus.setText("Open");
-                    //btnStatus.setBackgroundColor(btnStatus.getContext().getResources().getColor(R.color.primary));
-                    //btnStatus.setBackground();
+
+                    //btnStatus.setBackgroundColor(getResources().getColor(R.color.primary));
+                    btnStatus.setText("OPEN");
+                    btnStatus.setTextColor(getResources().getColor(R.color.info));
+                    // btnStatus.setBackgroundColor(btnStatus.getContext().getResources().getColor(R.color.primary));
+                    // btnStatus.setBackground();
                 }
                 else {
                     toastMessage("The dinning hall is currentl closed");
-                    btnStatus.setText("Closed");
+                    btnStatus.setText("CLOSED");
+                    btnStatus.setTextColor(getResources().getColor(R.color.danger));
                     //btnStatus.setBackground(R.color.danger);
                 }
                 // toggle.setBackgroundResource(R.color.info);
@@ -227,6 +251,18 @@ public class DinningHallMenuSection extends AppCompatActivity {
 
 }
 
+    public  Boolean internetConnection(){
+        Boolean network;
+        ConnectivityManager connectivityManager = (ConnectivityManager)getSystemService(Context.CONNECTIVITY_SERVICE);
+        if(connectivityManager.getNetworkInfo(ConnectivityManager.TYPE_MOBILE).getState() == NetworkInfo.State.CONNECTED ||
+                connectivityManager.getNetworkInfo(ConnectivityManager.TYPE_WIFI).getState() == NetworkInfo.State.CONNECTED) {
+            //we are connected to a network
+            return true;
+        }
+        else{
+            return false;
+        }
+    }
     public void toastMessage( String msg){
         Toast.makeText(DinningHallMenuSection.this, msg, Toast.LENGTH_SHORT).show();
     }

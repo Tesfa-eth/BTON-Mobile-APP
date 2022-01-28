@@ -22,13 +22,13 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/btnicon"
         android:layout_centerHorizontal="true"
-        android:text="Dinning Hall Menu"
+        android:text="DHall Menu"
         android:textColor="@color/white"
-        android:textSize="35sp" />
+        android:textSize="30sp" />
 
     <Spinner
         android:id="@+id/spinnerDay"
-        android:layout_width="250dp"
+        android:layout_width="200dp"
         android:layout_height="30dp"
         android:layout_below="@+id/title"
         android:layout_marginTop="20dp"
@@ -338,7 +338,7 @@
 
     <TextView
         android:id="@+id/notification"
-        android:layout_width="wrap_content"
+        android:layout_width="250dp"
         android:layout_height="wrap_content"
         android:layout_below="@+id/spinnerDay"
         android:layout_marginTop="15dp"
@@ -348,14 +348,22 @@
         android:id="@+id/btnStatus"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="15dp"
-        android:layout_toEndOf="@+id/btnicon"
-        android:background="@drawable/contact_hc_button_apply"
-        android:backgroundTint="@color/danger"
-        android:fadingEdge="vertical"
-        android:text="Closed"
+        android:layout_below="@+id/title"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="40dp"
+        android:layout_toEndOf="@+id/spinnerDay"
+        android:background="@color/white"
+        android:text="Offline"
         android:textAllCaps="false"
-        android:textColor="@color/white" />
+        android:textColor="@color/black" />
+
+    <Button
+        android:id="@+id/btnRefresh"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/btnicon"
+        android:layout_toEndOf="@+id/title"
+        android:background="@drawable/ic_baseline_refresh_24" />
 
 </RelativeLayout>
