@@ -6,7 +6,6 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
-import android.widget.Button;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -16,6 +15,7 @@ import com.backendless.async.callback.AsyncCallback;
 import com.backendless.exceptions.BackendlessFault;
 import com.backendless.persistence.DataQueryBuilder;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class DinningHallMenuSection extends AppCompatActivity {
@@ -24,12 +24,17 @@ public class DinningHallMenuSection extends AppCompatActivity {
     TextView breakFaststreetEats, bFsaltSourSpiceUmami, bFsoupAndgrains;
     TextView lunchStreetEats, lunchsaltSourSpiceUmami, lunchsoupAndgrains;
     TextView dinnerStreetEats, dinnersaltSourSpiceUmami, dinnersoupAndgrains;
+    TextView notification;
     public final String[] day = {"Monday"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dinning_hall_menu_section);
+
+        String tag = "Notice text";
+        readData(tag); // read data for the notification and update,// can be used for
+        // other purposes as well
 
         // day of the day of the week spinner
         Spinner spinnerDay = (Spinner) findViewById(R.id.spinnerDay);
@@ -148,19 +153,6 @@ public class DinningHallMenuSection extends AppCompatActivity {
                         }
                     }
                 }
-
-                /*foodlist = findViewById(R.id.foodlist);
-                dayView = findViewById(R.id.dayView);
-
-                dayView.setText(day[0]);
-                if (response.size() > 0){
-                    foodlist.setText(response.get(0).getMeal());
-                    //foodlist.setText(response.get(0).getDay() + " - " + response.get(0).getMealOfTheDay()+ " - " + response.get(0).getMeal());
-                }
-                else{
-                    foodlist.setText("Sorry, menu not updated yet :( ");
-                }*/
-
             }
 
             @Override
@@ -170,6 +162,30 @@ public class DinningHallMenuSection extends AppCompatActivity {
             }
         });
     }
+
+    public void readData(String tag){
+        String whereClause = "day = '" + tag + "'";
+        DataQueryBuilder queryBuilder = DataQueryBuilder.create();
+        queryBuilder.setWhereClause(whereClause);
+        queryBuilder.setPageSize(100).setOffset(0);
+        queryBuilder.setSortBy("created DESC"); // latest
+
+        Backendless.Persistence.of(DhallMenu.class).find(queryBuilder, new AsyncCallback<List<DhallMenu>>() {
+            @Override
+            public void handleResponse(List<DhallMenu> response) {
+                notification = findViewById(R.id.notification);
+                notification.setText(response.get(0).getMeal());
+
+            }
+
+            @Override
+            public void handleFault(BackendlessFault fault) {
+                String faultMessage = "Fault occurred while retrieving data :(. " +
+                        "Please check your internet connection.";
+            }
+        });
+    }
+
     public void toastMessage( String msg){
         Toast.makeText(DinningHallMenuSection.this, msg, Toast.LENGTH_SHORT).show();
     }
