@@ -191,24 +191,24 @@ public class DinningHallMenuSection extends AppCompatActivity {
     }
 
     public void readData(String tag){
-        String whereClause = "day = '" + tag + "'";
+        String whereClause = "tag = '" + tag + "'";
         DataQueryBuilder queryBuilder = DataQueryBuilder.create();
         queryBuilder.setWhereClause(whereClause);
         queryBuilder.setPageSize(100).setOffset(0);
         queryBuilder.setSortBy("created DESC"); // latest
 
-        Backendless.Persistence.of(DhallMenu.class).find(queryBuilder, new AsyncCallback<List<DhallMenu>>() {
-            @Override
-            public void handleResponse(List<DhallMenu> response) {
-                notification = findViewById(R.id.notification);
-                notification.setText(response.get(0).getMeal());
 
+        Backendless.Persistence.of(StatusUpdate.class).find(queryBuilder, new AsyncCallback<List<StatusUpdate>>() {
+            @Override
+            public void handleResponse(List<StatusUpdate> response) {
+                notification = findViewById(R.id.notification);
+                notification.setText(response.get(0).getStatus());
+                notification.setText("");
             }
 
             @Override
             public void handleFault(BackendlessFault fault) {
-                String faultMessage = "Fault occurred while retrieving data :(. " +
-                        "Please check your internet connection.";
+                Log.e("fault occured", "readData()");
             }
         });
     }
