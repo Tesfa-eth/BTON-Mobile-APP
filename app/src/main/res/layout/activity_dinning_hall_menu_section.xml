@@ -344,4 +344,18 @@
         android:layout_marginTop="15dp"
         android:textColor="#ff9966" />
 
+    <Button
+        android:id="@+id/btnStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="15dp"
+        android:layout_toEndOf="@+id/btnicon"
+        android:background="@drawable/contact_hc_button_apply"
+        android:backgroundTint="@color/danger"
+        android:fadingEdge="vertical"
+        android:text="Closed"
+        android:textAllCaps="false"
+        android:textColor="@color/white" />
+
 </RelativeLayout>

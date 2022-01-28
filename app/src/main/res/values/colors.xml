@@ -9,4 +9,12 @@
     <color name="white">#FFFFFFFF</color>
     <color name="primary">#945F4F</color>
     <color name="primary_light">#6C483C</color>
+    <color name="warnning">#f0ad4e</color>
+    <color name="primaryBootstrap">#0275d8</color>
+    <color name="success">#5cb85c</color>
+    <color name="info">#5bc0de</color>
+    <color name="danger">#d9534f</color>
+    <color name="inverse">#292b2c</color>
+    <color name="faded">#f7f7f7</color>
+    <color name="facebook">#3b5998</color>
 </resources>

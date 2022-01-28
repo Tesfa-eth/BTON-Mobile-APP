@@ -2,13 +2,17 @@ package com.application.bton;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.graphics.Color;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
+import android.widget.ToggleButton;
 
 import com.backendless.Backendless;
 import com.backendless.async.callback.AsyncCallback;
@@ -31,6 +35,9 @@ public class DinningHallMenuSection extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dinning_hall_menu_section);
+
+        // update online status
+        readAndUpdateStatus("DhallStatus");
 
         String tag = "Notice text";
         readData(tag); // read data for the notification and update,// can be used for
@@ -185,6 +192,40 @@ public class DinningHallMenuSection extends AppCompatActivity {
             }
         });
     }
+
+    public void readAndUpdateStatus(String tag){
+        String whereClause = "tag = '" + tag + "'";
+        DataQueryBuilder queryBuilder = DataQueryBuilder.create();
+        queryBuilder.setWhereClause(whereClause);
+        queryBuilder.setPageSize(100).setOffset(0);
+        queryBuilder.setSortBy("created DESC"); // latest status
+
+        Backendless.Persistence.of(StatusUpdate.class).find(queryBuilder, new AsyncCallback<List<StatusUpdate>>() {
+            @Override
+            public void handleResponse(List<StatusUpdate> response) {
+                String status = response.get(0).getStatus();
+                Button btnStatus = findViewById(R.id.btnStatus);
+                if (status.equals("ON")){
+                    toastMessage("The dinning hall is currently Open");
+                    btnStatus.setText("Open");
+                    //btnStatus.setBackgroundColor(btnStatus.getContext().getResources().getColor(R.color.primary));
+                    //btnStatus.setBackground();
+                }
+                else {
+                    toastMessage("The dinning hall is currentl closed");
+                    btnStatus.setText("Closed");
+                    //btnStatus.setBackground(R.color.danger);
+                }
+                // toggle.setBackgroundResource(R.color.info);
+            }
+
+            @Override
+            public void handleFault(BackendlessFault fault) {
+                Log.d("fault readStatus", "fault occured while getting online status" + fault);
+            }
+        });
+
+}
 
     public void toastMessage( String msg){
         Toast.makeText(DinningHallMenuSection.this, msg, Toast.LENGTH_SHORT).show();
