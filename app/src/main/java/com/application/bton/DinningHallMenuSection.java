@@ -203,7 +203,7 @@ public class DinningHallMenuSection extends AppCompatActivity {
             public void handleResponse(List<StatusUpdate> response) {
                 notification = findViewById(R.id.notification);
                 notification.setText(response.get(0).getStatus());
-                notification.setText("");
+                //notification.setText("");
             }
 
             @Override
