@@ -8,9 +8,9 @@
     <application
         android:name=".DefaultApplication"
         android:allowBackup="true"
-        android:icon="@mipmap/benniconcircle2"
+        android:icon="@mipmap/play_store_512"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/bennicon"
+        android:roundIcon="@mipmap/play_store_512"
         android:supportsRtl="true"
         android:theme="@style/Theme.BTON">
         <activity
@@ -19,9 +19,10 @@
         <activity
             android:name=".DinningHallMenuSection"
             android:exported="false" />
-        <activity
+        <!--Todo: may cause error.-->
+        <!--activity
             android:name=".DhallMenu"
-            android:exported="false" />
+            android:exported="false" /-->
         <activity
             android:name=".SchoolCalander"
             android:exported="false" />

@@ -1,5 +1,7 @@
 package com.application.bton;
 
+import androidx.appcompat.app.AppCompatActivity;
+
 public class DhallMenu {
     private String day;
     private String mealOfTheDay;
