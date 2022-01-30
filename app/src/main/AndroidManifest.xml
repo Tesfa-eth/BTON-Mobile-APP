@@ -20,9 +20,9 @@
             android:name=".DinningHallMenuSection"
             android:exported="false" />
         <!--Todo: may cause error.-->
-        <activity
+        <!--activity
             android:name=".DhallMenu"
-            android:exported="false" />
+            android:exported="false" /-->
         <activity
             android:name=".SchoolCalander"
             android:exported="false" />

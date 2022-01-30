@@ -203,7 +203,6 @@ public class DinningHallMenuSection extends AppCompatActivity {
             public void handleResponse(List<StatusUpdate> response) {
                 notification = findViewById(R.id.notification);
                 notification.setText(response.get(0).getStatus());
-                //notification.setText("");
             }
 
             @Override
@@ -240,7 +239,7 @@ public class DinningHallMenuSection extends AppCompatActivity {
                     // btnStatus.setBackgroundColor(btnStatus.getContext().getResources().getColor(R.color.primary));
                     // btnStatus.setBackground();
                 }
-                else {
+                else if(status.equals("OFF")){
                     toastMessage("The dinning hall is currently closed.");
                     btnStatus.setText("CLOSED");
                     btnStatus.setTextColor(getResources().getColor(R.color.danger));
