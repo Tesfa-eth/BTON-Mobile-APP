@@ -71,9 +71,9 @@
                 android:textColor="@color/white"
                 android:textSize="25dp" />
 
-            <!--Health Center-->
+            <!--Dinning hall menu-->
             <ImageView
-                android:id="@+id/imgHealthCenter"
+                android:id="@+id/imgDhall"
                 android:layout_width="wrap_content"
                 android:layout_height="250dp"
                 android:layout_below="@+id/imgAnnouncements"
@@ -81,10 +81,34 @@
                 android:src="@drawable/brooderhealthctratnight" />
 
             <Button
-                android:id="@+id/btnHeathCenter"
+                android:id="@+id/btnDhall"
                 android:layout_width="300dp"
                 android:layout_height="100dp"
                 android:layout_below="@+id/imgAnnouncements"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="87dp"
+                android:background="@drawable/homepage_btn_apply"
+                android:text="Dinning Hall"
+                android:textAlignment="center"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="25dp" />
+
+
+            <!--Health Center-->
+            <ImageView
+                android:id="@+id/imgHealthCenter"
+                android:layout_width="wrap_content"
+                android:layout_height="250dp"
+                android:layout_below="@+id/imgDhall"
+                android:layout_marginTop="-5dp"
+                android:src="@drawable/brooderhealthctratnight" />
+
+            <Button
+                android:id="@+id/btnHeathCenter"
+                android:layout_width="300dp"
+                android:layout_height="100dp"
+                android:layout_below="@+id/imgDhall"
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="87dp"
                 android:background="@drawable/homepage_btn_apply"

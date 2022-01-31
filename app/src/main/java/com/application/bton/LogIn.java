@@ -37,9 +37,9 @@ public class LogIn extends AppCompatActivity implements View.OnClickListener {
                 startActivity(intent);
                 break;
             case R.id.btnVisitor:
-                // sends to dhall menu section for now
+                // sends to Emplouee registration section for now
                 // Intent visitor_intent = new Intent(LogIn.this, Homepage.class);
-                Intent visitor_intent = new Intent(LogIn.this, DinningHallMenuSection.class);
+                Intent visitor_intent = new Intent(LogIn.this, EmployeeRegistration.class);
                 startActivity(visitor_intent);
                 break;
             default:

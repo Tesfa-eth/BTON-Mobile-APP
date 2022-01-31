@@ -40,6 +40,10 @@ public class Homepage extends AppCompatActivity implements View.OnClickListener 
                 startActivity(sclCalander_intent);
                 break;
 
+            case R.id.btnDhall:
+                startActivity(new Intent(Homepage.this, DinningHallMenuSection.class));
+                break;
+
 
             default:
                 break;
@@ -67,6 +71,9 @@ public class Homepage extends AppCompatActivity implements View.OnClickListener 
 
         Button btnSchoolCalendar = findViewById(R.id.btnSclCalander);
         btnSchoolCalendar.setOnClickListener(this);
+
+        Button btnDhall = findViewById(R.id.btnDhall);
+        btnDhall.setOnClickListener(this);
 
     }
 }
