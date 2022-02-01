@@ -39,4 +39,14 @@
         android:layout_marginTop="10dp"
         android:src="@mipmap/bennicon"/>
 
+    <ListView
+        android:id="@+id/regListView"
+        android:layout_below="@+id/btnSearch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:divider="@color/white"
+        android:layout_marginTop="15dp"
+        android:dividerHeight="13dp"
+        />
+
 </RelativeLayout>

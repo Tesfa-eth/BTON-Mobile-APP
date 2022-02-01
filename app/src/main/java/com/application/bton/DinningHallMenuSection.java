@@ -36,7 +36,6 @@ public class DinningHallMenuSection extends AppCompatActivity {
     TextView dinnerStreetEats, dinnersaltSourSpiceUmami, dinnersoupAndgrains;
     TextView notification;
     public final String[] day = {"Monday"};
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
