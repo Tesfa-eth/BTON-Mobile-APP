@@ -38,61 +38,19 @@ public class EmployeeRegistration extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_employee_registration);
 
-        //Log.d("BROKEHERE", "p-0 check response" + response.size());
-
-        // list view that contains all the card views.
+        // list view to display profiles
         mListView = findViewById(R.id.regListView);
 
         lastname = findViewById(R.id.edtTxtFirstName);
         btnSearch = findViewById(R.id.btnSearch);
-
-        //Log.d("brokeHere", "p-1 check response" + response.size());
-
         getEverything();
-        //toastMessage("check responseList size........." + responseList.size());
-        toastMessage("One more time: " + resuLT[0].size());
-
 
         btnSearch.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 writeToCard();
-                //backendless stuff.... searching for stuff here
-                //String whereClause = "surname is not null";
-                String whereClause = "surname = '" + lastname.getText().toString() + "'";
-                Log.d("whereClause", whereClause);
-
-                DataQueryBuilder queryBuilder = DataQueryBuilder.create();
-                queryBuilder.setWhereClause(whereClause);
-                queryBuilder.setPageSize(100).setOffset(0);
-                queryBuilder.setSortBy("name");
-
-                Backendless.Persistence.of(Person.class).find(queryBuilder, new AsyncCallback<List<Person>>() {
-                    @Override
-                    public void handleResponse(List<Person> response1) {
-                        //responseList.add(response1);
-                        //response = response1;
-                        //writeToCard(response1);
-                        for(int i=0; i < response1.size(); i++){
-                            toastMessage(response1.get(i).getName());
-                        }
-                    }
-
-                    @Override
-                    public void handleFault(BackendlessFault fault) {
-                        toastMessage("Some fault found" + fault);
-                    }
-                });
-
-                // end of backendless stuff
-
-
-                lastname.setText("");
             }
         });
-        //toastMessage("check responseList size........." + responseList.size());
-
-        //Log.d("beforeAdapter", "check response" + response.size());
     }
 
     public void getEverything(){
@@ -106,10 +64,6 @@ public class EmployeeRegistration extends AppCompatActivity {
             @Override
             public void handleResponse(List<Person> response) {
                 resuLT[0] = response;
-                //rESULT[0] = response;
-                toastMessage("size one: " + resuLT[0].size());
-                //responseList.add(response);
-                //toastMessage("Count: " + responseList.size());
             }
 
             @Override

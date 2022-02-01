@@ -7,6 +7,12 @@
     tools:context=".DhallMenu"
     android:padding="40dp"
     android:background="#945F4F">
+    <ImageView
+        android:id="@+id/btnicon"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_centerHorizontal="true"
+        android:src="@mipmap/bennicon"/>
 
     <EditText
         android:id="@+id/edtTxtFirstName"
@@ -15,31 +21,36 @@
         android:layout_below="@+id/btnicon"
         android:layout_marginTop="20dp"
         android:background="@color/primary_light"
+        android:hint="First Name"
+        android:inputType="text"
+        android:minHeight="30dp"/>
+
+    <EditText
+        android:id="@+id/edtTxtLastName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/edtTxtFirstName"
+        android:layout_marginTop="10dp"
+        android:background="@color/primary_light"
         android:hint="Last name"
         android:inputType="text"
-        android:minHeight="48dp" />
+        android:minHeight="30dp" />
+    <!--Todo: add a spinner here for department-->
 
     <Button
         android:id="@+id/btnSearch"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/edtTxtFirstName"
-        android:layout_centerInParent="true"
+        android:layout_below="@+id/edtTxtLastName"
         android:layout_marginTop="10dp"
         android:backgroundTint="@color/primary_light"
         android:drawableRight="@drawable/ic_person_sign_in"
         android:text="Search Employee"
         android:textSize="20sp" />
 
-    <ImageView
-        android:id="@+id/btnicon"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:layout_centerHorizontal="true"
-        android:src="@mipmap/bennicon"/>
-
     <ListView
         android:id="@+id/regListView"
+        android:scrollbars="none"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/btnSearch"

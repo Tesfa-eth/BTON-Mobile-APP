@@ -8,12 +8,11 @@
         android:layout_width="match_parent"
         android:background="@color/primary_light"
         android:layout_height="wrap_content">
-        <!--Todo: circular image-->
         <de.hdodenhof.circleimageview.CircleImageView
             android:layout_width="match_parent"
             android:layout_height="160dp"
             android:scaleType="centerCrop"
-            android:layout_marginTop="5dp"
+            android:layout_marginTop="10dp"
             android:layout_marginHorizontal="20dp"
             android:id="@+id/cardRegImageView"/>
         <TextView
