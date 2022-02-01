@@ -13,7 +13,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/btnicon"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="20dp"
         android:background="@color/primary_light"
         android:hint="Last name"
         android:inputType="text"
@@ -25,28 +25,26 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/edtTxtFirstName"
         android:layout_centerInParent="true"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="10dp"
         android:backgroundTint="@color/primary_light"
         android:drawableRight="@drawable/ic_person_sign_in"
         android:text="Search Employee"
-        android:textSize="20dp" />
+        android:textSize="20sp" />
 
     <ImageView
         android:id="@+id/btnicon"
-        android:layout_width="150dp"
-        android:layout_height="150dp"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="10dp"
         android:src="@mipmap/bennicon"/>
 
     <ListView
         android:id="@+id/regListView"
-        android:layout_below="@+id/btnSearch"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:divider="@color/white"
+        android:layout_below="@+id/btnSearch"
         android:layout_marginTop="15dp"
-        android:dividerHeight="13dp"
-        />
+        android:divider="@color/primary"
+        android:dividerHeight="13dp" />
 
 </RelativeLayout>
