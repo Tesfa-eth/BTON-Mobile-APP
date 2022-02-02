@@ -31,7 +31,7 @@ public class EmployeeRegistration extends AppCompatActivity {
     EditText lastname;
     Button btnSearch;
     ListView mListView;
-    public final List<Person>[] resuLT = new List[]{new ArrayList<>()};
+    public final List<EmployeeProfile>[] resuLT = new List[]{new ArrayList<>()};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,9 +41,12 @@ public class EmployeeRegistration extends AppCompatActivity {
         // list view to display profiles
         mListView = findViewById(R.id.regListView);
 
+        // search by
         lastname = findViewById(R.id.edtTxtFirstName);
-        btnSearch = findViewById(R.id.btnSearch);
         getEverything();
+
+
+        btnSearch = findViewById(R.id.btnSearch);
 
         btnSearch.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -58,9 +61,22 @@ public class EmployeeRegistration extends AppCompatActivity {
         DataQueryBuilder queryBuilder = DataQueryBuilder.create();
         //queryBuilder.setWhereClause(whereClause);
         queryBuilder.setPageSize(100).setOffset(0);
-        queryBuilder.setSortBy("name");
+        //queryBuilder.setSortBy("name");
 
-        Backendless.Persistence.of(Person.class).find(queryBuilder, new AsyncCallback<List<Person>>() {
+        Backendless.Persistence.of(EmployeeProfile.class).find(queryBuilder, new AsyncCallback<List<EmployeeProfile>>() {
+            @Override
+            public void handleResponse(List<EmployeeProfile> response) {
+                resuLT[0] = response;
+                toastMessage("employee registration: " + response.size());
+            }
+
+            @Override
+            public void handleFault(BackendlessFault fault) {
+                toastMessage("fault occurred");
+            }
+        });
+
+        /*Backendless.Persistence.of(Person.class).find(queryBuilder, new AsyncCallback<List<Person>>() {
             @Override
             public void handleResponse(List<Person> response) {
                 resuLT[0] = response;
@@ -71,17 +87,19 @@ public class EmployeeRegistration extends AppCompatActivity {
 
             }
         });
+
+         */
     }
 
     public void writeToCard(){
-        toastMessage("One more time: " + resuLT[0].size());
+        toastMessage("oh wow! : " + resuLT[0].size());
         MyAdapter myAdapter = new MyAdapter();
         mListView.setAdapter(myAdapter);
     }
 
     public class MyAdapter extends BaseAdapter{
 
-        List<Person> response = resuLT[0];
+        List<EmployeeProfile> response = resuLT[0];
 
         @Override
         public int getCount() {
@@ -102,11 +120,17 @@ public class EmployeeRegistration extends AppCompatActivity {
         @Override
         public View getView(int position, View convertView, ViewGroup parent) {
             convertView = getLayoutInflater().inflate(R.layout.card_emp_reg, parent, false);
-            ImageView mImageView = convertView.findViewById(R.id.cardRegImageView);
-            TextView mTextView = convertView.findViewById(R.id.cardRegText);
+            ImageView profileImage = convertView.findViewById(R.id.cardRegImageView);
+            TextView fullName = convertView.findViewById(R.id.cardRegFullName);
+            TextView office = convertView.findViewById(R.id.cardRegOffice);
+            TextView email = convertView.findViewById(R.id.cardRegBennEmail);
+            TextView phone = convertView.findViewById(R.id.cardRegPhone);
 
-            mImageView.setImageResource(R.drawable.adm2_wesley);
-            mTextView.setText(response.get(position).getName());
+            profileImage.setImageResource(R.drawable.adm2_wesley);
+            fullName.setText(response.get(position).getFirstName() + " " + response.get(position).getLastName());
+            office.setText(response.get(position).getOffice());
+            email.setText(response.get(position).getBennEmail());
+            phone.setText(("000-000-000"));
 
             return convertView;
         }
