@@ -20,6 +20,7 @@ import com.backendless.Backendless;
 import com.backendless.async.callback.AsyncCallback;
 import com.backendless.exceptions.BackendlessFault;
 import com.backendless.persistence.DataQueryBuilder;
+import com.bumptech.glide.Glide;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -126,11 +127,13 @@ public class EmployeeRegistration extends AppCompatActivity {
             TextView email = convertView.findViewById(R.id.cardRegBennEmail);
             TextView phone = convertView.findViewById(R.id.cardRegPhone);
 
-            profileImage.setImageResource(R.drawable.adm2_wesley);
+            //profileImage.setImageResource(R.drawable.adm2_wesley);
+            //Glide.with(this).load(response.get(position).getImageUrl()).into(profileImage);
+            Glide.with(EmployeeRegistration.this).load(response.get(position).getImageUrl()).into(profileImage);
             fullName.setText(response.get(position).getFirstName() + " " + response.get(position).getLastName());
             office.setText(response.get(position).getOffice());
             email.setText(response.get(position).getBennEmail());
-            phone.setText(("000-000-000"));
+            phone.setText((phone.getText().toString()));
 
             return convertView;
         }
