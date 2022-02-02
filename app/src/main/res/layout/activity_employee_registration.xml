@@ -37,11 +37,20 @@
         android:minHeight="30dp" />
     <!--Todo: add a spinner here for department-->
 
+    <Spinner
+        android:id="@+id/spinnerDepartment"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/edtTxtLastName"
+        android:layout_marginTop="15dp"
+        android:backgroundTint="@color/white" />
+
+
     <Button
         android:id="@+id/btnSearch"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/edtTxtLastName"
+        android:layout_below="@+id/spinnerDepartment"
         android:layout_marginTop="10dp"
         android:backgroundTint="@color/primary_light"
         android:drawableRight="@drawable/ic_person_sign_in"

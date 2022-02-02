@@ -8,11 +8,14 @@ import android.provider.Settings;
 import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.BaseAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.ListView;
+import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -29,9 +32,11 @@ import java.util.Map;
 import weborb.client.Fault;
 
 public class EmployeeRegistration extends AppCompatActivity {
-    EditText lastname;
+    EditText lastnameText, firstnameText;
     Button btnSearch;
     ListView mListView;
+    Spinner departmentSpinner;
+    public final String[] spinnerStorage = {"department"};
     public final List<EmployeeProfile>[] resuLT = new List[]{new ArrayList<>()};
 
     @Override
@@ -39,12 +44,33 @@ public class EmployeeRegistration extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_employee_registration);
 
+        getEverything();
+
         // list view to display profiles
         mListView = findViewById(R.id.regListView);
 
-        // search by
-        lastname = findViewById(R.id.edtTxtFirstName);
-        getEverything();
+        // SEARCH BY:
+        // *name
+        lastnameText = findViewById(R.id.edtTxtLastName);
+        firstnameText = findViewById(R.id.edtTxtFirstName);
+        // *spinner
+        departmentSpinner = (Spinner) findViewById(R.id.spinnerDepartment);
+        ArrayAdapter<CharSequence> adapterDepartment = ArrayAdapter.createFromResource(this,
+                R.array.departments, android.R.layout.simple_spinner_item);
+        adapterDepartment.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        departmentSpinner.setAdapter(adapterDepartment);
+        departmentSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                spinnerStorage[0] = parent.getItemAtPosition(position).toString();
+                searchBy(spinnerStorage[0], null, null);
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+                spinnerStorage[0] = "All";
+            }
+        });
 
 
         btnSearch = findViewById(R.id.btnSearch);
@@ -53,6 +79,39 @@ public class EmployeeRegistration extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 writeToCard();
+            }
+        });
+    }
+
+    public void searchBy(String department, String firstname, String lastName){
+        String whereClause;
+        DataQueryBuilder queryBuilder = DataQueryBuilder.create();
+        //toastMessage("some" + lastnameText.getText().toString().equals(""));
+        if(department.equals("All")){
+            getEverything();
+            return;
+        }
+        if(firstname == null){
+            whereClause = "department = '" + department + "'";
+            queryBuilder.setWhereClause(whereClause);
+        }
+        else{
+            return;
+        }
+
+        queryBuilder.setPageSize(100).setOffset(0);
+        //queryBuilder.setSortBy("name");
+
+        Backendless.Persistence.of(EmployeeProfile.class).find(queryBuilder, new AsyncCallback<List<EmployeeProfile>>() {
+            @Override
+            public void handleResponse(List<EmployeeProfile> response) {
+                resuLT[0] = response;
+                toastMessage("employee registration: " + response.size());
+            }
+
+            @Override
+            public void handleFault(BackendlessFault fault) {
+                toastMessage("fault occurred");
             }
         });
     }
@@ -76,20 +135,6 @@ public class EmployeeRegistration extends AppCompatActivity {
                 toastMessage("fault occurred");
             }
         });
-
-        /*Backendless.Persistence.of(Person.class).find(queryBuilder, new AsyncCallback<List<Person>>() {
-            @Override
-            public void handleResponse(List<Person> response) {
-                resuLT[0] = response;
-            }
-
-            @Override
-            public void handleFault(BackendlessFault fault) {
-
-            }
-        });
-
-         */
     }
 
     public void writeToCard(){

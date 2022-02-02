@@ -108,5 +108,15 @@
         <item>Sunday</item>
     </string-array>
 
+    <string-array name="departments">
+        <item>All</item>
+        <item>The Presidents office</item>
+        <item>Admissions office</item>
+        <item>IT</item>
+        <item>Dickinson Faculty</item>
+        <item>Academic office</item>
+        <item>Business office</item>
+    </string-array>
+
 
 </resources>
