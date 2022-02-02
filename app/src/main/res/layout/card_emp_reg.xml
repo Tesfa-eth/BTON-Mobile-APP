@@ -22,18 +22,35 @@
             android:layout_height="wrap_content"
             android:layout_below="@+id/cardRegImageView"
             android:layout_centerHorizontal="true"
-            android:textColor="@color/white"
             android:text="First name"
+            android:textColor="@color/white"
             android:textSize="15sp" />
 
-        <!--??POSITION HERE-->
+        <TextView
+            android:id="@+id/cardRegDepartment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/cardRegFullName"
+            android:layout_centerHorizontal="true"
+            android:text="Department"
+            android:textColor="@color/white"
+            android:textSize="15sp" />
+        <TextView
+            android:id="@+id/cardRegPosition"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/cardRegDepartment"
+            android:layout_centerHorizontal="true"
+            android:text="Position"
+            android:textColor="@color/white"
+            android:textSize="15sp" />
         <TextView
             android:id="@+id/cardRegOffice"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="15sp"
             android:textColor="@color/white"
-            android:layout_below="@+id/cardRegFullName"
+            android:layout_below="@+id/cardRegPosition"
             android:text="Office location"
             android:layout_centerHorizontal="true" />
         <TextView

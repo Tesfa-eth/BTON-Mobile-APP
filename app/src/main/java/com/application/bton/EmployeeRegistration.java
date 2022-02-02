@@ -123,6 +123,8 @@ public class EmployeeRegistration extends AppCompatActivity {
             convertView = getLayoutInflater().inflate(R.layout.card_emp_reg, parent, false);
             ImageView profileImage = convertView.findViewById(R.id.cardRegImageView);
             TextView fullName = convertView.findViewById(R.id.cardRegFullName);
+            TextView departmemt = convertView.findViewById(R.id.cardRegDepartment);
+            TextView positionInOffice = convertView.findViewById(R.id.cardRegPosition);
             TextView office = convertView.findViewById(R.id.cardRegOffice);
             TextView email = convertView.findViewById(R.id.cardRegBennEmail);
             TextView phone = convertView.findViewById(R.id.cardRegPhone);
@@ -133,7 +135,17 @@ public class EmployeeRegistration extends AppCompatActivity {
             fullName.setText(response.get(position).getFirstName() + " " + response.get(position).getLastName());
             office.setText(response.get(position).getOffice());
             email.setText(response.get(position).getBennEmail());
-            phone.setText((phone.getText().toString()));
+            phone.setText((response.get(position).getPhone()));
+
+            // Todo: add this checker for all setTetxts above.
+            //toastMessage(response.get(position).getDepartment());
+            //toastMessage("position: " + (response.get(position).getPosition() == null));
+            if(!(response.get(position).getDepartment() == null)){
+                departmemt.setText(response.get(position).getDepartment());
+            }
+            if(!(response.get(position).getPosition() == null)){
+                positionInOffice.setText(response.get(position).getPosition());
+            }
 
             return convertView;
         }

@@ -5,19 +5,21 @@ public class EmployeeProfile {
     private String firstName;
     private String lastName;
     private String bennEmail;
-    private long phone;
+    private String phone;
     private String imageUrl;
     private String office;
     private String department;
+    private String position;
 
     public EmployeeProfile(){
         firstName = null;
         lastName = null;
         bennEmail = null;
-        phone = 0;
+        phone = null;
         imageUrl = null;
         office = null;
         department = null;
+        position = null;
     }
 
     public String getFirstName() {
@@ -44,11 +46,11 @@ public class EmployeeProfile {
         this.bennEmail = bennEmail;
     }
 
-    public long getPhone() {
+    public String getPhone() {
         return phone;
     }
 
-    public void setPhone(long phone) {
+    public void setPhone(String phone) {
         this.phone = phone;
     }
 
@@ -74,5 +76,13 @@ public class EmployeeProfile {
 
     public void setDepartment(String department) {
         this.department = department;
+    }
+
+    public String getPosition() {
+        return position;
+    }
+
+    public void setPosition(String position) {
+        this.position = position;
     }
 }
