@@ -60,6 +60,7 @@
         android:id="@+id/scrollView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:scrollbars="none"
         android:layout_below="@+id/notification"
         android:layout_marginTop="15dp"
         >
@@ -73,7 +74,8 @@
                 style="@style/CardView.Light"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                app:cardBackgroundColor="@color/primary_light">
+                app:cardBackgroundColor="@color/primary_light"
+                app:cardCornerRadius="15dp">
 
                 <RelativeLayout
                     android:layout_width="wrap_content"
@@ -156,12 +158,14 @@
             <!-- Lunch Card View -->
             <androidx.cardview.widget.CardView
                 android:id="@+id/carfdViewLunch"
+                style="@style/CardView.Light"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                app:cardBackgroundColor="@color/primary_light"
                 android:layout_below="@+id/cardViewBreakfast"
                 android:layout_marginTop="10dp"
-                style="@style/CardView.Light">
+                app:cardCornerRadius="15dp"
+                app:cardBackgroundColor="@color/primary_light">
+
                 <RelativeLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content">
@@ -174,7 +178,7 @@
                         android:padding="5dp"
                         android:text="Lunch"
                         android:textColor="@color/white"
-                        android:textSize="30sp"/>
+                        android:textSize="30sp" />
 
                     <TextView
                         android:id="@+id/lunchStreetEatsSubtitle"
@@ -205,16 +209,16 @@
                         android:text="(Salt/Sour/Spice/Umami)"
                         android:textColor="@color/primary"
                         android:textSize="20sp" />
+
                     <TextView
                         android:id="@+id/lunchsaltSourSpiceUmami"
-                        android:layout_below="@+id/lunchsaltSourSpiceUmamiSubtitle"
-                        android:text="Sorry, menu not updated yet :("
-                        android:textSize="15sp"
-                        android:textColor="#f5d57a"
-                        android:padding="5dp"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        />
+                        android:layout_below="@+id/lunchsaltSourSpiceUmamiSubtitle"
+                        android:padding="5dp"
+                        android:text="Sorry, menu not updated yet :("
+                        android:textColor="#f5d57a"
+                        android:textSize="15sp" />
 
                     <TextView
                         android:id="@+id/lunchsoupAndgrainsSubtitle"
@@ -228,16 +232,13 @@
 
                     <TextView
                         android:id="@+id/lunchsoupAndgrains"
-                        android:layout_below="@+id/lunchsoupAndgrainsSubtitle"
-                        android:text="Sorry, menu not updated yet :("
-                        android:textSize="15sp"
-                        android:textColor="#f5d57a"
-                        android:padding="5dp"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        />
-
-
+                        android:layout_below="@+id/lunchsoupAndgrainsSubtitle"
+                        android:padding="5dp"
+                        android:text="Sorry, menu not updated yet :("
+                        android:textColor="#f5d57a"
+                        android:textSize="15sp" />
 
 
                 </RelativeLayout>
@@ -251,6 +252,7 @@
                 app:cardBackgroundColor="@color/primary_light"
                 android:layout_below="@+id/carfdViewLunch"
                 android:layout_marginTop="10dp"
+                app:cardCornerRadius="15dp"
                 style="@style/CardView.Light">
                 <RelativeLayout
                     android:layout_width="wrap_content"

@@ -53,51 +53,6 @@
     <string name="eric"><br>Eric Dingfelder \n </br><br> Senior Software and Data \n Engineer \n </br><br> edingfelder@bennington.edu \n </br> 000-000-0000</string>
 
 
-    <!--General announcment (dynamic)-->
-    <!--Nov 30, 2021-->
-    <string name="nov30_2021"><b>Message from:</b> Kate Child, Associate  Dean for Academic  \n <b>Subject: </b>New Travel Ban in effect</string>
-    <string name="nov_30_2021_body1">Good morning,\n
-        Like me you may have been keeping up with the news of an Executive Order signed by U.S. President Biden
-        that prohibit travelers who were physically present within the Republic of Botswana, the Kingdom of Eswatini,
-        the Kingdom of Lesotho, the Republic of Malawi, the Republic of Mozambique, the Republic of Namibia, the Republic
-        of South Africa, and the Republic of Zimbabwe during the 14-day period preceding their entry or attempted entry into
-        the United States. \n
-        It is not yet clear to me at this time if there will be a national interest exception for students traveling on F1 visas,
-        but I *hope* to have more information about that shortly.  \n
-
-        I have written to our contacts at Senator Leahy Office to ask if they have more information. We will be watching
-        the news and updates to the Executive Order carefully. We will send email updates as we have more information. And,
-        we will continue to advocate for international students and press our elected officials, as needed. \n
-
-        If you have not already applied to stay on campus for winter break and FWT and wish to do so due to concerns regarding
-        safety or ability to reenter the US, you can email iss@bennington.edu and/or Christine Winget directly. It is the Colleges
-        priority for international students to remain on campus this winter if they choose to do so.
-
-    </string>
-
-    <!--Nov 26, 2021-->
-    <string name="nov26_2021"><b>Message from:</b> COVID Taskforce  \n <b>Subject: </b>Covid Update</string>
-
-    <string name="nov_26_2021_body1">
-        Dear Bennington Community, \n
-
-        I wanted to share that we have a new student case, which was identified through surveillance testing earlier this week. \n
-
-        The student is isolating and contact tracing is complete. The College is working closely with the student and the Vermont
-        Department of Health. If anyone is identified as a close contact, they will receive instructions from me. \n
-
-        Christine Winget, Dr. Randy Anselmo, and I have been in touch with the House to answer any questions. \n
-
-        Per CDC guidelines, anyone who is fully vaccinated is not required to quarantine and is permitted to continue daily activities
-        on campus including attending class and entering the dining hall. Close contacts will be tested 5-7 days after exposure. \n
-
-        Everyone should be tested every week. Please continue to wear a mask, including in common spaces in houses; wash your hands; and
-        please report symptoms if you have them. \n
-
-        Please let me know if you have any questions.
-
-    </string>
-
     <string-array name="dayOfTheWeek">
         <item>Monday</item>
         <item>Tuesday</item>
@@ -106,6 +61,16 @@
         <item>Friday</item>
         <item>Saturday</item>
         <item>Sunday</item>
+    </string-array>
+
+    <string-array name="departments">
+        <item>All</item>
+        <item>The Presidents office</item>
+        <item>Admissions office</item>
+        <item>IT</item>
+        <item>Dickinson Faculty</item>
+        <item>Academic office</item>
+        <item>Business office</item>
     </string-array>
 
 

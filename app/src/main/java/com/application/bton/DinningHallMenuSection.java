@@ -12,6 +12,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.BaseAdapter;
 import android.widget.Button;
 import android.widget.Spinner;
 import android.widget.TextView;
@@ -25,6 +26,7 @@ import com.backendless.persistence.DataQueryBuilder;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 
 public class DinningHallMenuSection extends AppCompatActivity {
 
@@ -34,11 +36,12 @@ public class DinningHallMenuSection extends AppCompatActivity {
     TextView dinnerStreetEats, dinnersaltSourSpiceUmami, dinnersoupAndgrains;
     TextView notification;
     public final String[] day = {"Monday"};
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dinning_hall_menu_section);
+
+        // Todo: add loader progress bar.
 
         Button btnRefresh = findViewById(R.id.btnRefresh);
         btnRefresh.setOnClickListener(new View.OnClickListener() {
@@ -127,6 +130,7 @@ public class DinningHallMenuSection extends AppCompatActivity {
         Backendless.Persistence.of(DhallMenu.class).find(queryBuilder,new AsyncCallback<List<DhallMenu>>() {
             @Override
             public void handleResponse(List<DhallMenu> response) {
+                generateCardView(response);
                 //toastMessage("count: " + response.size());
                 for(int i=0; i < response.size(); i++){
                     //toastMessage(response.get(i).getDay() + " - " +
@@ -268,6 +272,11 @@ public class DinningHallMenuSection extends AppCompatActivity {
             return false;
         }
     }
+
+    public void generateCardView(List<DhallMenu> response){
+        toastMessage("Got it: " + response.size() + " yayyyyy");
+    }
+
     public void toastMessage( String msg){
         Toast.makeText(DinningHallMenuSection.this, msg, Toast.LENGTH_SHORT).show();
     }

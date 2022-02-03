@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="13dp">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:background="@color/primary_light"
+        android:layout_height="wrap_content">
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_width="match_parent"
+            android:layout_height="160dp"
+            android:scaleType="centerCrop"
+            android:layout_marginTop="10dp"
+            android:layout_marginHorizontal="20dp"
+            android:id="@+id/cardRegImageView"/>
+        <!--firstname, lastname, bennEmail, phone,imgUrl, office-->
+        <TextView
+            android:id="@+id/cardRegFullName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/cardRegImageView"
+            android:layout_centerHorizontal="true"
+            android:text="First name"
+            android:textColor="@color/white"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/cardRegDepartment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/cardRegFullName"
+            android:layout_centerHorizontal="true"
+            android:text="Department"
+            android:textColor="@color/white"
+            android:textSize="15sp" />
+        <TextView
+            android:id="@+id/cardRegPosition"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/cardRegDepartment"
+            android:layout_centerHorizontal="true"
+            android:text="Position"
+            android:textColor="@color/white"
+            android:textSize="15sp" />
+        <TextView
+            android:id="@+id/cardRegOffice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:textColor="@color/white"
+            android:layout_below="@+id/cardRegPosition"
+            android:text="Office location"
+            android:layout_centerHorizontal="true" />
+        <TextView
+            android:id="@+id/cardRegBennEmail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:textColor="@color/white"
+            android:layout_below="@+id/cardRegOffice"
+            android:text="email@bennington.edu"
+            android:layout_centerHorizontal="true" />
+        <TextView
+            android:id="@+id/cardRegPhone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:textColor="@color/white"
+            android:layout_below="@+id/cardRegBennEmail"
+            android:text="000-000-0000"
+            android:layout_centerHorizontal="true" />
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>
