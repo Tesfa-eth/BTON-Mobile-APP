@@ -9,6 +9,7 @@
         android:background="@color/primary_light"
         android:layout_width="match_parent"
         android:minHeight="280dp"
+        android:padding="10dp"
         android:layout_height="wrap_content">
 
         <TextView
@@ -16,7 +17,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Date and time"
-            android:textColor="@color/white"
+            android:textSize="30dp"
+            android:textColor="#30D5C8"
             />
         <TextView
             android:id="@+id/messageFrom"
@@ -24,7 +26,8 @@
             android:layout_height="wrap_content"
             android:text="Message from"
             android:layout_below="@+id/msgDateAndTime"
-            android:textColor="@color/white"
+            android:textColor="@color/gold"
+            android:textSize="20dp"
             />
         <TextView
             android:id="@+id/messageContent"
