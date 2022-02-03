@@ -4,8 +4,17 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Parcelable;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
+
+import com.backendless.Backendless;
+import com.backendless.async.callback.AsyncCallback;
+import com.backendless.exceptions.BackendlessFault;
+import com.backendless.persistence.DataQueryBuilder;
+
+import java.util.List;
 
 public class Homepage extends AppCompatActivity implements View.OnClickListener {
 
@@ -18,7 +27,7 @@ public class Homepage extends AppCompatActivity implements View.OnClickListener 
                 startActivity(intent);
                 break;
             case R.id.btnDirectory:
-                Intent intent_dir = new Intent(Homepage.this, CampusDirectory.class);
+                Intent intent_dir = new Intent(Homepage.this, EmployeeRegistration.class);
                 startActivity(intent_dir);
                 break;
             case  R.id.btnAboutBTN:
@@ -75,5 +84,8 @@ public class Homepage extends AppCompatActivity implements View.OnClickListener 
         Button btnDhall = findViewById(R.id.btnDhall);
         btnDhall.setOnClickListener(this);
 
+    }
+    public void toastMessage( String msg){
+        Toast.makeText(Homepage.this, msg, Toast.LENGTH_SHORT).show();
     }
 }

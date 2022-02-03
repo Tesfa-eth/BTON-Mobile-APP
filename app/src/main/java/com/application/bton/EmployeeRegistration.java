@@ -87,17 +87,35 @@ public class EmployeeRegistration extends AppCompatActivity {
         String whereClause;
         DataQueryBuilder queryBuilder = DataQueryBuilder.create();
         //toastMessage("some" + lastnameText.getText().toString().equals(""));
+
+        // if either first or last name is filled for search
         if(department.equals("All")){
             getEverything();
             return;
         }
-        if(firstname == null){
-            whereClause = "department = '" + department + "'";
-            queryBuilder.setWhereClause(whereClause);
-        }
-        else{
-            return;
-        }
+        // // Todo: use array [firstname, lastname, department] for search purposes!
+
+
+
+//        if(firstname != null || lastName != null){
+//            toastMessage("Going here!" + lastName);
+//            if(firstname != null & lastName != null){
+//                whereClause = "firstName = '" + firstname + "' and lastName = '" + lastName + "'";
+//                queryBuilder.setWhereClause(whereClause);
+//            }
+//            else if(firstname != null){
+//                whereClause = "firstName = '" + firstname + "'";
+//                queryBuilder.setWhereClause(whereClause);
+//            }
+//            else if(lastName != null){
+//                whereClause = "lastName = '" + lastName + "'";
+//                queryBuilder.setWhereClause(whereClause);
+//            }
+//        }
+        // if one of them is provided
+        //if(firstname != null && lastName != null && department != null)
+        whereClause = "department = '" + department + "'";
+        queryBuilder.setWhereClause(whereClause);
 
         queryBuilder.setPageSize(100).setOffset(0);
         //queryBuilder.setSortBy("name");

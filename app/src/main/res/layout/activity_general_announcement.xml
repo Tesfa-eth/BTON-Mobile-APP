@@ -13,70 +13,24 @@
         android:layout_height="200dp"
         android:layout_marginTop="-20dp"
         android:src="@drawable/gen_announcement"/>
-    <ScrollView
+    <Button
+        android:id="@+id/btnDisplay"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/titleAnnouncement">
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            >
+        android:layout_below="@+id/titleAnnouncement"
+        android:backgroundTint="@color/primary_light"
+        android:text="Display"
+        android:textAllCaps="false"
+        android:textSize="30dp"
+        />
 
-            <!--nov29_2021-->
-            <TextView
-                android:id="@+id/nov29_2021"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@color/primary_light"
-                android:text="Nov 29, 2021"
-                android:textSize="35dp" />
-
-            <TextView
-                android:id="@+id/nov29_2021_sub1"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/nov29_2021"
-                android:text="@string/nov30_2021"
-                />
-            <TextView
-                android:id="@+id/nov29_2021_body1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:paddingHorizontal="25dp"
-                android:justificationMode="inter_word"
-                android:text="@string/nov_30_2021_body1"
-                android:layout_below="@id/nov29_2021_sub1"
-                />
-
-            <!--nov26_2021-->
-            <TextView
-                android:id="@+id/nov26_2021"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@color/primary_light"
-                android:text="Nov 26, 2021"
-                android:layout_marginTop="10dp"
-                android:layout_below="@+id/nov29_2021_body1"
-                android:textSize="35dp" />
-            <TextView
-                android:id="@+id/nov26_2021_sub1"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/nov26_2021"
-                android:text="@string/nov30_2021"
-                />
-            <TextView
-                android:id="@+id/nov26_2021_body1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:paddingHorizontal="25dp"
-                android:justificationMode="inter_word"
-                android:text="@string/nov_26_2021_body1"
-                android:layout_below="@id/nov26_2021_sub1"
-                android:layout_marginBottom="10dp"
-                />
-
-        </RelativeLayout>
-    </ScrollView>
-
+    <ListView
+        android:id="@+id/announcementListView"
+        android:scrollbars="none"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btnDisplay"
+        android:layout_marginTop="15dp"
+        android:divider="@color/primary"
+        android:dividerHeight="13dp" />
 </RelativeLayout>
