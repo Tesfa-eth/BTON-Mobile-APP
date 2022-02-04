@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:padding="10dp"
     tools:context=".CampusMap">
 
     <TextView
@@ -11,10 +12,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Campus map"
-        android:textSize="50dp"
         android:textAlignment="center"
         android:textColor="@color/primary"
-        />
+        android:textSize="40dp" />
     <TextView
         android:id="@+id/quickNotice"
         android:layout_below="@+id/titleCampusMap"
@@ -22,9 +22,36 @@
         android:layout_marginTop="25dp"
         android:text="Quick notice: turn-off auto-rotate mode for better experience"
         android:layout_height="wrap_content"/>
+    <Button
+        android:id="@+id/rotateButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Rotate"
+        android:textAllCaps="false"
+        android:layout_below="@+id/quickNotice"
+        android:layout_alignParentRight="true"
+        />
+    <Button
+        android:id="@+id/btnZoomOUT"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="-"
+        android:layout_below="@+id/quickNotice"
+        android:layout_marginLeft="5dp"
+        android:layout_toLeftOf="@+id/rotateButton"
+        />
+
+    <Button
+        android:id="@+id/btnZoomIN"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/quickNotice"
+        android:layout_marginLeft="5dp"
+        android:layout_toLeftOf="@+id/btnZoomOUT"
+        android:text="+" />
     <com.github.barteksc.pdfviewer.PDFView
         android:id="@+id/pdfCampusMap"
-        android:layout_below="@+id/quickNotice"
+        android:layout_below="@+id/rotateButton"
         android:layout_width="match_parent"
         android:layout_height="match_parent"/>
 
