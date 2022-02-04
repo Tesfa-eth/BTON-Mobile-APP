@@ -8,77 +8,113 @@ import android.text.Layout;
 import android.transition.AutoTransition;
 import android.transition.TransitionManager;
 import android.view.View;
+import android.view.ViewGroup;
+import android.widget.BaseAdapter;
 import android.widget.Button;
+import android.widget.ImageView;
+import android.widget.ListView;
+import android.widget.TextView;
+import android.widget.Toast;
+
+import com.backendless.Backendless;
+import com.backendless.async.callback.AsyncCallback;
+import com.backendless.exceptions.BackendlessFault;
+import com.backendless.persistence.DataQueryBuilder;
+import com.bumptech.glide.Glide;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class CampusGallery extends AppCompatActivity {
 
     //declaring variables
-    Button btnBarn, btnGeneral, btnCommons;
-    CardView barnCardView, generalCardView, commonsCardView;
+    ImageView sampleImage;
+    Button sampleButton;
+    //public final ArrayList result = new ArrayList<List<gallery>>();
+    public final List<gallery>[] result = new List[]{new ArrayList<>()};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_campus_gallery);
 
-        //respective buttons to cardViews
-        btnBarn = findViewById(R.id.btnBarn);
-        btnGeneral = findViewById(R.id.btnGeneral);
-        btnCommons = findViewById(R.id.btnCommons);
-
-        //cardViews
-        generalCardView = findViewById(R.id.generalCardView);
-        barnCardView = findViewById(R.id.barnCardView);
-        commonsCardView = findViewById(R.id.commonsCardView);
-
-        //Campus view on click listener
-        btnBarn.setOnClickListener(new View.OnClickListener() {
+        sampleButton = findViewById(R.id.sampleButton);
+        sampleButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(barnCardView.getVisibility() == View.GONE){
-                    TransitionManager.beginDelayedTransition(barnCardView, new AutoTransition());
-                    barnCardView.setVisibility(View.VISIBLE);
-                    btnBarn.setBackgroundResource(R.drawable.ic_baseline_keyboard_arrow_up_24);
-                }
-                else{
-                    barnCardView.setVisibility(View.GONE);
-                    btnBarn.setBackgroundResource(R.drawable.ic_baseline_keyboard_arrow_down_24);
-                }
+                loadMore();
+                toastMessage("loading...");
+                sampleButton.setText("Next page");
+
             }
         });
 
-        //Barn view on click listener
-        btnGeneral.setOnClickListener(new View.OnClickListener() {
+        gallery galleryVar = new gallery();
+        final long startTime = System.currentTimeMillis();
+        final int PAGESIZE = 80;
+        final Integer[] currentPage = {0};
+        // Todo: controlled next page loading rather than automated one.
+
+        DataQueryBuilder queryBuilder = DataQueryBuilder.create();
+        queryBuilder.setPageSize(PAGESIZE);
+        Backendless.Persistence.of(gallery.class).find(queryBuilder, new AsyncCallback<List<gallery>>() {
             @Override
-            public void onClick(View v) {
-                if(generalCardView.getVisibility() == View.GONE){
-                    TransitionManager.beginDelayedTransition(generalCardView, new AutoTransition());
-                    generalCardView.setVisibility(View.VISIBLE);
-                    btnGeneral.setBackgroundResource(R.drawable.ic_baseline_keyboard_arrow_up_24);
-                }
-                else{
-                    generalCardView.setVisibility(View.GONE);
-                    btnGeneral.setBackgroundResource(R.drawable.ic_baseline_keyboard_arrow_down_24);
+            public void handleResponse(List<gallery> response) {
+                result[0] = response;
+                // TODO MULTIPLE PAGE LOADING
+                int size = response.size();
+                if (size == PAGESIZE) {
+                    queryBuilder.prepareNextPage();
+                    Backendless.Data.of(gallery.class).find(queryBuilder, this);
+                } else {
+                    toastMessage("Start time" + (System.currentTimeMillis() - startTime));
                 }
             }
-        });
 
-        //commons on click listener
-        btnCommons.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
-                if(commonsCardView.getVisibility() == View.GONE){
-                    TransitionManager.beginDelayedTransition(commonsCardView, new AutoTransition());
-                    commonsCardView.setVisibility(View.VISIBLE);
-                    btnCommons.setBackgroundResource(R.drawable.ic_baseline_keyboard_arrow_up_24);
-                }
-                else{
-                    commonsCardView.setVisibility(View.GONE);
-                    btnCommons.setBackgroundResource(R.drawable.ic_baseline_keyboard_arrow_down_24);
-                }
+            public void handleFault(BackendlessFault fault) {
+
             }
         });
+    }
+
+    public void loadMore(){
+        ListView mListView = findViewById(R.id.imageListView);
+        MyAdapter myAdapter = new MyAdapter();
+        mListView.setAdapter(myAdapter);
+    }
+
+    public class MyAdapter extends BaseAdapter {
+
+        List<gallery> response = result[0];
+
+        @Override
+        public int getCount() {
+            return response.size();
+        }
+
+        @Override
+        public Object getItem(int position) {
+            return null;
+        }
+
+        @Override
+        public long getItemId(int position) {
+            return 0;
+        }
+
+        @Override
+        public View getView(int position, View convertView, ViewGroup parent) {
+            convertView = getLayoutInflater().inflate(R.layout.card_gallery_images, parent, false);
+            // display the image
+            ImageView profileImage = convertView.findViewById(R.id.cardViewGalleryImage);
+            Glide.with(CampusGallery.this).load(response.get(position).getPhoto_url()).into(profileImage);
+            return convertView;
+        }
+    }
 
 
+    public void toastMessage( String msg){
+        Toast.makeText(CampusGallery.this, msg, Toast.LENGTH_SHORT).show();
     }
 }
