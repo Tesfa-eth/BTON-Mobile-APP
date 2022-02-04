@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/primary"
+    tools:context=".CampusMap">
+
+    <TextView
+        android:id="@+id/titleCampusMap"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Campus map"
+        android:textSize="50dp"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        />
+    <com.github.barteksc.pdfviewer.PDFView
+        android:id="@+id/pdfCampusMap"
+        android:layout_below="@+id/titleCampusMap"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+
+</RelativeLayout>

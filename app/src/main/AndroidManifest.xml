@@ -14,15 +14,19 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.BTON">
         <activity
+            android:name=".CampusMap"
+            android:exported="false" />
+        <activity
             android:name=".EmployeeRegistration"
             android:exported="false" />
         <activity
             android:name=".DinningHallMenuSection"
-            android:exported="false" />
-        <!--Todo: may cause error.-->
-        <!--activity
+            android:exported="false" /> <!-- Todo: may cause error. -->
+        <!--
+activity
             android:name=".DhallMenu"
-            android:exported="false" /-->
+            android:exported="false" /
+        -->
         <activity
             android:name=".SchoolCalander"
             android:exported="false" />
