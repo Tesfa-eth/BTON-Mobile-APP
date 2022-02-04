@@ -4,7 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/primary"
     tools:context=".CampusMap">
 
     <TextView
@@ -14,11 +13,18 @@
         android:text="Campus map"
         android:textSize="50dp"
         android:textAlignment="center"
-        android:textColor="@color/white"
+        android:textColor="@color/primary"
         />
+    <TextView
+        android:id="@+id/quickNotice"
+        android:layout_below="@+id/titleCampusMap"
+        android:layout_width="match_parent"
+        android:layout_marginTop="25dp"
+        android:text="Quick notice: turn-off auto-rotate mode for better experience"
+        android:layout_height="wrap_content"/>
     <com.github.barteksc.pdfviewer.PDFView
         android:id="@+id/pdfCampusMap"
-        android:layout_below="@+id/titleCampusMap"
+        android:layout_below="@+id/quickNotice"
         android:layout_width="match_parent"
         android:layout_height="match_parent"/>
 

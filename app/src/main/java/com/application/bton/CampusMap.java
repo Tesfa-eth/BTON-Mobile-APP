@@ -14,6 +14,6 @@ public class CampusMap extends AppCompatActivity {
         setContentView(R.layout.activity_campus_map);
 
         pdfCampusMap = findViewById(R.id.pdfCampusMap);
-        pdfCampusMap.fromAsset("benn_campus_map.pdf").load();
+        pdfCampusMap.fromAsset("benn_campus_map_rotated.pdf").load();
     }
 }
