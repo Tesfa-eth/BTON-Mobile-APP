@@ -53,6 +53,9 @@ public class Homepage extends AppCompatActivity implements View.OnClickListener 
                 startActivity(new Intent(Homepage.this, DinningHallMenuSection.class));
                 break;
 
+            case R.id.btnCampusMap:
+                startActivity(new Intent(Homepage.this, CampusMap.class));
+                break;
 
             default:
                 break;
@@ -83,6 +86,9 @@ public class Homepage extends AppCompatActivity implements View.OnClickListener 
 
         Button btnDhall = findViewById(R.id.btnDhall);
         btnDhall.setOnClickListener(this);
+
+        Button btnCampusMap = findViewById(R.id.btnCampusMap);
+        btnCampusMap.setOnClickListener(this);
 
     }
     public void toastMessage( String msg){

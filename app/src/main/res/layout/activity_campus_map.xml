@@ -33,9 +33,10 @@
         />
     <Button
         android:id="@+id/btnZoomOUT"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="-"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:backgroundTint="@color/primary"
+        android:background="@drawable/ic_baseline_zoom_out_24"
         android:layout_below="@+id/quickNotice"
         android:layout_marginLeft="5dp"
         android:layout_toLeftOf="@+id/rotateButton"
@@ -43,12 +44,13 @@
 
     <Button
         android:id="@+id/btnZoomIN"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
         android:layout_below="@+id/quickNotice"
+        android:backgroundTint="@color/primary"
+        android:background="@drawable/ic_baseline_zoom_in_24"
         android:layout_marginLeft="5dp"
-        android:layout_toLeftOf="@+id/btnZoomOUT"
-        android:text="+" />
+        android:layout_toLeftOf="@+id/btnZoomOUT" />
     <com.github.barteksc.pdfviewer.PDFView
         android:id="@+id/pdfCampusMap"
         android:layout_below="@+id/rotateButton"
