@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="10dp"
+    android:background="@color/primary"
     tools:context=".CampusMap">
 
     <TextView
@@ -13,13 +14,16 @@
         android:layout_height="wrap_content"
         android:text="Campus map"
         android:textAlignment="center"
-        android:textColor="@color/primary"
+        android:background="@color/primary"
+        android:textColor="@color/white"
         android:textSize="40dp" />
     <TextView
         android:id="@+id/quickNotice"
         android:layout_below="@+id/titleCampusMap"
         android:layout_width="match_parent"
+        android:background="@color/primary"
         android:layout_marginTop="25dp"
+        android:textColor="@color/gold"
         android:text="Quick notice: turn-off auto-rotate mode for better experience"
         android:layout_height="wrap_content"/>
     <Button
@@ -35,7 +39,7 @@
         android:id="@+id/btnZoomOUT"
         android:layout_width="50dp"
         android:layout_height="50dp"
-        android:backgroundTint="@color/primary"
+        android:backgroundTint="@color/white"
         android:background="@drawable/ic_baseline_zoom_out_24"
         android:layout_below="@+id/quickNotice"
         android:layout_marginLeft="5dp"
@@ -47,7 +51,7 @@
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:layout_below="@+id/quickNotice"
-        android:backgroundTint="@color/primary"
+        android:backgroundTint="@color/white"
         android:background="@drawable/ic_baseline_zoom_in_24"
         android:layout_marginLeft="5dp"
         android:layout_toLeftOf="@+id/btnZoomOUT" />
