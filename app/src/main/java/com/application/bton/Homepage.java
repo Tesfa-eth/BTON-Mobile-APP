@@ -57,6 +57,10 @@ public class Homepage extends AppCompatActivity implements View.OnClickListener 
                 startActivity(new Intent(Homepage.this, CampusMap.class));
                 break;
 
+            case R.id.btnCampusShuttle:
+                startActivity(new Intent(Homepage.this, CampusShuttle.class));
+                break;
+
             default:
                 break;
         }
@@ -89,6 +93,9 @@ public class Homepage extends AppCompatActivity implements View.OnClickListener 
 
         Button btnCampusMap = findViewById(R.id.btnCampusMap);
         btnCampusMap.setOnClickListener(this);
+
+        Button btnCampusShuttle = findViewById(R.id.btnCampusShuttle);
+        btnCampusShuttle.setOnClickListener(this);
 
     }
     public void toastMessage( String msg){

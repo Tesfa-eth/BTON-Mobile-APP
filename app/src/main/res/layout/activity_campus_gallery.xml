@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".CampusGallery"
-    android:backgroundTint="@color/white"
+    android:backgroundTint="@color/gold"
     android:background="#945F4F">
 
     <!--main title, background image would be nice-->
@@ -50,17 +50,17 @@
     <Button
         android:id="@+id/btnSearchCatagory"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="20dp"
         android:layout_below="@+id/spinnerGalleryCategory"
         android:layout_marginLeft="65dp"
         android:layout_toRightOf="@+id/btnGeneralCampusView"
         android:background="@drawable/homepage_btn_apply"
         android:backgroundTint="@color/primary"
         android:text="Search"
-        android:textSize="15dp"
+        android:layout_marginTop="5dp"
         android:textAllCaps="false"
         android:textColor="@color/gold"
-        />
+        android:textSize="13dp" />
 
     <ListView
         android:id="@+id/imageListView"
