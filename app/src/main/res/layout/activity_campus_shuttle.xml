@@ -32,17 +32,18 @@
     <TextView
         android:id="@+id/localVanText"
         android:layout_width="200dp"
+        android:layout_marginLeft="10dp"
         android:layout_height="wrap_content"
         android:layout_below="@+id/shuttleTitle"
         android:text="Local van status: "
-        android:layout_centerHorizontal="true"
         android:textSize="20dp"
         android:textColor="@color/gold"
         android:layout_marginTop="10dp"
         />
     <TextView
         android:id="@+id/localVanStatus"
-        android:layout_width="200dp"
+        android:layout_width="150dp"
+        android:layout_marginRight="10dp"
         android:layout_height="wrap_content"
         android:layout_below="@+id/shuttleTitle"
         android:layout_toRightOf="@+id/localVanText"
@@ -57,9 +58,9 @@
     <TextView
         android:id="@+id/paranShuttleText"
         android:layout_width="200dp"
+        android:layout_marginLeft="10dp"
         android:layout_height="wrap_content"
         android:layout_below="@+id/localVanText"
-        android:layout_centerHorizontal="true"
         android:text="Paran creen shuttle: "
         android:textSize="20dp"
         android:textColor="@color/gold"
@@ -68,7 +69,8 @@
 
     <TextView
         android:id="@+id/paranShuttleStatus"
-        android:layout_width="200dp"
+        android:layout_width="150dp"
+        android:layout_marginRight="10dp"
         android:layout_height="wrap_content"
         android:layout_below="@+id/localVanText"
         android:layout_centerHorizontal="true"
