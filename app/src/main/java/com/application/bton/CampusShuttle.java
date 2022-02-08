@@ -2,9 +2,11 @@ package com.application.bton;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -18,6 +20,7 @@ import java.util.List;
 
 public class CampusShuttle extends AppCompatActivity {
     TextView localVanStatus, paranShuttleStatus;
+    Button toParanCreekShuttle, toLocalVanService;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -26,6 +29,21 @@ public class CampusShuttle extends AppCompatActivity {
         readAndUpdateStatus("paranShuttleStatus");
         localVanStatus = findViewById(R.id.localVanStatus);
         paranShuttleStatus = findViewById(R.id.paranShuttleStatus);
+
+        toParanCreekShuttle = findViewById(R.id.toParanCreekShuttle);
+        toParanCreekShuttle.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(CampusShuttle.this, ParanCreekShuttle.class));
+            }
+        });
+        toLocalVanService = findViewById(R.id.toLocalVanService);
+        toLocalVanService.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(CampusShuttle.this, LocalVan.class));
+            }
+        });
     }
 
     public void readAndUpdateStatus(String tag){
