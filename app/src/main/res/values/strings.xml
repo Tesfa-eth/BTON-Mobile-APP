@@ -73,5 +73,28 @@
         <item>Business office</item>
     </string-array>
 
+    <string-array name="galleryCategories">
+        <item>Categories</item>
+        <item>Commons</item>
+        <item>Barn</item>
+        <item>Capa</item>
+        <item>Student center</item>
+        <item>Dodge ball</item>
+        <item>Athletics</item>
+        <item>Clubs</item>
+        <item>Campus and classrooms</item>
+        <item>Campus housing</item>
+        <item>Bingham</item>
+        <item>Family weekend</item>
+        <item>Bennington works</item>
+        <item>Vermonter</item>
+        <item>Midnight breakfast</item>
+        <item>FWT night</item>
+        <item>Rehearsals</item>
+        <item>Alumni panels</item>
+        <item>Commencement</item>
+        <item>Fall weekend</item>
+    </string-array>
+
 
 </resources>

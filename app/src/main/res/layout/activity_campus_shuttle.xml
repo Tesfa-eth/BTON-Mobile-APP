@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/primary"
+    android:padding="5dp"
+    tools:context=".CampusShuttle">
+
+    <ImageView
+        android:id="@+id/btnicon"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:src="@mipmap/bennicon" />
+    <TextView
+        android:id="@+id/shuttleTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btnicon"
+        android:layout_marginTop="10dp"
+        android:text="Shuttle service"
+        android:layout_centerHorizontal="true"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:background="@color/primary_light"
+        android:textSize="35dp"
+        />
+
+    <TextView
+        android:id="@+id/localVanText"
+        android:layout_width="200dp"
+        android:layout_marginLeft="10dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/shuttleTitle"
+        android:text="Local van status: "
+        android:textSize="20dp"
+        android:textColor="@color/gold"
+        android:layout_marginTop="10dp"
+        />
+    <TextView
+        android:id="@+id/localVanStatus"
+        android:layout_width="150dp"
+        android:layout_marginRight="10dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/shuttleTitle"
+        android:layout_toRightOf="@+id/localVanText"
+        android:text="N/A"
+        android:textAlignment="center"
+        android:background="@color/danger"
+        android:textSize="20dp"
+        android:textColor="@color/gold"
+        android:layout_marginTop="10dp"
+        />
+
+    <TextView
+        android:id="@+id/paranShuttleText"
+        android:layout_width="200dp"
+        android:layout_marginLeft="10dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/localVanText"
+        android:text="Paran creen shuttle: "
+        android:textSize="20dp"
+        android:textColor="@color/gold"
+        android:layout_marginTop="10dp"
+        />
+
+    <TextView
+        android:id="@+id/paranShuttleStatus"
+        android:layout_width="150dp"
+        android:layout_marginRight="10dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/localVanText"
+        android:layout_centerHorizontal="true"
+        android:layout_toRightOf="@+id/paranShuttleText"
+        android:text="N/A"
+        android:background="@color/danger"
+        android:textAlignment="center"
+        android:textSize="20dp"
+        android:textColor="@color/gold"
+        android:layout_marginTop="10dp"
+        />
+
+    <Button
+        android:id="@+id/toParanCreekShuttle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:background="@drawable/homepage_custom_btn"
+        android:text="Paran Creek shuttle"
+        android:layout_marginHorizontal="25dp"
+        android:textAllCaps="false"
+        />
+
+    <Button
+        android:id="@+id/toLocalVanService"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/toParanCreekShuttle"
+        android:layout_marginTop="15dp"
+        android:layout_marginHorizontal="25dp"
+        android:background="@drawable/homepage_custom_btn"
+        android:text="Local van service"
+        android:textAllCaps="false"
+        />
+
+
+</RelativeLayout>

@@ -5,38 +5,71 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".CampusGallery"
-    android:backgroundTint="@color/white"
+    android:backgroundTint="@color/gold"
     android:background="#945F4F">
 
     <!--main title, background image would be nice-->
     <TextView
         android:id="@+id/campusGallery"
         android:layout_width="wrap_content"
-        android:layout_height="150dp"
-        android:paddingTop="40dp"
+        android:layout_height="100dp"
         android:layout_centerHorizontal="true"
         android:background="@drawable/bennington_background"
+        android:paddingTop="30dp"
         android:text="Campus Gallery"
         android:textAlignment="center"
         android:textColor="#ffffff"
         android:textSize="40dp" />
 
     <Button
-        android:id="@+id/sampleButton"
-        android:layout_width="match_parent"
+        android:id="@+id/btnGeneralCampusView"
+        android:layout_width="150dp"
         android:layout_height="wrap_content"
         android:layout_below="@id/campusGallery"
-        android:text="display"
-        android:textSize="30dp" />
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:background="@drawable/homepage_custom_btn"
+        android:backgroundTint="@color/primary"
+        android:padding="5dp"
+        android:text="General Campus View"
+        android:textAllCaps="false"
+        android:textColor="@color/gold"
+        android:textSize="20dp" />
+
+    <Spinner
+        android:id="@+id/spinnerGalleryCategory"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/campusGallery"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_toRightOf="@+id/btnGeneralCampusView"
+        android:backgroundTint="@color/primary" />
+
+    <Button
+        android:id="@+id/btnSearchCatagory"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:layout_below="@+id/spinnerGalleryCategory"
+        android:layout_marginLeft="65dp"
+        android:layout_toRightOf="@+id/btnGeneralCampusView"
+        android:background="@drawable/homepage_btn_apply"
+        android:backgroundTint="@color/primary"
+        android:text="Search"
+        android:layout_marginTop="5dp"
+        android:textAllCaps="false"
+        android:textColor="@color/gold"
+        android:textSize="13dp" />
 
     <ListView
         android:id="@+id/imageListView"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:dividerHeight="0dp"
-        android:layout_below="@+id/sampleButton"
+        android:layout_below="@+id/btnSearchCatagory"
         android:divider="@color/white"
-        />
+        android:layout_marginTop="5dp"
+        android:dividerHeight="0dp" />
 
 
 </RelativeLayout>

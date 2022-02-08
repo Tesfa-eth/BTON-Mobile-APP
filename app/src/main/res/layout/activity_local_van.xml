@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/primary"
+    android:padding="5dp"
+    tools:context=".LocalVan">
+
+    <ImageView
+        android:id="@+id/btnicon"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:src="@mipmap/bennicon" />
+    <TextView
+        android:id="@+id/localVanTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btnicon"
+        android:layout_marginTop="10dp"
+        android:text="Local van service"
+        android:layout_centerHorizontal="true"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:background="@color/primary_light"
+        android:textSize="35dp"
+        />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/localVanTitle"
+        >
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/noticeTitle"
+                android:layout_below="@+id/localVanTitle"
+                android:layout_marginTop="15dp"
+                android:textColor="@color/gold"
+                android:text="Important information"
+                android:textSize="30dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:id="@+id/noticeText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/noticeTitle"
+                android:text="Updates coming soon"
+                android:textColor="@color/white"
+                android:textSize="20dp" />
+
+            <TextView
+                android:id="@+id/scheduleTitle"
+                android:layout_below="@+id/noticeText"
+                android:layout_marginTop="15dp"
+                android:textColor="@color/gold"
+                android:text="Schedule"
+                android:textSize="30dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:id="@+id/scheduleText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/scheduleTitle"
+                android:text="Local van Schedule"
+                android:textColor="@color/white"
+                android:textSize="20dp" />
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>

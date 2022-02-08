@@ -14,6 +14,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.BTON">
         <activity
+            android:name=".ParanCreekShuttle"
+            android:exported="false" />
+        <activity
+            android:name=".LocalVan"
+            android:exported="false" />
+        <activity
+            android:name=".CampusShuttle"
+            android:exported="false" />
+        <activity
             android:name=".CampusMap"
             android:exported="false" />
         <activity
