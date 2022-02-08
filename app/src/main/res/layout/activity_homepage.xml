@@ -191,11 +191,9 @@
                 android:textColor="@color/white"
                 android:textSize="25dp" />
 
-
-
-            <!--Campus map-->
+            <!--Meyer Rec Barn-->
             <ImageView
-                android:id="@+id/imgCampusMap"
+                android:id="@+id/imgMeyerRecBarn"
                 android:layout_width="wrap_content"
                 android:layout_height="250dp"
                 android:src="@drawable/bennington_background"
@@ -204,10 +202,37 @@
                 />
 
             <Button
-                android:id="@+id/btnCampusMap"
+                android:id="@+id/btnMeyerRecBarn"
                 android:layout_width="300dp"
                 android:layout_height="100dp"
                 android:layout_below="@+id/imgCampusShuttle"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="85dp"
+                android:background="@drawable/homepage_btn_apply"
+                android:text="Meyer Rec Barn"
+                android:textAlignment="center"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="25dp" />
+
+
+
+
+            <!--Campus map-->
+            <ImageView
+                android:id="@+id/imgCampusMap"
+                android:layout_width="wrap_content"
+                android:layout_height="250dp"
+                android:src="@drawable/bennington_background"
+                android:layout_below="@+id/imgMeyerRecBarn"
+                android:layout_marginTop="-10dp"
+                />
+
+            <Button
+                android:id="@+id/btnCampusMap"
+                android:layout_width="300dp"
+                android:layout_height="100dp"
+                android:layout_below="@+id/imgMeyerRecBarn"
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="85dp"
                 android:background="@drawable/homepage_btn_apply"
