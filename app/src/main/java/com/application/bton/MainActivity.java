@@ -15,7 +15,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         switch (v.getId()){
             case  R.id.getStarted:
                 Toast.makeText(this, "Welcome to BTON mobile app", Toast.LENGTH_SHORT).show();
-                Intent intent = new Intent(MainActivity.this, LogIn.class);
+                Intent intent = new Intent(MainActivity.this, Homepage.class);
                 startActivity(intent);
                 break;
             default:
