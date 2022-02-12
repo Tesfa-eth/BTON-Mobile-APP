@@ -51,8 +51,8 @@ public class EmployeeRegistration extends AppCompatActivity {
 
         // SEARCH BY:
         // *name
-        lastnameText = findViewById(R.id.edtTxtLastName);
-        firstnameText = findViewById(R.id.edtTxtFirstName);
+        //lastnameText = findViewById(R.id.edtTxtLastName);
+        //firstnameText = findViewById(R.id.edtTxtFirstName);
         // *spinner
         departmentSpinner = (Spinner) findViewById(R.id.spinnerDepartment);
         ArrayAdapter<CharSequence> adapterDepartment = ArrayAdapter.createFromResource(this,

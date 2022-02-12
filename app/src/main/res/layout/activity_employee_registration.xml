@@ -5,16 +5,16 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".DhallMenu"
-    android:padding="40dp"
     android:background="#945F4F">
+
     <ImageView
         android:id="@+id/btnicon"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
+        android:layout_width="150dp"
+        android:layout_height="100dp"
         android:layout_centerHorizontal="true"
-        android:src="@mipmap/bennicon"/>
+        android:src="@mipmap/bennicon" />
 
-    <EditText
+    <!--EditText
         android:id="@+id/edtTxtFirstName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -34,30 +34,34 @@
         android:background="@color/primary_light"
         android:hint="Last name"
         android:inputType="text"
-        android:minHeight="30dp" />
+        android:minHeight="30dp" /-->
     <!--Todo: add a spinner here for department-->
 
     <Spinner
         android:id="@+id/spinnerDepartment"
         android:layout_width="250dp"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/edtTxtLastName"
+        android:layout_below="@+id/btnicon"
+        android:paddingHorizontal="40dp"
         android:layout_marginTop="15dp"
         android:backgroundTint="@color/white" />
 
 
     <Button
         android:id="@+id/btnSearch"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/spinnerDepartment"
         android:layout_marginTop="10dp"
+        android:layout_centerHorizontal="true"
+        android:paddingHorizontal="40dp"
         android:backgroundTint="@color/primary_light"
         android:drawableRight="@drawable/ic_person_sign_in"
         android:text="Search Employee"
         android:textSize="20sp" />
 
     <ListView
+        android:paddingHorizontal="40dp"
         android:id="@+id/regListView"
         android:scrollbars="none"
         android:layout_width="match_parent"
