@@ -95,24 +95,23 @@
 
             <Button
                 android:id="@+id/btnGallery"
-                android:layout_width="300dp"
+                android:layout_width="340dp"
                 android:layout_height="70dp"
+                android:layout_centerHorizontal="true"
                 android:layout_marginTop="30dp"
                 android:background="@drawable/homepagebtns"
-                android:textAllCaps="false"
-                android:layout_centerHorizontal="true"
-                android:textColor="@color/primary_light"
                 android:text="Campus Gallery"
-                android:textSize="25dp"
-                />
+                android:textAllCaps="false"
+                android:textColor="@color/primary_light"
+                android:textSize="25dp" />
             <Button
                 android:id="@+id/btnAnnouncement"
                 android:layout_centerHorizontal="true"
                 android:layout_marginLeft="5dp"
-                android:layout_width="300dp"
+                android:layout_width="340dp"
                 android:layout_height="70dp"
                 android:layout_below="@+id/btnGallery"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="5dp"
                 android:background="@drawable/homepagebtns"
                 android:textAllCaps="false"
                 android:textColor="@color/primary_light"
@@ -121,9 +120,9 @@
                 />
             <Button
                 android:id="@+id/btnDhall"
-                android:layout_width="300dp"
+                android:layout_width="340dp"
                 android:layout_height="70dp"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="5dp"
                 android:layout_below="@+id/btnAnnouncement"
                 android:background="@drawable/homepagebtns"
                 android:textAllCaps="false"
@@ -135,9 +134,9 @@
 
             <Button
                 android:id="@+id/btnHeathCenter"
-                android:layout_width="300dp"
+                android:layout_width="340dp"
                 android:layout_height="70dp"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="5dp"
                 android:layout_below="@+id/btnDhall"
                 android:background="@drawable/homepagebtns"
                 android:textAllCaps="false"
@@ -149,9 +148,9 @@
 
             <Button
                 android:id="@+id/btnDirectory"
-                android:layout_width="300dp"
+                android:layout_width="340dp"
                 android:layout_height="70dp"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="5dp"
                 android:layout_below="@+id/btnHeathCenter"
                 android:background="@drawable/homepagebtns"
                 android:textAllCaps="false"
@@ -163,9 +162,9 @@
 
             <Button
                 android:id="@+id/btnSclCalander"
-                android:layout_width="300dp"
+                android:layout_width="340dp"
                 android:layout_height="70dp"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="5dp"
                 android:layout_below="@+id/btnDirectory"
                 android:background="@drawable/homepagebtns"
                 android:textAllCaps="false"
@@ -177,9 +176,9 @@
 
             <Button
                 android:id="@+id/btnCampusShuttle"
-                android:layout_width="300dp"
+                android:layout_width="340dp"
                 android:layout_height="70dp"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="5dp"
                 android:layout_below="@+id/btnSclCalander"
                 android:background="@drawable/homepagebtns"
                 android:textAllCaps="false"
@@ -191,9 +190,9 @@
 
             <Button
                 android:id="@+id/btnMeyerRecBarn"
-                android:layout_width="300dp"
+                android:layout_width="340dp"
                 android:layout_height="70dp"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="5dp"
                 android:layout_below="@+id/btnCampusShuttle"
                 android:background="@drawable/homepagebtns"
                 android:textAllCaps="false"
@@ -205,9 +204,9 @@
 
             <Button
                 android:id="@+id/btnCampusMap"
-                android:layout_width="300dp"
+                android:layout_width="340dp"
                 android:layout_height="70dp"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="5dp"
                 android:layout_below="@+id/btnMeyerRecBarn"
                 android:background="@drawable/homepagebtns"
                 android:textAllCaps="false"
@@ -219,9 +218,9 @@
 
             <Button
                 android:id="@+id/btnAboutBTN"
-                android:layout_width="300dp"
+                android:layout_width="340dp"
                 android:layout_height="70dp"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="5dp"
                 android:layout_below="@+id/btnCampusMap"
                 android:background="@drawable/homepagebtns"
                 android:textAllCaps="false"
