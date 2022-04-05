@@ -1,4 +1,6 @@
 # BTON-Mobile-APP
+Java Firebase Backendless
+
 BTON is a campus-wide mobile app for Bennington College where current and prospective students, employees, faculty members, and student families can get school announcements, campus galleries, directories, information, and live updates from different offices all-in-one place. The BTON mobile app user will be able to:
 
 * View general and specific campus images from the campus gallery section that contains dozens of campus views and student event image collections.
@@ -8,7 +10,7 @@ BTON is a campus-wide mobile app for Bennington College where current and prospe
 * Find campus employee/faculty profile and contact information in a nice view.
 * View school calendar
 * Get Local van and Paran creek shuttle information and live updates on their availability.
-*View Meyer Recreation Barn information and live update on whether it is open or closed.
+* View Meyer Recreation Barn information and live update on whether it is open or closed.
 
 
 ![3 (2)](https://user-images.githubusercontent.com/62855279/144115876-99b492ba-4e28-4641-8c39-0e91e9406926.jpg)
