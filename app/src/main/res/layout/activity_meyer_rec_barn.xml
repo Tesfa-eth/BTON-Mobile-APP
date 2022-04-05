@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/primary"
+    android:padding="5dp"
+    tools:context=".MeyerRecBarn">
+
+    <ImageView
+        android:id="@+id/btnicon"
+        android:layout_width="150dp"
+        android:layout_height="100dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:src="@mipmap/bennicon" />
+
+    <TextView
+        android:id="@+id/meyerRecTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btnicon"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:background="@color/primary_light"
+        android:text="Meyer Rec Barn"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="35dp" />
+
+    <TextView
+        android:id="@+id/meyerRecBarnStatusText"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/meyerRecTitle"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:text="The Rec Barn is currently: "
+        android:textColor="@color/black"
+        android:textSize="17dp" />
+
+    <TextView
+        android:id="@+id/meyerRecStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/meyerRecTitle"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_toRightOf="@+id/meyerRecBarnStatusText"
+        android:background="@color/danger"
+        android:minWidth="100dp"
+        android:minHeight="40dp"
+        android:paddingTop="5dp"
+        android:text="Closed"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="20dp" />
+
+
+    <ScrollView
+        android:layout_below="@+id/meyerRecStatus"
+        android:layout_width="match_parent"
+        android:layout_marginTop="20dp"
+        android:scrollbars="none"
+        android:layout_height="wrap_content">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <TextView
+                android:id="@+id/recBarnImptInfoTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Important Notice"
+                android:textColor="@color/gold"
+                android:textSize="25dp" />
+
+            <TextView
+                android:id="@+id/recBarnImptInfoText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/recBarnImptInfoTitle"
+                android:layout_marginTop="5dp"
+                android:text="update coming soon"
+                android:textSize="17dp"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:id="@+id/recBarnFallHoursTitle"
+                android:layout_below="@+id/recBarnImptInfoText"
+                android:layout_marginTop="13dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Fall term working hours"
+                android:textColor="@color/gold"
+                android:textSize="25dp"
+                />
+
+            <TextView
+                android:id="@+id/recBarnFallHoursText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/recBarnFallHoursTitle"
+                android:layout_marginTop="5dp"
+                android:textSize="17dp"
+                android:text="update coming soon"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:id="@+id/recBarnSpecialHoursTitle"
+                android:layout_below="@+id/recBarnFallHoursText"
+                android:layout_marginTop="13dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Special hours"
+                android:textColor="@color/gold"
+                android:textSize="25dp"
+                />
+
+            <TextView
+                android:id="@+id/recBarnSpecialHoursText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/recBarnSpecialHoursTitle"
+                android:layout_marginTop="5dp"
+                android:text="update coming soon"
+                android:textSize="17dp"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:id="@+id/recBarnDanceStudioTitle"
+                android:layout_below="@+id/recBarnSpecialHoursText"
+                android:layout_marginTop="13dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Faculty Dance Studio"
+                android:textColor="@color/gold"
+                android:textSize="25dp"
+                />
+
+            <TextView
+                android:id="@+id/recBarnDanceStudioText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/recBarnDanceStudioTitle"
+                android:layout_marginTop="5dp"
+                android:textSize="17dp"
+                android:text="update coming soon"
+                android:textColor="@color/white" />
+
+        </RelativeLayout>
+
+    </ScrollView>
+</RelativeLayout>

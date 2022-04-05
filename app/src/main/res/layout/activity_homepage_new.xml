@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/primary"
+    tools:context=".HomepageNew">
+
+    <ImageView
+        android:id="@+id/btnicon"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:src="@mipmap/bennicon" />
+    <ScrollView
+        android:layout_below="@+id/btnicon"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none"
+        android:padding="5dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <!--Campus Gallery card View-->
+            <!--androidx.cardview.widget.CardView
+                android:id="@+id/campusGalleryCard"
+                android:layout_width="170dp"
+                android:backgroundTint="@color/primary_light"
+                app:cardCornerRadius="10dp"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/imgGallery"
+                        android:layout_width="match_parent"
+                        android:layout_height="100dp"
+                        android:src="@drawable/bennington_background" />
+
+                    <Button
+                        android:id="@+id/btnGallery"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_below="@+id/imgGallery"
+                        android:layout_marginTop="5dp"
+                        android:background="@drawable/homepagebtns"
+                        android:text="Campus Gallery"
+                        android:textAlignment="center"
+                        android:textAllCaps="false"
+                        android:textColor="@color/primary"
+                        android:textSize="20dp" />
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/generalAnnCard"
+                android:layout_toRightOf="@+id/campusGalleryCard"
+                android:layout_width="170dp"
+                android:layout_marginLeft="10dp"
+                android:backgroundTint="@color/primary_light"
+                app:cardCornerRadius="10dp"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/imgGallery"
+                        android:layout_width="match_parent"
+                        android:layout_height="100dp"
+                        android:src="@drawable/gen_announcement" />
+
+                    <Button
+                        android:id="@+id/btnGallery"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_below="@+id/imgGallery"
+                        android:background="@drawable/homepagebtns"
+                        android:text="Announcements"
+                        android:textAlignment="center"
+                        android:textAllCaps="false"
+                        android:layout_marginTop="5dp"
+                        android:textColor="@color/primary"
+                        android:textSize="20dp" />
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView-->
+
+            <Button
+                android:id="@+id/btnGallery"
+                android:layout_width="340dp"
+                android:layout_height="70dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/homepagebtns"
+                android:text="Campus Gallery"
+                android:textAllCaps="false"
+                android:textColor="@color/primary_light"
+                android:textSize="25dp" />
+            <Button
+                android:id="@+id/btnAnnouncement"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="5dp"
+                android:layout_width="340dp"
+                android:layout_height="70dp"
+                android:layout_below="@+id/btnGallery"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/homepagebtns"
+                android:textAllCaps="false"
+                android:textColor="@color/primary_light"
+                android:text="Announcements"
+                android:textSize="25dp"
+                />
+            <Button
+                android:id="@+id/btnDhall"
+                android:layout_width="340dp"
+                android:layout_height="70dp"
+                android:layout_marginTop="5dp"
+                android:layout_below="@+id/btnAnnouncement"
+                android:background="@drawable/homepagebtns"
+                android:textAllCaps="false"
+                android:layout_centerHorizontal="true"
+                android:textColor="@color/primary_light"
+                android:text="Dinning Hall"
+                android:textSize="25dp"
+                />
+
+            <Button
+                android:id="@+id/btnHeathCenter"
+                android:layout_width="340dp"
+                android:layout_height="70dp"
+                android:layout_marginTop="5dp"
+                android:layout_below="@+id/btnDhall"
+                android:background="@drawable/homepagebtns"
+                android:textAllCaps="false"
+                android:layout_centerHorizontal="true"
+                android:textColor="@color/primary_light"
+                android:text="Health Center"
+                android:textSize="25dp"
+                />
+
+            <Button
+                android:id="@+id/btnDirectory"
+                android:layout_width="340dp"
+                android:layout_height="70dp"
+                android:layout_marginTop="5dp"
+                android:layout_below="@+id/btnHeathCenter"
+                android:background="@drawable/homepagebtns"
+                android:textAllCaps="false"
+                android:layout_centerHorizontal="true"
+                android:textColor="@color/primary_light"
+                android:text="Directory"
+                android:textSize="25dp"
+                />
+
+            <Button
+                android:id="@+id/btnSclCalander"
+                android:layout_width="340dp"
+                android:layout_height="70dp"
+                android:layout_marginTop="5dp"
+                android:layout_below="@+id/btnDirectory"
+                android:background="@drawable/homepagebtns"
+                android:textAllCaps="false"
+                android:layout_centerHorizontal="true"
+                android:textColor="@color/primary_light"
+                android:text="Calender"
+                android:textSize="25dp"
+                />
+
+            <Button
+                android:id="@+id/btnCampusShuttle"
+                android:layout_width="340dp"
+                android:layout_height="70dp"
+                android:layout_marginTop="5dp"
+                android:layout_below="@+id/btnSclCalander"
+                android:background="@drawable/homepagebtns"
+                android:textAllCaps="false"
+                android:layout_centerHorizontal="true"
+                android:textColor="@color/primary_light"
+                android:text="Shuttle"
+                android:textSize="25dp"
+                />
+
+            <Button
+                android:id="@+id/btnMeyerRecBarn"
+                android:layout_width="340dp"
+                android:layout_height="70dp"
+                android:layout_marginTop="5dp"
+                android:layout_below="@+id/btnCampusShuttle"
+                android:background="@drawable/homepagebtns"
+                android:textAllCaps="false"
+                android:layout_centerHorizontal="true"
+                android:textColor="@color/primary_light"
+                android:text="Meyer Rec. Barn"
+                android:textSize="25dp"
+                />
+
+            <Button
+                android:id="@+id/btnCampusMap"
+                android:layout_width="340dp"
+                android:layout_height="70dp"
+                android:layout_marginTop="5dp"
+                android:layout_below="@+id/btnMeyerRecBarn"
+                android:background="@drawable/homepagebtns"
+                android:textAllCaps="false"
+                android:layout_centerHorizontal="true"
+                android:textColor="@color/primary_light"
+                android:text="Map"
+                android:textSize="25dp"
+                />
+
+            <Button
+                android:id="@+id/btnAboutBTN"
+                android:layout_width="340dp"
+                android:layout_height="70dp"
+                android:layout_marginTop="5dp"
+                android:layout_below="@+id/btnCampusMap"
+                android:background="@drawable/homepagebtns"
+                android:textAllCaps="false"
+                android:layout_centerHorizontal="true"
+                android:textColor="@color/primary_light"
+                android:text="About"
+                android:textSize="25dp"
+                />
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

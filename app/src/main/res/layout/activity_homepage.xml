@@ -7,24 +7,25 @@
     android:background="@color/primary"
     tools:context=".Homepage">
 
+    <ImageView
+        android:id="@+id/btnicon"
+        android:layout_width="150dp"
+        android:layout_height="100dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:src="@mipmap/bennicon" />
     <!--main scroll view containing the whole page-->
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_below="@+id/btnicon"
+        android:scrollbars="none"
         android:layout_margin="5dp"
         >
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             >
-            <ImageView
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:id="@+id/btnicon"
-                android:layout_marginTop="10dp"
-                android:layout_centerHorizontal="true"
-                android:src="@mipmap/bennicon"/>
-
             <!--Gallery veiw-->
             <ImageView
                 android:id="@+id/imgGallery"
@@ -45,8 +46,8 @@
                 android:text="Campus Gallery"
                 android:textAlignment="center"
                 android:textAllCaps="false"
-                android:textColor="@color/white"
-                android:textSize="40dp" />
+                android:textColor="#FF0018"
+                android:textSize="30dp" />
 
             <!--General Announcements-->
             <ImageView
@@ -68,7 +69,7 @@
                 android:text="General Announcements"
                 android:textAlignment="center"
                 android:textAllCaps="false"
-                android:textColor="@color/white"
+                android:textColor="#FFA52C"
                 android:textSize="25dp" />
 
             <!--Dinning hall menu-->
@@ -78,7 +79,7 @@
                 android:layout_height="250dp"
                 android:layout_below="@+id/imgAnnouncements"
                 android:layout_marginTop="-5dp"
-                android:src="@drawable/brooderhealthctratnight" />
+                android:src="@drawable/dinning_hall_benn" />
 
             <Button
                 android:id="@+id/btnDhall"
@@ -91,7 +92,7 @@
                 android:text="Dinning Hall"
                 android:textAlignment="center"
                 android:textAllCaps="false"
-                android:textColor="@color/white"
+                android:textColor="#FFFF41"
                 android:textSize="25dp" />
 
 
@@ -115,7 +116,7 @@
                 android:text="Health Center"
                 android:textAlignment="center"
                 android:textAllCaps="false"
-                android:textColor="@color/white"
+                android:textColor="#008018"
                 android:textSize="25dp" />
 
             <!--Campus Directory-->
@@ -123,7 +124,7 @@
                 android:id="@+id/imgCampusDirectory"
                 android:layout_width="wrap_content"
                 android:layout_height="250dp"
-                android:src="@drawable/bennington_background"
+                android:src="@drawable/directory"
                 android:layout_below="@+id/imgHealthCenter"
                 android:layout_marginTop="-10dp"
                 />
@@ -139,7 +140,7 @@
                 android:text="Campus Directory"
                 android:textAlignment="center"
                 android:textAllCaps="false"
-                android:textColor="@color/white"
+                android:textColor="#0000F9"
                 android:textSize="25dp" />
 
             <!--School Calander-->
@@ -147,7 +148,7 @@
                 android:id="@+id/imgSclCalander"
                 android:layout_width="wrap_content"
                 android:layout_height="250dp"
-                android:src="@drawable/bennington_background"
+                android:src="@drawable/calander_benn"
                 android:layout_below="@+id/imgCampusDirectory"
                 android:layout_marginTop="-10dp"
                 />
@@ -163,7 +164,7 @@
                 android:text="School Calendar"
                 android:textAlignment="center"
                 android:textAllCaps="false"
-                android:textColor="@color/white"
+                android:textColor="#86007D"
                 android:textSize="25dp" />
 
 
@@ -172,7 +173,7 @@
                 android:id="@+id/imgCampusShuttle"
                 android:layout_width="wrap_content"
                 android:layout_height="250dp"
-                android:src="@drawable/bennington_background"
+                android:src="@drawable/shuttle_benn"
                 android:layout_below="@+id/imgSclCalander"
                 android:layout_marginTop="-10dp"
                 />
@@ -188,8 +189,33 @@
                 android:text="Campus Shuttle"
                 android:textAlignment="center"
                 android:textAllCaps="false"
+                android:textColor="#FFFF41"
+                android:textSize="25dp" />
+
+            <!--Meyer Rec Barn-->
+            <ImageView
+                android:id="@+id/imgMeyerRecBarn"
+                android:layout_width="wrap_content"
+                android:layout_height="250dp"
+                android:src="@drawable/gym_benn"
+                android:layout_below="@+id/imgCampusShuttle"
+                android:layout_marginTop="-10dp"
+                />
+
+            <Button
+                android:id="@+id/btnMeyerRecBarn"
+                android:layout_width="300dp"
+                android:layout_height="100dp"
+                android:layout_below="@+id/imgCampusShuttle"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="75dp"
+                android:background="@drawable/homepage_btn_apply"
+                android:text="Meyer Rec Barn"
+                android:textAlignment="center"
+                android:textAllCaps="false"
                 android:textColor="@color/white"
                 android:textSize="25dp" />
+
 
 
 
@@ -198,8 +224,8 @@
                 android:id="@+id/imgCampusMap"
                 android:layout_width="wrap_content"
                 android:layout_height="250dp"
-                android:src="@drawable/bennington_background"
-                android:layout_below="@+id/imgCampusShuttle"
+                android:src="@drawable/campus_map"
+                android:layout_below="@+id/imgMeyerRecBarn"
                 android:layout_marginTop="-10dp"
                 />
 
@@ -207,14 +233,14 @@
                 android:id="@+id/btnCampusMap"
                 android:layout_width="300dp"
                 android:layout_height="100dp"
-                android:layout_below="@+id/imgCampusShuttle"
+                android:layout_below="@+id/imgMeyerRecBarn"
                 android:layout_centerHorizontal="true"
-                android:layout_marginTop="85dp"
+                android:layout_marginTop="75dp"
                 android:background="@drawable/homepage_btn_apply"
                 android:text="Campus Map"
                 android:textAlignment="center"
                 android:textAllCaps="false"
-                android:textColor="@color/white"
+                android:textColor="#FF0018"
                 android:textSize="25dp" />
 
 

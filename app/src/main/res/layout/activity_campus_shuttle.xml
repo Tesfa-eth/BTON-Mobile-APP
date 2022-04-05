@@ -10,24 +10,24 @@
 
     <ImageView
         android:id="@+id/btnicon"
-        android:layout_width="70dp"
-        android:layout_height="70dp"
+        android:layout_width="150dp"
+        android:layout_height="100dp"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="20dp"
         android:src="@mipmap/bennicon" />
+
     <TextView
         android:id="@+id/shuttleTitle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/btnicon"
-        android:layout_marginTop="10dp"
-        android:text="Shuttle service"
         android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:background="@color/primary_light"
+        android:text="Shuttle service"
         android:textAlignment="center"
         android:textColor="@color/white"
-        android:background="@color/primary_light"
-        android:textSize="35dp"
-        />
+        android:textSize="35dp" />
 
     <TextView
         android:id="@+id/localVanText"

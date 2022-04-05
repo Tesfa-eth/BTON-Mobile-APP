@@ -9,29 +9,30 @@
     tools:context=".GeneralAnnouncement">
 
     <ImageView
-        android:id="@+id/titleAnnouncement"
-        android:layout_width="match_parent"
-        android:layout_height="200dp"
-        android:layout_marginTop="-20dp"
-        android:src="@drawable/gen_announcement"/>
+        android:id="@+id/btnicon"
+        android:layout_width="150dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true"
+        android:src="@mipmap/bennicon" />
+
     <Button
         android:id="@+id/btnDisplay"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/titleAnnouncement"
+        android:layout_below="@+id/btnicon"
         android:backgroundTint="@color/primary_light"
         android:text="Display"
         android:textAllCaps="false"
-        android:textSize="30dp"
-        />
+        android:textSize="30dp" />
 
     <ListView
         android:id="@+id/announcementListView"
-        android:scrollbars="none"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/btnDisplay"
-        android:layout_marginTop="15dp"
+        android:layout_marginTop="10dp"
         android:divider="@color/primary"
-        android:dividerHeight="13dp" />
+        android:dividerHeight="13dp"
+        android:scrollbars="none" />
 </RelativeLayout>

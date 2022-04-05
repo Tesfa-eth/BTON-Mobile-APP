@@ -51,8 +51,8 @@ public class EmployeeRegistration extends AppCompatActivity {
 
         // SEARCH BY:
         // *name
-        lastnameText = findViewById(R.id.edtTxtLastName);
-        firstnameText = findViewById(R.id.edtTxtFirstName);
+        //lastnameText = findViewById(R.id.edtTxtLastName);
+        //firstnameText = findViewById(R.id.edtTxtFirstName);
         // *spinner
         departmentSpinner = (Spinner) findViewById(R.id.spinnerDepartment);
         ArrayAdapter<CharSequence> adapterDepartment = ArrayAdapter.createFromResource(this,
@@ -124,7 +124,7 @@ public class EmployeeRegistration extends AppCompatActivity {
             @Override
             public void handleResponse(List<EmployeeProfile> response) {
                 resuLT[0] = response;
-                toastMessage("employee registration: " + response.size());
+                //toastMessage("employee registration: " + response.size());
             }
 
             @Override
@@ -145,7 +145,7 @@ public class EmployeeRegistration extends AppCompatActivity {
             @Override
             public void handleResponse(List<EmployeeProfile> response) {
                 resuLT[0] = response;
-                toastMessage("employee registration: " + response.size());
+                //toastMessage("employee registration: " + response.size());
             }
 
             @Override
@@ -156,7 +156,7 @@ public class EmployeeRegistration extends AppCompatActivity {
     }
 
     public void writeToCard(){
-        toastMessage("oh wow! : " + resuLT[0].size());
+        //toastMessage("oh wow! : " + resuLT[0].size());
         MyAdapter myAdapter = new MyAdapter();
         mListView.setAdapter(myAdapter);
     }

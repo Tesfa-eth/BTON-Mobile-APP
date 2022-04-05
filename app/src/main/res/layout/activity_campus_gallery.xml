@@ -5,18 +5,17 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".CampusGallery"
-    android:backgroundTint="@color/gold"
+    android:backgroundTint="@color/primary"
     android:background="#945F4F">
 
     <!--main title, background image would be nice-->
     <TextView
         android:id="@+id/campusGallery"
-        android:layout_width="wrap_content"
+        android:layout_width="150dp"
         android:layout_height="100dp"
         android:layout_centerHorizontal="true"
-        android:background="@drawable/bennington_background"
-        android:paddingTop="30dp"
-        android:text="Campus Gallery"
+        android:background="@mipmap/bennicon"
+        android:layout_marginTop="20dp"
         android:textAlignment="center"
         android:textColor="#ffffff"
         android:textSize="40dp" />
@@ -27,10 +26,9 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/campusGallery"
         android:layout_marginLeft="10dp"
-        android:layout_marginTop="5dp"
+        android:layout_marginTop="10dp"
         android:layout_marginBottom="5dp"
         android:background="@drawable/homepage_custom_btn"
-        android:backgroundTint="@color/primary"
         android:padding="5dp"
         android:text="General Campus View"
         android:textAllCaps="false"
@@ -45,19 +43,18 @@
         android:layout_marginLeft="10dp"
         android:layout_marginTop="10dp"
         android:layout_toRightOf="@+id/btnGeneralCampusView"
-        android:backgroundTint="@color/primary" />
+        android:backgroundTint="@color/white" />
 
     <Button
         android:id="@+id/btnSearchCatagory"
         android:layout_width="wrap_content"
-        android:layout_height="20dp"
+        android:layout_height="25dp"
         android:layout_below="@+id/spinnerGalleryCategory"
         android:layout_marginLeft="65dp"
+        android:layout_marginTop="10dp"
         android:layout_toRightOf="@+id/btnGeneralCampusView"
-        android:background="@drawable/homepage_btn_apply"
-        android:backgroundTint="@color/primary"
+        android:background="@drawable/homepage_custom_btn"
         android:text="Search"
-        android:layout_marginTop="5dp"
         android:textAllCaps="false"
         android:textColor="@color/gold"
         android:textSize="13dp" />
@@ -66,9 +63,9 @@
         android:id="@+id/imageListView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/btnSearchCatagory"
+        android:layout_below="@+id/btnGeneralCampusView"
         android:divider="@color/white"
-        android:layout_marginTop="5dp"
+        android:layout_marginTop="10dp"
         android:dividerHeight="0dp" />
 
 

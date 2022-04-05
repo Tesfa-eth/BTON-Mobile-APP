@@ -4,65 +4,57 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.os.Parcelable;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
-import com.backendless.Backendless;
-import com.backendless.async.callback.AsyncCallback;
-import com.backendless.exceptions.BackendlessFault;
-import com.backendless.persistence.DataQueryBuilder;
-
-import java.util.List;
-
-public class Homepage extends AppCompatActivity implements View.OnClickListener {
+public class HomepageNew extends AppCompatActivity implements View.OnClickListener {
 
 
     @Override
     public void onClick(View v) {
         switch (v.getId()){
             case  R.id.btnGallery:
-                Intent intent = new Intent(Homepage.this, CampusGallery.class);
+                Intent intent = new Intent(HomepageNew.this, CampusGallery.class);
                 startActivity(intent);
                 break;
             case R.id.btnDirectory:
-                Intent intent_dir = new Intent(Homepage.this, EmployeeRegistration.class);
+                Intent intent_dir = new Intent(HomepageNew.this, EmployeeRegistration.class);
                 startActivity(intent_dir);
                 break;
             case  R.id.btnAboutBTN:
-                Intent aboutBtn_intent = new Intent(Homepage.this, AboutBTONCollege.class);
+                Intent aboutBtn_intent = new Intent(HomepageNew.this, AboutBTONCollege.class);
                 startActivity(aboutBtn_intent);
                 break;
             case  R.id.btnHeathCenter:
-                Intent healthCenter_intent = new Intent(Homepage.this, HealthCenter.class);
+                Intent healthCenter_intent = new Intent(HomepageNew.this, HealthCenter.class);
                 startActivity(healthCenter_intent);
                 break;
 
             case R.id.btnAnnouncement:
-                Intent announcement_intent = new Intent(Homepage.this, GeneralAnnouncement.class);
+                Intent announcement_intent = new Intent(HomepageNew.this, GeneralAnnouncement.class);
                 startActivity(announcement_intent);
                 break;
 
             case R.id.btnSclCalander:
-                Intent sclCalander_intent = new Intent(Homepage.this, SchoolCalander.class);
+                Intent sclCalander_intent = new Intent(HomepageNew.this, SchoolCalander.class);
                 startActivity(sclCalander_intent);
                 break;
 
             case R.id.btnDhall:
-                startActivity(new Intent(Homepage.this, DinningHallMenuSection.class));
+                startActivity(new Intent(HomepageNew.this, DinningHallMenuSection.class));
                 break;
 
             case R.id.btnCampusMap:
-                startActivity(new Intent(Homepage.this, CampusMap.class));
+                startActivity(new Intent(HomepageNew.this, CampusMap.class));
                 break;
 
             case R.id.btnCampusShuttle:
-                startActivity(new Intent(Homepage.this, CampusShuttle.class));
+                startActivity(new Intent(HomepageNew.this, CampusShuttle.class));
                 break;
 
             case R.id.btnMeyerRecBarn:
-                startActivity(new Intent(Homepage.this, MeyerRecBarn.class));
+                startActivity(new Intent(HomepageNew.this, MeyerRecBarn.class));
                 break;
 
             default:
@@ -72,7 +64,7 @@ public class Homepage extends AppCompatActivity implements View.OnClickListener 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_homepage);
+        setContentView(R.layout.activity_homepage_new);
 
         Button btnGallery = findViewById(R.id.btnGallery);
         btnGallery.setOnClickListener(this);
@@ -106,6 +98,6 @@ public class Homepage extends AppCompatActivity implements View.OnClickListener 
 
     }
     public void toastMessage( String msg){
-        Toast.makeText(Homepage.this, msg, Toast.LENGTH_SHORT).show();
+        Toast.makeText(HomepageNew.this, msg, Toast.LENGTH_SHORT).show();
     }
 }

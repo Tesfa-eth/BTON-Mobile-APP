@@ -12,9 +12,9 @@
         android:id="@+id/titleCampusMap"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="@color/primary"
         android:text="Campus map"
         android:textAlignment="center"
-        android:background="@color/primary"
         android:textColor="@color/white"
         android:textSize="40dp" />
     <TextView

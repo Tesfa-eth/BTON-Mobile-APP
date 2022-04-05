@@ -274,7 +274,7 @@ public class DinningHallMenuSection extends AppCompatActivity {
     }
 
     public void generateCardView(List<DhallMenu> response){
-        toastMessage("Got it: " + response.size() + " yayyyyy");
+        //toastMessage("Got it: " + response.size() + " yayyyyy");
     }
 
     public void toastMessage( String msg){
