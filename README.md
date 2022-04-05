@@ -1,5 +1,5 @@
 # BTON-Mobile-APP
-Java Firebase Backendless
+![Java](https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=java&logoColor=white) ![Firebase](https://img.shields.io/badge/firebase-%23039BE5.svg?style=for-the-badge&logo=firebase) Backendless
 
 BTON is a campus-wide mobile app for Bennington College where current and prospective students, employees, faculty members, and student families can get school announcements, campus galleries, directories, information, and live updates from different offices all-in-one place. The BTON mobile app user will be able to:
 
