@@ -1,11 +1,15 @@
 # BTON-Mobile-APP
-Campus wide andriod mobile app for Bennington College where students can find all essential information in one place. This app has functional user log in and registration. This app the following main sections:
+BTON is a campus-wide mobile app for Bennington College where current and prospective students, employees, faculty members, and student families can get school announcements, campus galleries, directories, information, and live updates from different offices all-in-one place. The BTON mobile app user will be able to:
 
-* Campus Gallery - sample photo showcase for general campus view, Barn and commons
-* General announcements - where announcmenets are displayed chronologically
-* Health Center - contains general information, health center and pychological services information.
-* Campus Directory for offices
-* About page
+* View general and specific campus images from the campus gallery section that contains dozens of campus views and student event image collections.
+* Get School Announcements from different offices.
+* Receive timely and live updates on the menu and status of the Dining Hall
+* Access general and contact information about the Health Center
+* Find campus employee/faculty profile and contact information in a nice view.
+* View school calendar
+* Get Local van and Paran creek shuttle information and live updates on their availability.
+*View Meyer Recreation Barn information and live update on whether it is open or closed.
+
 
 ![3 (2)](https://user-images.githubusercontent.com/62855279/144115876-99b492ba-4e28-4641-8c39-0e91e9406926.jpg)
 ![4 (2)](https://user-images.githubusercontent.com/62855279/144115878-b4632609-9c81-4e19-b695-ddedbc8009c0.jpg)
