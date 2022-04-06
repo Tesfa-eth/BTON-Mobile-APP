@@ -19,7 +19,8 @@ A BTON mobile app user will be able to:
 |Campus Shuttle|Get Local van and Paran creek shuttle information :taxi: and live :clock12: updates on their availability.|
 |Meyer Rec Barn|View Meyer Recreation :running: Barn information and live :clock12: update on whether it is open or closed.|
 
-<img src="https://user-images.githubusercontent.com/62855279/161883443-95929b8b-5bd3-454f-909a-d5e612f08c58.png" width="200"><img src="https://user-images.githubusercontent.com/62855279/161884340-d50c8202-4529-4794-a4ce-cf0ee583436e.png" width="200"> <img src="https://user-images.githubusercontent.com/62855279/161884444-a78df1f5-efac-4898-a8c9-4bef4cc3230d.png" width="200"> [View all screenshoots](https://github.com/Tesfa-eth/BTON-Mobile-APP/blob/master/docs/all-screenshots.md)
+                          [View all screenshoots](https://github.com/Tesfa-eth/BTON-Mobile-APP/blob/master/docs/all-screenshots.md)
+<img src="https://user-images.githubusercontent.com/62855279/161883443-95929b8b-5bd3-454f-909a-d5e612f08c58.png" width="200"><img src="https://user-images.githubusercontent.com/62855279/161884340-d50c8202-4529-4794-a4ce-cf0ee583436e.png" width="200"> <img src="https://user-images.githubusercontent.com/62855279/161884444-a78df1f5-efac-4898-a8c9-4bef4cc3230d.png" width="200"> 
 
 # How is the information on the app updated?
 The information on the app is updated using a [BTON-admin app](https://github.com/Tesfa-eth/BTON_admin)(private repo for now) that is exclusively available only to a few staff members of campus offices. Please take a look at the [BTON ADMIN USER MANUAL](https://drive.google.com/file/d/1hs0AdO2h4RAJQi-MljNQpyswKr_0avhp/view?usp=sharing) for more information about the admin app.
