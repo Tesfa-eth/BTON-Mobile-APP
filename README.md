@@ -6,7 +6,7 @@
 
 | First Header  | Second Header |
 | ------------- | ------------- |
-| Content Cell  | Content Cell  |
+| Campus Gallery  | View general and specific campus :classical_building: images :camera: from the campus gallery section that contains dozens of campus views :school: and student event :tada: image collections.  |
 | Content Cell  | Content Cell  |
 
 * View general and specific campus :classical_building: images :camera: from the campus gallery section that contains dozens of campus views :school: and student event :tada: image collections.
