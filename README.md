@@ -21,3 +21,6 @@ A BTON mobile app user will be able to:
 
 # How is the information on the app updated?
 The information on the app is updated using a [BTON-admin app](https://github.com/Tesfa-eth/BTON_admin)(private repo for now) that is exclusively available only to a few staff members of campus offices. Please take a look at the [BTON ADMIN USER MANUAL](https://drive.google.com/file/d/1hs0AdO2h4RAJQi-MljNQpyswKr_0avhp/view?usp=sharing) for more information about the admin app.
+
+
+[View all screenshoots](https://github.com/Tesfa-eth/BTON-Mobile-APP/blob/master/docs/all-screenshots.md)
