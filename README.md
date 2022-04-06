@@ -4,7 +4,7 @@
 
 *BTON* is a campus-wide mobile app :iphone: for Bennington College where current and prospective students :man_student:, employees :office_worker: , faculty members :woman_teacher: , and student families :family_man_man_girl_boy: can get school announcements, campus galleries, directories, information, and live updates from different offices all-in-one place. 
 
-[Find the User Manual Here](https://drive.google.com/drive/folders/1RWMBSemmKYsNjSh0HC8cUMEAH9mMIer5?usp=sharing)
+[Find the User Manual Here](https://drive.google.com/file/d/1iEqKGNU0TxwLQwtxCVeJDp5ipbOCa9i-/view?usp=sharing)
 
 A BTON mobile app user will be able to:
 
