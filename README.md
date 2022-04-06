@@ -4,11 +4,16 @@
 
 *BTON* is a campus-wide mobile app :iphone: for Bennington College where current and prospective students :man_student:, employees :office_worker: , faculty members :woman_teacher: , and student families :family_man_man_girl_boy: can get school announcements, campus galleries, directories, information, and live updates from different offices all-in-one place. The BTON mobile app user will be able to:
 
-| First Header  | Second Header |
+| Section  | Description |
 | ------------- | ------------- |
 | Campus Gallery  | View general and specific campus :classical_building: images :camera: from the campus gallery section that contains dozens of campus views :school: and student event :tada: image collections.  |
-| Content Cell  | Content Cell  |
-
+| General Announcement  | Get School Announcements :speaking_head: from different offices.  |
+|Dinning Hall|Receive timely and live :clock12: updates on the menu and status of the Dining Hall :bellhop_bell:|
+|Health Center|Access general and contact information about the Health Center :hospital:|
+|Campus Directory|Find campus employee/faculty profile and contact information :phone: in a nice view.|
+|School Calendary|View school calendar :spiral_calendar:|
+|Campus Shuttle|Get Local van and Paran creek shuttle information :taxi: and live :clock12: updates on their availability.|
+|Meyer Rec Barn|View Meyer Recreation :running: Barn information and live :clock12: update on whether it is open or closed.|
 * View general and specific campus :classical_building: images :camera: from the campus gallery section that contains dozens of campus views :school: and student event :tada: image collections.
 * Get School Announcements :speaking_head: from different offices.
 * Receive timely and live :clock12: updates on the menu and status of the Dining Hall :bellhop_bell:
