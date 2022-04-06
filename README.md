@@ -19,4 +19,5 @@ A BTON mobile app user will be able to:
 |Campus Shuttle|Get Local van and Paran creek shuttle information :taxi: and live :clock12: updates on their availability.|
 |Meyer Rec Barn|View Meyer Recreation :running: Barn information and live :clock12: update on whether it is open or closed.|
 
+# Updating the information on the app
 The information on the app is updated using a [BTON-admin app](https://github.com/Tesfa-eth/BTON_admin)(private repo for now) that is exclusively available only to a few staff members of campus offices. Please take a look at the [BTON ADMIN USER MANUAL](https://drive.google.com/file/d/1hs0AdO2h4RAJQi-MljNQpyswKr_0avhp/view?usp=sharing) app user manual for more information.
