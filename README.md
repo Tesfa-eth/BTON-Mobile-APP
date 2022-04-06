@@ -19,4 +19,4 @@ A BTON mobile app user will be able to:
 |Campus Shuttle|Get Local van and Paran creek shuttle information :taxi: and live :clock12: updates on their availability.|
 |Meyer Rec Barn|View Meyer Recreation :running: Barn information and live :clock12: update on whether it is open or closed.|
 
-<img src="https://user-images.githubusercontent.com/62855279/161874099-005243d4-c5e1-497d-b982-4f11e9086d26.jpg" width="100" height="100"">
+<img src="https://user-images.githubusercontent.com/62855279/161874099-005243d4-c5e1-497d-b982-4f11e9086d26.jpg" width="100" height="100">
