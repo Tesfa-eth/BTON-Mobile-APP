@@ -8,17 +8,9 @@
 | ------------- | ------------- |
 | Campus Gallery  | View general and specific campus :classical_building: images :camera: from the campus gallery section that contains dozens of campus views :school: and student event :tada: image collections.  |
 | General Announcement  | Get School Announcements :speaking_head: from different offices.  |
-|Dinning Hall|Receive timely and live :clock12: updates on the menu and status of the Dining Hall :bellhop_bell:|
+|Dinning Hall|Receive timely and live :clock12: updates on the menu :bellhop_bell: and status of the Dining Hall :classical_building:|
 |Health Center|Access general and contact information about the Health Center :hospital:|
 |Campus Directory|Find campus employee/faculty profile and contact information :phone: in a nice view.|
 |School Calendary|View school calendar :spiral_calendar:|
 |Campus Shuttle|Get Local van and Paran creek shuttle information :taxi: and live :clock12: updates on their availability.|
 |Meyer Rec Barn|View Meyer Recreation :running: Barn information and live :clock12: update on whether it is open or closed.|
-* View general and specific campus :classical_building: images :camera: from the campus gallery section that contains dozens of campus views :school: and student event :tada: image collections.
-* Get School Announcements :speaking_head: from different offices.
-* Receive timely and live :clock12: updates on the menu and status of the Dining Hall :bellhop_bell:
-*  Access general and contact information about the Health Center :hospital:
-* :phone: Find campus employee/faculty profile and contact information in a nice view.
-* View school calendar :spiral_calendar:
-* Get Local van and Paran creek shuttle information :taxi: and live :clock12: updates on their availability.
-* View Meyer Recreation :running: Barn information and live :clock12: update on whether it is open or closed.
